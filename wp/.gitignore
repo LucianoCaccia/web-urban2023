@@ -1,0 +1,11 @@
+# Wordpress ignored files & folders
+.htaccess
+/wp-admin
+/wp-includes
+/wp-content/plugins
+
+# Default Themes
+wp-content/themes/index.php
+wp-content/themes/twentytwentyone
+wp-content/themes/twentytwentythree
+wp-content/themes/twentytwentytwo

@@ -1,0 +1,27 @@
+
+services:
+  web:
+    image: wordpress
+    links:
+    - mysql
+    ports:
+    - "127.0.0.1:8080:80"
+    volumes:
+    - "/Users/lucho/tooit/repositories/github.com/web-urban2023/wp:/var/www/html"
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - "/Users/lucho/tooit/repositories/github.com/web-urban2023/mysql:/var/lib/mysql"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      credentials: root/password
+    ports:
+      - "127.0.0.1:8081:80"
