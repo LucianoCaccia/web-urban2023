@@ -23,6 +23,8 @@ $ npm install
 
 Run the watch script
 
+```bash
 $ npm run watch
+```
 
 Modify /assets/main.scss and /assets/main.js
