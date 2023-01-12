@@ -17,7 +17,9 @@ Prerequisites: Node.js (NPM) needs to be installed on your system
 
 Open the Project directory / in Terminal and install the required Node.js dependencies: gulp, webpack, Sass-Compiler, Autoprefixer, etc.
 
-'$ npm install'
+```bash
+$ npm install
+```
 
 Run the watch script
 
