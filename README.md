@@ -17,8 +17,6 @@ Use this section to remenber ideas..
 
 ### How to use Them.es
 
-[Documentation](https://them.es/starter-bootstrap/getting-started/)
-
 This Theme comes with a built in gulp/webpack task automation. Sass files will be compiled if changed, vendor prefixes will be added automatically and the CSS will be minified. JS source files will be bundled and minified.
 
 Prerequisites: Node.js (NPM) needs to be installed on your system
@@ -36,3 +34,7 @@ $ npm run watch
 ```
 
 Modify /assets/main.scss and /assets/main.js
+
+### Documentation
+[Them.es Doc](https://them.es/starter-bootstrap/getting-started/)
+[Bootstrap 5 - Doc](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
