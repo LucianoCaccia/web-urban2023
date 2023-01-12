@@ -2,7 +2,7 @@
 .htaccess
 /wp-admin
 /wp-includes
-/wp-content/plugins
+/wp-content/uploads
 
 # Default Themes
 wp-content/themes/index.php

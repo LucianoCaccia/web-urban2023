@@ -16,6 +16,9 @@ Use this section to remenber ideas..
 [Them.es is first taked option](https://them.es/starter-bootstrap/)
 
 ### How to use Them.es
+
+[Documentation](https://them.es/starter-bootstrap/getting-started/)
+
 This Theme comes with a built in gulp/webpack task automation. Sass files will be compiled if changed, vendor prefixes will be added automatically and the CSS will be minified. JS source files will be bundled and minified.
 
 Prerequisites: Node.js (NPM) needs to be installed on your system
