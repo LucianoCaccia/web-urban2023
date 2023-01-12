@@ -5,6 +5,9 @@
 
 [Read.me syntax helper](https://www.mygreatlearning.com/blog/readme-file/#:~:text=When%20you%20create%20a%20repository,be%20easily%20converted%20to%20text.)
 
+## Developer Notes
+Use this section to remenber ideas..
+
 ## Theme options
 [Bootscore](https://bootscore.me/)
 
