@@ -17,6 +17,7 @@ Use this section to remenber ideas..
 
 [Extending WordPress With CCT](https://www.smashingmagazine.com/2015/04/extending-wordpress-custom-content-types/)
 
+
 ## Theme options
 [Bootscore](https://bootscore.me/)
 
@@ -34,7 +35,7 @@ Open the Project directory / in Terminal and install the required Node.js depend
 $ npm install
 ```
 
-Run the watch script
+Run the watch script on /wp/wp-content/themes/ue-theme
 
 ```bash
 $ npm run watch
