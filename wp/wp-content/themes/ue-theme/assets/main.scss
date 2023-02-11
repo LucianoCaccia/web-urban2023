@@ -164,7 +164,10 @@ img {
 		height: auto;
 	}
 }
-
+/* Pre Header */ 
+.pre-header {
+	background-color: #d4f8ff7b;
+}
 /* Header */
 
 #header {
@@ -174,7 +177,7 @@ img {
 }
 
 .bg-light {
-	background-color: #0dcaf0 !important;
+	background-color: #2dceee5c !important;
 }
 
 .navbar-brand {
@@ -194,13 +197,13 @@ img {
 
 #main {
 	margin-top: $spacer;
-	background-color:#495057;
+	background-color:#e6e6e6;
 }
 
 /* Footer */
 
 #footer {
-	background-color: #fff;
+	background-color: rgb(255, 218, 218);
 
 	p {
 		margin-top: 10px;
