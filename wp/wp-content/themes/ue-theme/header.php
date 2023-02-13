@@ -51,15 +51,15 @@
 				</button>
 
 				<div id="navbar" class="collapse navbar-collapse">
-					<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<div class="input-group">
-							<label>
-								<i class="bi bi-search"></i>
-								<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
-								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->
-							</label>
-						</div>
-					</form>
+					<label>
+						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
+								<span class="">
+									<i class="bi bi-search"></i>
+									<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
+								</span>
+								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->						
+						</form>
+					</label>
 					<?php
 						// Loading WordPress Custom Menu (theme_location).
 						wp_nav_menu(
