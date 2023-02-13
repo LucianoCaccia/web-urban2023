@@ -46,3 +46,4 @@ Modify /assets/main.scss and /assets/main.js
 ### Documentation
 [Them.es Doc](https://them.es/starter-bootstrap/getting-started/)
 [Bootstrap 5 - Doc](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+[Bootstrap Library Icons](https://icons.getbootstrap.com/#icons)
