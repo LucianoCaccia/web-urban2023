@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<?php wp_head(); ?>
+	<link href="/wp-content/themes/ue-theme/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <?php
@@ -51,7 +52,8 @@
 				<div id="navbar" class="collapse navbar-collapse">
 					<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<div class="input-group">
-							<label>Search
+							<label>
+								<i class="bi bi-search"></i>
 								<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
 								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->
 							</label>
