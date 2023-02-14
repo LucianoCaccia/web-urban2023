@@ -3,7 +3,7 @@
  * Plugin Name: Urban Estate - Custom Content Type
  * Plugin URI: http://www.tooit.com
  * Description: Define custom content types for Urban Estate
- * Version: Version: 1.0
+ * Version: Version: 2.0
  * Author: Luciano Caccia
  * Author URI: http://www.tooit.com
  * License: A "Slug" license name e.g. GPL2
@@ -82,6 +82,6 @@ function ue_taxonomies_project() {
     'hierarchical' => true,
     'show_admin_column'	=> true,
   );
-  register_taxonomy( 'project_cat', 'project', $args );
+  register_taxonomy( 'project_cat', 'projecto', $args );
 }
 add_action( 'init', 'ue_taxonomies_project', 0 );
