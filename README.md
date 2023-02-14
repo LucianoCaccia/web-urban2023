@@ -49,3 +49,6 @@ Modify /assets/main.scss and /assets/main.js
 [Bootstrap 5 - Doc](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 [Bootstrap Library Icons](https://icons.getbootstrap.com/#icons)
+
+### Initial credentials
+DB: root / password / wordpress
