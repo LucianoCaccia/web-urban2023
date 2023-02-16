@@ -7,6 +7,7 @@
 	<?php wp_head(); ?>
 	<!-- adding bootstrap icons -->
 	<link href="/wp-content/themes/ue-theme/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <?php
@@ -54,7 +55,6 @@
 					<label>
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
 								<span class="">
-									<i class="bi bi-search"></i>
 									<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
 								</span>
 								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->						
