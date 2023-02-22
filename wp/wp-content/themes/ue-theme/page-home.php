@@ -45,6 +45,28 @@ the_post();
 </div><!-- /#post-<?php the_ID(); ?> -->
 
 <section id="proyectos-slider">
+		<!-- Projectos Loop -->
+		<?php $args = array(
+    		'post_type' => 'proyecto'
+    		// 'posts_per_page' => 3
+			);
+		$the_query = new WP_Query( $args ); ?>
+
+		<?php if ( $the_query->have_posts() ) : ?>
+
+    	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        	<h2><?php the_title(); ?></h2>
+    	<?php endwhile; ?>
+
+    	<?php wp_reset_postdata(); ?>
+
+		<?php endif; ?>
+		<!-- End loop -->
+
+
+
+
+
 		<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">

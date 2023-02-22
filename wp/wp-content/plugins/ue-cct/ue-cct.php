@@ -14,29 +14,29 @@
 // WP custom content type Project creation
 function ue_cct_project() {
   $labels = array(
-    'name'               => _x( 'Projects', 'post type general name' ),
-    'singular_name'      => _x( 'Project', 'post type singular name' ),
-    'add_new'            => _x( 'Add New', 'project' ),
-    'add_new_item'       => __( 'Add New Project' ),
+    'name'               => _x( 'Proyectos', 'post type general name' ),
+    'singular_name'      => _x( 'Proyecto', 'post type singular name' ),
+    'add_new'            => _x( 'Agregar nuevo PR', 'proyecto' ),
+    'add_new_item'       => __( 'Agregar nuevo Proyecto' ),
     'edit_item'          => __( 'Edit Project' ),
     'new_item'           => __( 'New Project' ),
-    'all_items'          => __( 'All Projects' ),
+    'all_items'          => __( 'Todos los proyectos' ),
     'view_item'          => __( 'View Projects' ),
     'search_items'       => __( 'Search Projects' ),
     'not_found'          => __( 'No Projects found' ),
     'not_found_in_trash' => __( 'No Projects found in the Trash' ),
     'parent_item_colon'  => '',
-    'menu_name'          => 'Projects'
+    'menu_name'          => 'Proyectos'
   );
   $args = array(
     'labels'        => $labels,
-    'description'   => 'Manage the Projects for Urban State',
+    'description'   => 'Administrar ptoyectos en Urban State',
     'public'        => true,
     'menu_position' => 5,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'has_archive'   => true,
   );
-  register_post_type( 'projecto', $args );
+  register_post_type( 'proyecto', $args );
 }
 add_action( 'init', 'ue_cct_project' );
 
@@ -65,23 +65,23 @@ add_filter( 'post_updated_messages', 'ue_cct_messages' );
 // WP Taxonomiy for Projects
 function ue_taxonomies_project() {
   $labels = array(
-    'name'              => _x( 'Projects Categories', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Project Category', 'taxonomy singular name' ),
+    'name'              => _x( 'Categoría de PR', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Categoría de proyecto', 'taxonomy singular name' ),
     'search_items'      => __( 'Search Projects Categories' ),
-    'all_items'         => __( 'All Projects Categories' ),
+    'all_items'         => __( 'Todas las categorías' ),
     'parent_item'       => __( 'Parent Projects Category' ),
     'parent_item_colon' => __( 'Parent Projects Category:' ),
     'edit_item'         => __( 'Edit Project Category' ),
     'update_item'       => __( 'Update Project Category' ),
-    'add_new_item'      => __( 'Add New Project Category' ),
+    'add_new_item'      => __( 'Agregar nueva' ),
     'new_item_name'     => __( 'New Project Category' ),
-    'menu_name'         => __( 'Project Categories' ),
+    'menu_name'         => __( 'Categorías de PR' ),
   );
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
     'show_admin_column'	=> true,
   );
-  register_taxonomy( 'project_cat', 'projecto', $args );
+  register_taxonomy( 'proyecto_categoria', 'proyecto', $args );
 }
 add_action( 'init', 'ue_taxonomies_project', 0 );
