@@ -52,3 +52,7 @@ Modify /assets/main.scss and /assets/main.js
 
 ### Initial credentials
 DB: root / password / wordpress
+
+#### Custom fields
+https://www.advancedcustomfields.com/resources/
+
