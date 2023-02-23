@@ -50,6 +50,8 @@ Modify /assets/main.scss and /assets/main.js
 
 [Bootstrap Library Icons](https://icons.getbootstrap.com/#icons)
 
+[Bootstrap 4 Carousel Card Slider](https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/)
+
 ### Initial credentials
 DB: root / password / wordpress
 

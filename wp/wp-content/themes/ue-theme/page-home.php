@@ -61,12 +61,13 @@ the_post();
 			<!-- <?php $id = get_the_ID() ?> -->
 			<!-- <span class="badge text-bg-success"><?php the_field('amenities'); ?> </span> -->
 			<!-- <span class="badge text-bg-warning"><?php the_field('avance'); ?></span> -->
-
-			<div class="carousel-item "> <!-- pls add active class on first -->
+			<?php $post_n = $post_n + 1?>
+			<?php ($post_n == 1) ? $post_class = "active" : $post_class = "" ?>
+			<div class="carousel-item <?php echo $post_class ?>">
 				<div class="card">
 					<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
 					<div class="card-body">
-						<h5 class="card-title"><?php the_title(); ?></h5>
+						<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n?></span>
 						<p class="card-text"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></p>
 						<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 					</div>
