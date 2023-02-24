@@ -1,5 +1,5 @@
 # Wordpress ignored files & folders
-.htaccess
+
 /wp-admin
 /wp-includes
 /wp-content/uploads
