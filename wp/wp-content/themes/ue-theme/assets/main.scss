@@ -197,7 +197,6 @@ img {
 
 #main {
 	margin-top: $spacer;
-	background-color:#e6e6e6;
 }
 
 /* Footer */
@@ -424,7 +423,14 @@ img {
 	display: none;
   }
 
-  // Section proyectos-slider
+/** HOMEPAGE template **/ 
+//  Main section
+main.homepage {
+	padding: 0px;
+	margin-top: 0px !important;
+}
+
+// Section proyectos-slider
   .carousel-inner {
 	padding: 1em;
   }

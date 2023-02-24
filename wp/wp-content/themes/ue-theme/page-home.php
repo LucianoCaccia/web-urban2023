@@ -11,7 +11,7 @@ the_post();
 ?>
 
 <!-- Add main tag to each one template page -->
-<main id="main" class="container-fluid"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
+<main id="main" class="container-fluid homepage"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
 	<?php
 		// If Single or Archive (Category, Tag, Author or a Date based page).
 		if ( is_single() || is_archive() ) :
@@ -21,7 +21,7 @@ the_post();
 	<?php
 		endif;
 	?>
-	<section id="slider-video" class="container-fluid">
+	<section id="slider-video" class="fluid">
 		<video loop="true" autoplay="autoplay" muted src="/wp-content/themes/ue-theme/assets/forest.mp4" type="video/mp4" class="hover-to-play w-100"></video>
 	</section>
 
