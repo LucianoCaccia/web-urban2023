@@ -1,5 +1,4 @@
 // Section: proyectos-slider
-console.log("aca estoy");
 var multipleCardCarousel = document.querySelector(
     "#carouselExampleControls"
   );
@@ -31,6 +30,12 @@ var multipleCardCarousel = document.querySelector(
   } else {
     $(multipleCardCarousel).addClass("slide");
   }
+
+// Video autoplay on mouse over
+const clip = document.querySelectorAll(".hover-to-play");
+for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", function (e) { clip[i].play();
+  }); clip[i].addEventListener("mouseout", function (e) { clip[i].pause(); }); }
+
 
 // Webpack Imports
 import * as bootstrap from 'bootstrap';

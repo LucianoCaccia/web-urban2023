@@ -21,7 +21,11 @@ the_post();
 	<?php
 		endif;
 	?>
+	<section id="slider-video" class="container-fluid">
+		<video loop="true" autoplay="autoplay" muted src="/wp-content/themes/ue-theme/assets/forest.mp4" type="video/mp4" class="hover-to-play w-100"></video>
+	</section>
 
+	
 <!-- End Main -->
 
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'content container' ); ?>>
