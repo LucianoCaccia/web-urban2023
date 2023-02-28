@@ -16,9 +16,13 @@
 		<footer id="footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'ue-theme' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
+					<div class="col-md-2">
+						<p>Logo Urban Estate</p>
+						<p>Social Networks</p>
 					</div>
+					<div class="col-md-6 mt-4 pt-1">
+						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347 - contacto@urbanestate.com.ar</small>
+					</div>					
 
 					<?php
 						if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
@@ -30,7 +34,7 @@
 							wp_nav_menu(
 								array(
 									'container'       => 'nav',
-									'container_class' => 'col-md-6',
+									'container_class' => 'col-md-4 mt-4',
 									//'fallback_cb'     => 'WP_Bootstrap4_Navwalker_Footer::fallback',
 									'walker'          => new WP_Bootstrap4_Navwalker_Footer(),
 									'theme_location'  => 'footer-menu',

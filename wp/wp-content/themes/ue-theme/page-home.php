@@ -137,7 +137,7 @@ the_post();
 			<div class="text-center" style="position: relative; top: -11rem; height:0">
 				<h1>Conocé tu próxima inversión</h1>
 				<h1>Tomemos un café</h1>
-				<a href="./project_cat/todos" class="btn btn-primary">Ver todos</a>
+				<a href="#contact-form" class="btn btn-primary">Escríbenos</a>
 			</div>
 	</div>
 </section>
@@ -169,17 +169,79 @@ the_post();
 
 <section id="numeros" class="mb-5 mt-3">
 	<div class="container-fluid pt-3 pb-3" style="background-color:slategrey;">
-		<div class="container">
-			<div class="col-2-md">Número</div>
-			<div class="col-2-md">Número</div>
+		<div class="container text-center">
+			<div class="row align-items-end">
+				<div class="col"><h1 class="display-1">3</h1><span>PAÍSES</span></div>
+				<div class="col"><h1 class="display-1">15</h1><span>AÑOS DE EXPERIENCIA</span></div>
+				<div class="col"><h1 class="display-1">60</h1><span>DESARROLLOS</span></div>
+				<div class="col"><h1 class="display-1">6000</h1><span>CLIENTES FELICES</span></div>
+			</div>
 		</div>
-
 	</div>
-
 </section>
 
-<section id="contact-form" class="fluid">
-
+<section id="contact-form" class="fluid mb-3">
+			<div class="container">
+			<h1 class="entry-title">Contactanos</h1>
+				<div class="row">
+					<div class="col">
+					<form class="row g-3">
+						<div class="col-md-6">
+							<label for="inputEmail4" class="form-label">Email</label>
+							<input type="email" class="form-control" id="inputEmail4">
+						</div>
+						<div class="col-md-6">
+							<label for="inputPassword4" class="form-label">Password</label>
+							<input type="password" class="form-control" id="inputPassword4">
+						</div>
+						<div class="col-12">
+							<label for="inputAddress" class="form-label">Address</label>
+							<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+						</div>
+						<div class="col-12">
+							<label for="inputAddress2" class="form-label">Address 2</label>
+							<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+						</div>
+						<div class="col-md-6">
+							<label for="inputCity" class="form-label">City</label>
+							<input type="text" class="form-control" id="inputCity">
+						</div>
+						<div class="col-md-4">
+							<label for="inputState" class="form-label">State</label>
+							<select id="inputState" class="form-select">
+							<option selected>Choose...</option>
+							<option>...</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<label for="inputZip" class="form-label">Zip</label>
+							<input type="text" class="form-control" id="inputZip">
+						</div>
+						<div class="col-12">
+							<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck">
+							<label class="form-check-label" for="gridCheck">
+								Check me out
+							</label>
+							</div>
+						</div>
+						<div class="col-12">
+							<button type="submit" class="btn btn-primary">Sign in</button>
+						</div>
+						</form>
+					</div>
+					<div class="col offset-1">
+						<h3>UNITE A LA FAMILIA</h3>
+						<p>ARGENTINA: (+5411) 5258·8788</p>
+						<p>URUGUAY: (+598) 2927·2347</p>
+						<p>contacto@urbanestate.com.ar</p>
+						<i class="bi bi-facebook"></i><span> @UrbanEstateLive</span><br>
+						<i class="bi bi-instagram"></i><span> @UrbanEstateLive</span><br>
+						<i class="bi bi-youtube"></i><span> @urbanestate4035</span><br>
+						<i class="bi bi-linkedin"></i><span> company/urban-estate-live/</span>
+					</div>
+				</div>
+			</div>
 </section>
 
 
