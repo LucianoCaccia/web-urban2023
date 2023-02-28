@@ -142,20 +142,46 @@ the_post();
 	</div>
 </section>
 
-<section id="servicios">
-	<div class="container">
+<section id="servicios" class="mb-5 mt-3">
+	<div class="container-md">
 		<h1 class="entry-title">Servicios</h1>
 		<div class="row">
-			<div class="col-md-6"
-				<span>Invertí en vivienda</span>
+			<div class="col-md-5">
+				<div class="card text-bg-dark">
+					<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
+					<div class="card-img-overlay">
+						<h5 class="card-title">Invertí en vivienda</h5>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-6"
-				<span>Aumentá tu rentabilidad</span>
+			<div class="col-md-5 offset-md-2">
+				<div class="card text-bg-dark">
+						<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
+						<div class="card-img-overlay">
+							<h5 class="card-title">Aumentá tu rentabilidad</h5>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+</section>
+
+<section id="numeros" class="mb-5 mt-3">
+	<div class="container-fluid pt-3 pb-3" style="background-color:slategrey;">
+		<div class="container">
+			<div class="col-2-md">Número</div>
+			<div class="col-2-md">Número</div>
+		</div>
+
+	</div>
 
 </section>
+
+<section id="contact-form" class="fluid">
+
+</section>
+
 
 <?php
 	// If comments are open or we have at least one comment, load up the comment template.
