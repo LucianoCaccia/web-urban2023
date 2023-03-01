@@ -79,7 +79,7 @@ the_post();
 			</ul> <!-- content pills -->
 				<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-arg" role="tabpanel" aria-labelledby="pills-arg-tab" tabindex="0">
-					<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+					<div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
 						<div class="carousel-inner">
 						<!-- Projectos Loop -->
 						<?php $args = array(
@@ -90,14 +90,14 @@ the_post();
 						$the_query = new WP_Query( $args ); ?>
 						<?php if ( $the_query->have_posts() ) : ?>
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n = $post_n + 1?>
-							<?php ($post_n == 1) ? $post_class = "active" : $post_class = "" ?>
+							<?php $post_n_arg = $post_n_arg + 1?>
+							<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>
 							
 							<div class="carousel-item <?php echo $post_class ?>">
 								<div class="card">
 									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
 									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n?></span> <span><?php echo $pais;?></span>
+										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_arg?></span> <span><?php echo $pais;?></span>
 										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 									</div>
 								</div>
@@ -107,18 +107,18 @@ the_post();
 						<?php endif; ?>
 
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Previous</span>
 						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
 						</button>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="pills-uru" role="tabpanel" aria-labelledby="pills-uru-tab" tabindex="0">
-				<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+					<div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
 						<div class="carousel-inner">
 						<!-- Projectos Loop -->
 						<?php $args = array(
@@ -129,14 +129,14 @@ the_post();
 						$the_query = new WP_Query( $args ); ?>
 						<?php if ( $the_query->have_posts() ) : ?>
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n = $post_n + 1?>
-							<?php ($post_n == 1) ? $post_class = "active" : $post_class = "" ?>
+							<?php $post_n_uru = $post_n_uru + 1?>
+							<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>
 							
 							<div class="carousel-item <?php echo $post_class ?>">
 								<div class="card">
 									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
 									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n?></span> <span><?php echo $pais;?></span>
+										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span>
 										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 									</div>
 								</div>
@@ -146,19 +146,19 @@ the_post();
 						<?php endif; ?>
 
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Previous</span>
 						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
 						</button>
-					</div>
-				</div>					
+
+					</div>					
 				</div>
 				<div class="tab-pane fade" id="pills-esp" role="tabpanel" aria-labelledby="pills-esp-tab" tabindex="0">
-				<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+					<div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
 						<div class="carousel-inner">
 						<!-- Projectos Loop -->
 						<?php $args = array(
@@ -169,14 +169,14 @@ the_post();
 						$the_query = new WP_Query( $args ); ?>
 						<?php if ( $the_query->have_posts() ) : ?>
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n = $post_n + 1?>
-							<?php ($post_n == 1) ? $post_class = "active" : $post_class = "" ?>
+							<?php $post_n_esp = $post_n_esp + 1?>
+							<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>
 							
 							<div class="carousel-item <?php echo $post_class ?>">
 								<div class="card">
 									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
 									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n?></span> <span><?php echo $pais;?></span>
+										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span>
 										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 									</div>
 								</div>
@@ -186,16 +186,16 @@ the_post();
 						<?php endif; ?>
 
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Previous</span>
 						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselEspControls" data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
 						</button>
-					</div>
-				</div>					
+						</div>
+					</div>					
 				</div>
 			</div>
 	</div>
