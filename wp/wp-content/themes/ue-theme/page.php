@@ -22,7 +22,6 @@ the_post();
 		endif;
 	?>
 <!-- End Main -->
-
 <div class="row">
 	<div class="col-md-8 order-md-2 col-sm-12">
 		<div id="post-<?php the_ID(); ?>" <?php post_class( 'content' ); ?>>
