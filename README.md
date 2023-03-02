@@ -52,6 +52,8 @@ Modify /assets/main.scss and /assets/main.js
 
 [Bootstrap 4 Carousel Card Slider](https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/)
 
+Animations doc [Animate IT](https://www.downloads.eleopard.in/class-generator-wordpress.html)
+
 ### Initial credentials
 DB: root / password / wordpress
 
