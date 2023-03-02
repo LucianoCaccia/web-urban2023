@@ -1,10 +1,10 @@
 // Section: proyectos-slider
-// carousel Arg
-var multipleCardCarousel = document.querySelector(
+// Carousel Arg
+var multipleCardCarouselArg = document.querySelector(
     "#carouselArgControls"
   );
   if (window.matchMedia("(min-width: 768px)").matches) {
-    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+    var carousel = new bootstrap.Carousel(multipleCardCarouselArg, {
       interval: true,
     });
     var carouselWidth = $(".carousel-inner")[0].scrollWidth;
@@ -13,7 +13,7 @@ var multipleCardCarousel = document.querySelector(
     $("#carouselArgControls .carousel-control-next").on("click", function () {
       if (scrollPosition < carouselWidth - cardWidth * 4) {
         scrollPosition += cardWidth;
-        $("#carouselArg .carousel-inner").animate(
+        $("#carouselArgControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
         );
@@ -29,48 +29,48 @@ var multipleCardCarousel = document.querySelector(
       }
     });
   } else {
-    $(multipleCardCarousel).addClass("slide");
+    $(multipleCardCarouselArg).addClass("slide");
   }
 
-  // carousel Uru
-  var multipleCardCarousel = document.querySelector(
-    "#carouselUruControls"
-  );
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-      interval: true,
-    });
-    var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-    var cardWidth = $(".carousel-item").width();
-    var scrollPosition = 0;
-    $("#carouselUruControls .carousel-control-next").on("click", function () {
-      if (scrollPosition < carouselWidth - cardWidth * 4) {
-        scrollPosition += cardWidth;
-        $("#carouselUru .carousel-inner").animate(
-          { scrollLeft: scrollPosition },
-          600
-        );
-      }
-    });
-    $("#carouselUruControls .carousel-control-prev").on("click", function () {
-      if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
-        $("#carouselUruControls .carousel-inner").animate(
-          { scrollLeft: scrollPosition },
-          600
-        );
-      }
-    });
-  } else {
-    $(multipleCardCarousel).addClass("slide");
-  }
+// Carousel Uru
+var multipleCardCarouselUru = document.querySelector(
+  "#carouselUruControls"
+);
+if (window.matchMedia("(min-width: 768px)").matches) {
+  var carousel = new bootstrap.Carousel(multipleCardCarouselUru, {
+    interval: true,
+  });
+  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+  var cardWidth = $(".carousel-item").width();
+  var scrollPosition = 0;
+  $("#carouselUruControls .carousel-control-next").on("click", function () {
+    if (scrollPosition < carouselWidth - cardWidth * 4) {
+      scrollPosition += cardWidth;
+      $("#carouselUruControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+  $("#carouselUruControls .carousel-control-prev").on("click", function () {
+    if (scrollPosition > 0) {
+      scrollPosition -= cardWidth;
+      $("#carouselUruControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+} else {
+  $(multipleCardCarouselUru).addClass("slide");
+}
 
-// carousel Esp
-var multipleCardCarousel = document.querySelector(
+// Carousel Esp
+var multipleCardCarouselEsp = document.querySelector(
   "#carouselEspControls"
 );
 if (window.matchMedia("(min-width: 768px)").matches) {
-  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+  var carousel = new bootstrap.Carousel(multipleCardCarouselEsp, {
     interval: true,
   });
   var carouselWidth = $(".carousel-inner")[0].scrollWidth;
@@ -79,7 +79,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   $("#carouselEspControls .carousel-control-next").on("click", function () {
     if (scrollPosition < carouselWidth - cardWidth * 4) {
       scrollPosition += cardWidth;
-      $("#carouselEsp .carousel-inner").animate(
+      $("#carouselEspControls .carousel-inner").animate(
         { scrollLeft: scrollPosition },
         600
       );
@@ -95,10 +95,8 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     }
   });
 } else {
-  $(multipleCardCarousel).addClass("slide");
+  $(multipleCardCarouselEsp).addClass("slide");
 }
-
-
 
 
 // Video autoplay on mouse over
