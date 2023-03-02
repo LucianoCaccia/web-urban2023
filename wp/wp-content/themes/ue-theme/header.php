@@ -52,6 +52,7 @@
 				</button>
 
 				<div id="navbar" class="collapse navbar-collapse">
+
 					<label>
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
 								<span class="">
@@ -82,3 +83,4 @@
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>
+

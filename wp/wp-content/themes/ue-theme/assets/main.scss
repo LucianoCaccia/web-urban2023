@@ -149,7 +149,6 @@ img {
  */
 
 /* WordPress Embeds */
-
 .post-thumbnail,
 .wp-video,
 .embed-responsive {
@@ -164,12 +163,13 @@ img {
 		height: auto;
 	}
 }
+
 /* Pre Header */ 
 .pre-header {
 	background-color: #d4f8ff7b;
 }
-/* Header */
 
+/* Header */
 #header {
 	.search-form {
 		min-width: 200px;
@@ -178,6 +178,7 @@ img {
 
 .bg-light {
 	background-color: #2dceee5c !important;
+
 }
 
 .navbar-brand {
@@ -185,6 +186,7 @@ img {
 		height: 40px;
 	}
 }
+
 .navbar-collapse {
 	justify-content: flex-end;
 }

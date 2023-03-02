@@ -10,6 +10,7 @@ Use this section to remenber ideas..
 
 [readme.md syntax tool](https://readme.so/es/editor)
 
+
 [Animations:](https://lottiefiles.com/blog/guides/best-wordpress-plugins-for-animations)
 
 ### How to create custom content type
@@ -18,12 +19,15 @@ Use this section to remenber ideas..
 [Extending WordPress With CCT](https://www.smashingmagazine.com/2015/04/extending-wordpress-custom-content-types/)
 
 
+
 ## Theme options
 [Bootscore](https://bootscore.me/)
 
 [Them.es is first taked option](https://them.es/starter-bootstrap/)
 
 ### How to use Them.es
+
+
 
 This Theme comes with a built in gulp/webpack task automation. Sass files will be compiled if changed, vendor prefixes will be added automatically and the CSS will be minified. JS source files will be bundled and minified.
 
@@ -35,7 +39,9 @@ Open the Project directory / in Terminal and install the required Node.js depend
 $ npm install
 ```
 
+
 Run the watch script on /wp/wp-content/themes/ue-theme
+
 
 ```bash
 $ npm run watch
@@ -57,4 +63,5 @@ DB: root / password / wordpress
 
 #### Custom fields
 https://www.advancedcustomfields.com/resources/
+
 
