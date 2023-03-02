@@ -66,144 +66,135 @@ the_post();
 <section id="proyectos-slider">
 	<div class="container">
 		<h1 class="entry-title">Proyectos</h1>
-			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-				<li class="nav-item" role="presentation">
-					<button class="nav-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
-				</li>
-				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="pills-uru-tab" data-bs-toggle="pill" data-bs-target="#pills-uru" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">URUGUAY</button>
-				</li>
-				<li class="nav-item" role="presentation">
-					<button class="nav-link" id="pills-esp-tab" data-bs-toggle="pill" data-bs-target="#pills-esp" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ESPAÑA</button>
-				</li>
-			</ul> <!-- content pills -->
-				<div class="tab-content" id="pills-tabContent">
-				<div class="tab-pane fade show active" id="pills-arg" role="tabpanel" aria-labelledby="pills-arg-tab" tabindex="0">
-					<div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
-						<div class="carousel-inner">
-						<!-- Projectos Loop -->
-						<?php $args = array(
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="pills-uru-tab" data-bs-toggle="pill" data-bs-target="#pills-uru" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">URUGUAY</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="pills-esp-tab" data-bs-toggle="pill" data-bs-target="#pills-esp" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ESPAÑA</button>
+			</li>
+		</ul> 
+		<div class="tab-content" id="pills-tabContent"> <!-- content pills -->
+			<div class="tab-pane fade show active" id="pills-arg" role="tabpanel" aria-labelledby="pills-arg-tab" tabindex="0">
+				<div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					<!-- Projectos Loop Arg -->
+					<?php $args = array(
 						'post_type' => 'proyecto',
 						'meta_key' => 'pais',
 						'meta_value' => 'arg'
-						);
-						$the_query = new WP_Query( $args ); ?>
-						<?php if ( $the_query->have_posts() ) : ?>
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n_arg = $post_n_arg + 1?>
-							<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>
-							
-							<div class="carousel-item <?php echo $post_class ?>">
-								<div class="card">
-									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_arg?></span> <span><?php echo $pais;?></span>
-										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
-									</div>
+					);
+					$the_query = new WP_Query( $args ); ?>
+					<?php if ( $the_query->have_posts() ) : ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php $post_n_arg = $post_n_arg + 1?>
+					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
+						<div class="carousel-item <?php echo $post_class ?>">
+							<div class="card">
+								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+								<div class="card-body">
+									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_arg?></span> <span><?php echo $pais;?></span>
+									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 								</div>
 							</div>
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
 					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
 				</div>
-				<div class="tab-pane fade" id="pills-uru" role="tabpanel" aria-labelledby="pills-uru-tab" tabindex="0">
-					<div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
-						<div class="carousel-inner">
-						<!-- Projectos Loop -->
-						<?php $args = array(
+			</div>
+			<div class="tab-pane fade" id="pills-uru" role="tabpanel" aria-labelledby="pills-uru-tab" tabindex="0">
+				<div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					<!-- Projectos Loop Uru -->
+					<?php $args = array(
 						'post_type' => 'proyecto',
 						'meta_key' => 'pais',
 						'meta_value' => 'uru'
-						);
-						$the_query = new WP_Query( $args ); ?>
-						<?php if ( $the_query->have_posts() ) : ?>
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n_uru = $post_n_uru + 1?>
-							<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>
-							
-							<div class="carousel-item <?php echo $post_class ?>">
-								<div class="card">
-									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span>
-										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
-									</div>
+					);
+					$the_query = new WP_Query( $args ); ?>
+					<?php if ( $the_query->have_posts() ) : ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php $post_n_uru = $post_n_uru + 1?>
+					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
+						<div class="carousel-item <?php echo $post_class ?>">
+							<div class="card">
+								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+								<div class="card-body">
+									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span>
+									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 								</div>
 							</div>
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
-
-					</div>					
-				</div>
-				<div class="tab-pane fade" id="pills-esp" role="tabpanel" aria-labelledby="pills-esp-tab" tabindex="0">
-					<div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
-						<div class="carousel-inner">
-						<!-- Projectos Loop -->
-						<?php $args = array(
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>					
+			</div>
+			<div class="tab-pane fade" id="pills-esp" role="tabpanel" aria-labelledby="pills-esp-tab" tabindex="0">
+				<div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					<!-- Projectos Loop Esp -->
+					<?php $args = array(
 						'post_type' => 'proyecto',
 						'meta_key' => 'pais',
 						'meta_value' => 'esp'
-						);
-						$the_query = new WP_Query( $args ); ?>
-						<?php if ( $the_query->have_posts() ) : ?>
-						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php $post_n_esp = $post_n_esp + 1?>
-							<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>
-							
-							<div class="carousel-item <?php echo $post_class ?>">
-								<div class="card">
-									<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-									<div class="card-body">
-										<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span>
-										<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
-									</div>
+					);
+					$the_query = new WP_Query( $args ); ?>
+					<?php if ( $the_query->have_posts() ) : ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php $post_n_esp = $post_n_esp + 1?>
+					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
+						<div class="carousel-item <?php echo $post_class ?>">
+							<div class="card">
+								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+								<div class="card-body">
+									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span>
+									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
 								</div>
 							</div>
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselEspControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
-						</div>
-					</div>					
-				</div>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselEspControls" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>					
 			</div>
+		</div>
 	</div>
 
 	<div class="container text-center">
 		<a href="./project_cat/todos" class="btn btn-primary">Ver todos</a>
 	</div>
-	<!-- End loop -->
 </section>
 
 <section id="banner-proxima-inversion" class="fluid" style="">
