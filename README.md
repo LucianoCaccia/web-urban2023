@@ -10,12 +10,25 @@ Use this section to remenber ideas..
 
 [readme.md syntax tool](https://readme.so/es/editor)
 
+
+[Animations:](https://lottiefiles.com/blog/guides/best-wordpress-plugins-for-animations)
+
+### How to create custom content type
+[Custom content type programatically](https://www.cloudways.com/blog/how-to-create-custom-post-types-in-wordpress/)
+
+[Extending WordPress With CCT](https://www.smashingmagazine.com/2015/04/extending-wordpress-custom-content-types/)
+
+
+
 ## Theme options
 [Bootscore](https://bootscore.me/)
 
 [Them.es is first taked option](https://them.es/starter-bootstrap/)
 
 ### How to use Them.es
+
+
+
 This Theme comes with a built in gulp/webpack task automation. Sass files will be compiled if changed, vendor prefixes will be added automatically and the CSS will be minified. JS source files will be bundled and minified.
 
 Prerequisites: Node.js (NPM) needs to be installed on your system
@@ -26,10 +39,29 @@ Open the Project directory / in Terminal and install the required Node.js depend
 $ npm install
 ```
 
-Run the watch script
+
+Run the watch script on /wp/wp-content/themes/ue-theme
+
 
 ```bash
 $ npm run watch
 ```
 
 Modify /assets/main.scss and /assets/main.js
+
+### Documentation
+[Them.es Doc](https://them.es/starter-bootstrap/getting-started/)
+
+[Bootstrap 5 - Doc](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+[Bootstrap Library Icons](https://icons.getbootstrap.com/#icons)
+
+[Bootstrap 4 Carousel Card Slider](https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/)
+
+### Initial credentials
+DB: root / password / wordpress
+
+#### Custom fields
+https://www.advancedcustomfields.com/resources/
+
+
