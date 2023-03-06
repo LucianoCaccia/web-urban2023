@@ -44,7 +44,11 @@ get_header();
 
 <section id="proyectos-slider">
 	<div class="container">
-
+        <div class="mt-4 mb-4">
+            <h1 class="entry-title">ARGENTINA</h1>
+            <h2>BUENOS AIRES</h2>
+            <hr>
+        </div>
         <div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
                 <!-- Projectos Loop Arg -->
@@ -81,6 +85,11 @@ get_header();
             </button>
 		</div> <!-- end of slider -->
 
+        <div class="mt-4 mb-4">
+            <h1 class="entry-title">URUGUAY</h1>
+            <h2>MONTEVIDEO</h2>
+            <hr>
+        </div>        
         <div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
                 <!-- Projectos Loop Uru -->
@@ -117,6 +126,11 @@ get_header();
             </button>
 		</div> <!-- end of slider -->
 
+        <div class="mt-4 mb-4">
+            <h1 class="entry-title">ESPAÑA</h1>
+            <h2>MADRID</h2>
+            <hr>
+        </div>        
         <div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
                 <!-- Projectos Loop Esp -->
