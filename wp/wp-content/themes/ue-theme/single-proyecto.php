@@ -5,20 +5,36 @@
 
 get_header();
 
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-        
-        echo('<div>Estoy en single-proyecto.php</div>');
+// Breadcrumbs
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
 
-		get_template_part( 'content', 'single' );
+if ( have_posts() ) {
+	while ( have_posts() ) {
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-	endwhile;
-endif;
+		the_post(); ?>
+
+		<h2><?php the_title(); ?></h2>
+        <h4><?php the_permalink(); ?></h4>
+        <div><img src="<?php the_field('logo_pr');?>" alt="Logo del proyecto <?php the_title(); ?>">  </div>
+		<div class="col-6"><?php the_content(); ?></div>
+        <hr>
+
+        <h2>Tipología</h2>
+        <?php the_field('tipologia'); ?>
+
+        <h2>Amanities</h2>
+        <?php the_field('amenities'); ?>
+
+        <h2>Avance de obra</h2>
+        <?php the_field('avance'); ?>
+
+        <?php the_field('map'); ?>
+
+
+	<?php }
+}
 
 wp_reset_postdata();
 
@@ -28,6 +44,12 @@ if ( $count_posts->publish > '1' ) :
 	$next_post = get_next_post();
 	$prev_post = get_previous_post();
 ?>
+
+<h3>Mapa</h3>
+<div>
+
+</div>
+
 <hr class="mt-5">
 <div class="post-navigation d-flex justify-content-between">
 	<?php
