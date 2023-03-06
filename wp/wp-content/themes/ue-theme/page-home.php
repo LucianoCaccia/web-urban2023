@@ -43,6 +43,13 @@ the_post();
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 
+		<div class="content-over position-absolute">
+			<h1 class="display-2">RENTABILIDAD</h1>
+			<h1 class="display-2">EXPERIENCIA</h1>
+			<h1 class="display-2">EXELENCIA</h1>
+			<h2 class="display-3">Viví mejor, viví como querés</h2>
+		</div>
+
 	</section>
 
 	

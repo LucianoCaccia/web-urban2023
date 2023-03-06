@@ -37,6 +37,11 @@ get_header();
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 
+		<div class="content-over position-absolute">
+			<h1 class="display-2">Elegí tu mejor opción</h1>
+            <h1 class="display-2"> para invertir</h1>
+		</div>        
+
 	</section>
 
 <!-- End Main -->
