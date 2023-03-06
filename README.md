@@ -5,11 +5,17 @@
 
 [Read.me syntax helper](https://www.mygreatlearning.com/blog/readme-file/#:~:text=When%20you%20create%20a%20repository,be%20easily%20converted%20to%20text.)
 
+### URLS Strategy
+- Listado de proyectos: /proyecto o /proyectos. Ver archive-proyecto.php
+
+### Administración del backend
+- Imagen o video del header page Proyectos. Administrar desde >Pages>Proyectos
+
+
 ## Developer Notes & tools
 Use this section to remenber ideas..
 
 [readme.md syntax tool](https://readme.so/es/editor)
-
 
 [Animations:](https://lottiefiles.com/blog/guides/best-wordpress-plugins-for-animations)
 
