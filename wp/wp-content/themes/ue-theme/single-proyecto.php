@@ -29,9 +29,10 @@ if ( have_posts() ) {
 
         <h2>Avance de obra</h2>
         <?php the_field('avance'); ?>
-
-        <?php the_field('map'); ?>
-
+        
+        <?php $pepe = get_field('map_id',false); ?>
+        <h3>Map con shortode = <?php echo($pepe); ?></h3>
+        <?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
 
 	<?php }
 }
@@ -45,10 +46,6 @@ if ( $count_posts->publish > '1' ) :
 	$prev_post = get_previous_post();
 ?>
 
-<h3>Mapa</h3>
-<div>
-
-</div>
 
 <hr class="mt-5">
 <div class="post-navigation d-flex justify-content-between">

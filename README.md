@@ -11,6 +11,13 @@
 ### Administración del backend
 - Imagen o video del header page Proyectos. Administrar desde >Pages>Proyectos
 
+#### Crear y publicar mapas.
+- Crear el mapa usando >MapPress>Maps (/wp-admin/admin.php?page=mappress_maps)
+- Fijarse el Map ID una vez creado.
+- Ir a el proyecto y en el campo Map ID ingresar el nro de [ID]
+- Update y listo
+
+
 
 ## Developer Notes & tools
 Use this section to remenber ideas..
