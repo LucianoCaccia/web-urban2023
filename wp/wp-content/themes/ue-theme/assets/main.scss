@@ -479,3 +479,12 @@ main.videofull {
 	  height: 17em;
 	}
   }
+
+  // Project Single
+.grid-item {
+	width: 32%; // define cantidad de columnas
+	margin-bottom: 10px;
+	img {
+		max-width: 99%;
+	}
+}

@@ -35,6 +35,28 @@ if ( have_posts() ) {
         <?php $pepe = get_field('map_id',false); ?>
         <?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
 
+        <?php
+        if( class_exists('Dynamic_Featured_Image') ) {
+        global $dynamic_featured_image;
+        $featured_images = $dynamic_featured_image->get_featured_images( );
+        } ?>
+
+        <!-- Image Gallery -->
+        <div class="container">
+            <div class="row">
+                <div class="grid">
+                    <?php foreach ($featured_images as $key => $value): ?>
+                        <?php $img_feature_url = $value['full']; ?>
+                        <?php $img_feature_alt = $dynamic_featured_image->get_image_alt($img_feature_url);?>
+                        <div class="grid-item">
+                            <img src="<?php echo($img_feature_url);?>" alt="<?php echo($img_feature_alt); ?>">
+                        </div>
+                        
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
 	<?php }
 }
 
