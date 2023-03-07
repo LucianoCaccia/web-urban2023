@@ -14,7 +14,7 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 
 		the_post(); ?>
-
+        <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
 		<h2><?php the_title(); ?></h2>
         <h4><?php the_permalink(); ?></h4>
         <div><img src="<?php the_field('logo_pr');?>" alt="Logo del proyecto <?php the_title(); ?>">  </div>
@@ -22,7 +22,9 @@ if ( have_posts() ) {
         <hr>
 
         <h2>Tipología</h2>
-        <?php the_field('tipologia'); ?>
+        <?php the_field('tipologia'); ?><br>
+
+        <a href="<?php the_field('pdf'); ?>" class="btn btn-primary" target="_blank">Descargar PDF</a>
 
         <h2>Amanities</h2>
         <?php the_field('amenities'); ?>
@@ -31,7 +33,6 @@ if ( have_posts() ) {
         <?php the_field('avance'); ?>
         
         <?php $pepe = get_field('map_id',false); ?>
-        <h3>Map con shortode = <?php echo($pepe); ?></h3>
         <?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
 
 	<?php }

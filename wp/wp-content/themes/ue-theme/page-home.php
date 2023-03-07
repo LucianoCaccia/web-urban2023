@@ -29,10 +29,10 @@ the_post();
 		$the_query = new WP_Query( $args ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
-		<?php $pepe = get_field('video_bg',$id_query->post->ID,[false]); ?>
-			<?php if ($pepe) : ?>
+		<?php $video_url = get_field('video_bg',$id_query->post->ID,[false]); ?>
+			<?php if ($video_url) : ?>
 				
-				<video loop="true" autoplay="autoplay" muted src="<?php echo $pepe;?>" type="video/mp4" class="hover-to-play w-100"></video>
+				<video loop="true" autoplay="autoplay" muted src="<?php echo $video_url;?>" type="video/mp4" class="hover-to-play w-100"></video>
 				
 			<?php else : ?>
 		
