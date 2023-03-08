@@ -11,7 +11,8 @@ the_post();
 ?>
 
 <!-- Add main tag to each one template page -->
-<main id="main" class="container-fluid homepage"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
+<main id="main" class="container-fluid videofull"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
+
 	<?php
 		// If Single or Archive (Category, Tag, Author or a Date based page).
 		if ( is_single() || is_archive() ) :
@@ -29,10 +30,10 @@ the_post();
 		$the_query = new WP_Query( $args ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
-		<?php $pepe = get_field('video_bg',$id_query->post->ID,[false]); ?>
-			<?php if ($pepe) : ?>
+		<?php $video_url = get_field('video_bg',$id_query->post->ID,[false]); ?>
+			<?php if ($video_url) : ?>
 				
-				<video loop="true" autoplay="autoplay" muted src="<?php echo $pepe;?>" type="video/mp4" class="hover-to-play w-100"></video>
+				<video loop="true" autoplay="autoplay" muted src="<?php echo $video_url;?>" type="video/mp4" class="hover-to-play w-100"></video>
 				
 			<?php else : ?>
 		
@@ -42,6 +43,13 @@ the_post();
 		<?php endwhile; ?>
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
+
+		<div class="content-over position-absolute">
+			<h1 class="display-2">RENTABILIDAD</h1>
+			<h1 class="display-2">EXPERIENCIA</h1>
+			<h1 class="display-2">EXELENCIA</h1>
+			<h2 class="display-3">Viví mejor, viví como querés</h2>
+		</div>
 
 	</section>
 
@@ -193,7 +201,7 @@ the_post();
 	</div>
 
 	<div class="container text-center">
-		<a href="./project_cat/todos" class="btn btn-primary">Ver todos</a>
+		<a href="./proyectos" class="btn btn-primary">Ver todos</a>
 	</div>
 </section>
 

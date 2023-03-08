@@ -427,10 +427,16 @@ img {
 
 /** HOMEPAGE template **/ 
 //  Main section
-main.homepage {
+
+main.videofull {
 	padding: 0px;
 	margin-top: 0px !important;
 }
+.content-over {
+	top: 50%;
+	padding-left: 5%;
+}
+
 
 // Section proyectos-slider
   .carousel-inner {
@@ -475,3 +481,13 @@ main.homepage {
 	  height: 17em;
 	}
   }
+
+  // Project Single
+.grid-item {
+	width: 32%; // define cantidad de columnas
+	margin-bottom: 10px;
+	img {
+		max-width: 99%;
+	}
+}
+

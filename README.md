@@ -5,11 +5,24 @@
 
 [Read.me syntax helper](https://www.mygreatlearning.com/blog/readme-file/#:~:text=When%20you%20create%20a%20repository,be%20easily%20converted%20to%20text.)
 
+### URLS Strategy
+- Listado de proyectos: /proyecto o /proyectos. Ver archive-proyecto.php
+
+### Administración del backend
+- Imagen o video del header page Proyectos. Administrar desde >Pages>Proyectos
+
+#### Crear y publicar mapas.
+- Crear el mapa usando >MapPress>Maps (/wp-admin/admin.php?page=mappress_maps)
+- Fijarse el Map ID una vez creado.
+- Ir a el proyecto y en el campo Map ID ingresar el nro de [ID]
+- Update y listo
+
+
+
 ## Developer Notes & tools
 Use this section to remenber ideas..
 
 [readme.md syntax tool](https://readme.so/es/editor)
-
 
 [Animations:](https://lottiefiles.com/blog/guides/best-wordpress-plugins-for-animations)
 
@@ -57,6 +70,8 @@ Modify /assets/main.scss and /assets/main.js
 [Bootstrap Library Icons](https://icons.getbootstrap.com/#icons)
 
 [Bootstrap 4 Carousel Card Slider](https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/)
+
+Animations doc [Animate IT](https://www.downloads.eleopard.in/class-generator-wordpress.html)
 
 ### Initial credentials
 DB: root / password / wordpress
