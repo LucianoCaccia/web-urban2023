@@ -2,11 +2,11 @@
 
 [Masonry website][def]
 
-[Colorbox Jquery](https://wordpress.org/plugins/jquery-colorbox/)
-
 [Dynamic Feature Image](https://github.com/ankitpokhrel/Dynamic-Featured-Image)
 
 [MapPress doc](https://mappresspro.com/mappress-documentation/#toc-create-a-map-with-the-gutenberg-block-editor)
+
+[Jquery LightBox Plugin](https://wordpress.org/plugins/wp-jquery-lightbox/#installation)
 
 ## para imprimir las features fotos desde template
 ```php
@@ -29,3 +29,5 @@
         <?php endforeach; ?>
 
 ```
+
+[wp_colorbox_media url="http://example.com/wp-content/uploads/image/lightbox.jpg" type="image" hyperlink="click here to open image"]
