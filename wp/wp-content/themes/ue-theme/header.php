@@ -24,11 +24,15 @@
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'ue-theme' ); ?></a>
 
 <div id="wrapper">
-	<header>
+	<header class="position-absolute w-100">
 		<!-- Pre header -->
-		<div class="pre-header container text-end">
-			<a href="#">contacto@urbanestate.com.ar</a>
-			<a href="#">+54 11 5258 8788</a>
+		<div class="pre-header text-end">
+			<div class="container">
+				<i class="bi bi-envelope me-2" style="font-size: 1rem; color: white;"></i>
+				<a href="#">contacto@urbanestate.com.ar</a>
+				<i class="bi bi-telephone ms-5 me-2" style="font-size: 1rem; color: white;"></i>
+				<a href="#">+54 11 5258 8788</a>
+			</div>
 		</div>
 		<!-- end pre-header -->
 		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
@@ -56,7 +60,7 @@
 					<label>
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
 								<span class="">
-									<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
+									<input type="search" name="s" class="search-field form-control" placeholder="" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
 								</span>
 								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->						
 						</form>

@@ -32,9 +32,9 @@ the_post();
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
 		<?php $video_url = get_field('video_bg',$id_query->post->ID,[false]); ?>
 			<?php if ($video_url) : ?>
-				
+				<div class="video-overflow">
 				<video loop="true" autoplay="autoplay" muted src="<?php echo $video_url;?>" type="video/mp4" class="hover-to-play w-100"></video>
-				
+				</div>
 			<?php else : ?>
 		
 				<img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
@@ -44,7 +44,7 @@ the_post();
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 
-		<div class="content-over position-absolute">
+		<div class="content-over position-absolute animated appear delay2 duration4">
 			<h1 class="display-2">RENTABILIDAD</h1>
 			<h1 class="display-2">EXPERIENCIA</h1>
 			<h1 class="display-2">EXELENCIA</h1>
@@ -59,10 +59,10 @@ the_post();
 <section id="live-somos">
 	<div class="container clearfix">
 		<div class="row">
-			<div class="col-1 offset-md-5">
-				<img src="https://dummyimage.com/300x300/ffe3ff/000000.png" width="100px" alt="">
+			<div class="col-1 offset-md-5 mt-5">
+				<img src="/wp-content/uploads/2023/03/live.somos_.png" width="100px" alt="">
 			</div>
-			<div class="col">
+			<div class="col mt-5">
 				<p>Urban Estate, una empresa de desarrolladores de emprendimientos inmobiliarios con oficina ubicada en av. libertador 7766, en el barrio de nuñez, buenos aires, argentina.</p>
 				<p>Realizamos proyectos a medida de los inversores, prevaleciendo siempre una buena ubicación y el mejor precio de reventa.</p>
 				<p>Trabajamos con un equipo de profesionales de diseño, construcción, administración y venta de inmuebles para brindar la mejor rentabilidad en su inversión.</p>

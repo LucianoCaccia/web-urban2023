@@ -52,6 +52,7 @@ $yellow: #ffc107;
 $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
+$white: #fff;
 
 // Fonts
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -166,25 +167,33 @@ img {
 
 /* Pre Header */ 
 .pre-header {
-	background-color: #d4f8ff7b;
+	position: relative;
+	background-color: #ffffff5a;
+	.container a {
+		color: $white;
+	}
+
 }
 
 /* Header */
 #header {
 	.search-form {
-		min-width: 200px;
+		min-width: 60px;
+	}
+	a.nav-link {
+		color:$white;
 	}
 }
 
 .bg-light {
-	background-color: #2dceee5c !important;
-
+	background-color: #ffffff00 !important;
 }
 
 .navbar-brand {
 	img {
 		height: 40px;
 	}
+	color: $white;
 }
 
 .navbar-collapse {
@@ -400,22 +409,23 @@ img {
 	background-image: url(../../node_modules/bootstrap-icons/icons/search.svg);
 	background-position: 5px center;
 	background-repeat: no-repeat;
-	background-size: 24px 24px;
+	background-size: 20px 20px;
 	border: none;
 	cursor: pointer;
-	height: 37px;
+	height: 30px;
 	margin: 3px 0;
 	padding: 0 0 0 34px;
 	position: relative;
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition:         width 400ms ease, background 400ms ease;
 	width: 0;
+	filter: invert(1);
   }
   
   .search-field:focus {
-	background-color: transparent;
-	border: solid #e9e9e9;
-	border-width: 0 0 1px 0;
+	background-color: #ffffff67;
+	border: solid #e9e9e900;
+	border-width: 0 0 0 0;
 	cursor: text;
 	outline: 0;
 	width: 230px;
@@ -431,10 +441,18 @@ img {
 main.videofull {
 	padding: 0px;
 	margin-top: 0px !important;
+	video {
+		z-index: -1;
+		position: relative;
+	}
+}
+.video-overflow {
+	background-color: #00000050;
 }
 .content-over {
-	top: 50%;
+	top: 30%;
 	padding-left: 5%;
+	color: white;
 }
 
 
