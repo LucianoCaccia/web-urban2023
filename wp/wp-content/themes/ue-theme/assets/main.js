@@ -115,7 +115,7 @@ if (document.querySelector('section#numeros')) {
   let activated = false;
   window.addEventListener("scroll", () => {
     if (
-      pageYOffset > container.offsetTop - container.offsetHeight + 200 && activated === false
+      pageYOffset > container.offsetTop - container.offsetHeight - 400 && activated === false
     ) {
       counters.forEach(counter => {
         counter.innerText = 0;
@@ -168,7 +168,7 @@ if (document.querySelector('section#numeros')) {
         activated = true;
       });
     } else if (
-      pageYOffset < container.offsetTop - container.offsetHeight - 500 || pageYOffset === 0 && activated === true
+        pageYOffset === 0 && activated === true
     ) {
       counters.forEach(counter => {counter.innerText = 0;
       });

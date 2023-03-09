@@ -244,25 +244,25 @@ the_post();
 <section id="numeros" class="mb-5 mt-3">
 	<div class="container-fluid pt-3 pb-3" style="background-color:slategrey;">
 		<div class="container text-center">
-			<div class="row align-items-end">
-				<div class="counters">
-					<div class="counter">
+			<div class="counters row align-items-start">
+
+					<div class="counter col-md-3 col-xs-12">
 						<h1><span data-count="3">0</span></h1>
 						<h3>PAÌSES</h3>
 					</div>
-					<div class="counter">
+					<div class="counter col-md-3 col-xs-12">
 						<h1><span data-count="15">0</span></h1>
 						<h3>AÑOS DE EXPERIENCIA</h3>
 					</div>
-					<div class="counter">
+					<div class="counter col-md-3 col-xs-12">
 						<h1><span data-count="60">0</span></h1>
 						<h3>DESARROLLOS</h3>
 					</div>
-					<div class="counter">
+					<div class="counter col-md-3 col-xs-12">
 						<h1><span data-count="6000">0</span></h1>
 						<h3>CLIENTES FELICES</h3>
 					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>
