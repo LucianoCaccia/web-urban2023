@@ -1,6 +1,5 @@
 // Section: proyectos-slider
 // Carousel Arg
-
 var multipleCardCarouselArg = document.querySelector("#carouselArgControls");
 if (multipleCardCarouselArg) {
   if (window.matchMedia("(min-width: 768px)").matches) {
@@ -108,6 +107,75 @@ const clip = document.querySelectorAll(".hover-to-play");
 for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", function (e) { clip[i].play();
   }); clip[i].addEventListener("mouseout", function (e) { clip[i].pause(); }); }
 
+
+// Counter numbers
+if (document.querySelector('section#numeros')) {
+  const counters = document.querySelectorAll('.counters span');
+  const container = document.querySelector('.counters');
+  let activated = false;
+  window.addEventListener("scroll", () => {
+    if (
+      pageYOffset > container.offsetTop - container.offsetHeight + 200 && activated === false
+    ) {
+      counters.forEach(counter => {
+        counter.innerText = 0;
+        let count = 0;
+        function updateCount() {
+          const target = parseInt(counter.dataset.count);
+          switch (target) {
+            case 6000:
+              if (count < target) {
+                count = count + 45;
+                counter.innerText = count;
+                setTimeout(updateCount,10);
+      
+              } else {
+                counter.innerText = target;
+              }
+            break;
+            case 15:
+              if (count < target) {
+                count++;
+                counter.innerText = count;
+                setTimeout(updateCount,140);
+      
+              } else {
+                counter.innerText = target;
+              }
+            break;
+            case 3:
+              if (count < target) {
+                count++;
+                counter.innerText = count;
+                setTimeout(updateCount,700);
+      
+              } else {
+                counter.innerText = target;
+              }
+            break;
+            default:
+              if (count < target) {
+                count++;
+                counter.innerText = count;
+                setTimeout(updateCount,18);
+      
+              } else {
+                counter.innerText = target;
+              }
+          }
+        }
+        updateCount();
+        activated = true;
+      });
+    } else if (
+      pageYOffset < container.offsetTop - container.offsetHeight - 500 || pageYOffset === 0 && activated === true
+    ) {
+      counters.forEach(counter => {counter.innerText = 0;
+      });
+      activated = false;
+    }
+  });
+}
 
 
 // Webpack Imports

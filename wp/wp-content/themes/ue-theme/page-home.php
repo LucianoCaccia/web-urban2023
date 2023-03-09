@@ -245,10 +245,24 @@ the_post();
 	<div class="container-fluid pt-3 pb-3" style="background-color:slategrey;">
 		<div class="container text-center">
 			<div class="row align-items-end">
-				<div class="col"><h1 class="display-1">3</h1><span>PAÍSES</span></div>
-				<div class="col"><h1 class="display-1">15</h1><span>AÑOS DE EXPERIENCIA</span></div>
-				<div class="col"><h1 class="display-1">60</h1><span>DESARROLLOS</span></div>
-				<div class="col"><h1 class="display-1">6000</h1><span>CLIENTES FELICES</span></div>
+				<div class="counters">
+					<div class="counter">
+						<h1><span data-count="3">0</span></h1>
+						<h3>PAÌSES</h3>
+					</div>
+					<div class="counter">
+						<h1><span data-count="15">0</span></h1>
+						<h3>AÑOS DE EXPERIENCIA</h3>
+					</div>
+					<div class="counter">
+						<h1><span data-count="60">0</span></h1>
+						<h3>DESARROLLOS</h3>
+					</div>
+					<div class="counter">
+						<h1><span data-count="6000">0</span></h1>
+						<h3>CLIENTES FELICES</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
