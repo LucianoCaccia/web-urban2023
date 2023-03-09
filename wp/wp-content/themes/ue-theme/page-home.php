@@ -245,7 +245,6 @@ the_post();
 	<div class="container-fluid pt-3 pb-3" style="background-color:slategrey;">
 		<div class="container text-center">
 			<div class="counters row align-items-start">
-
 					<div class="counter col-md-3 col-xs-12">
 						<h1><span data-count="3">0</span></h1>
 						<h3>PAÌSES</h3>
@@ -262,7 +261,6 @@ the_post();
 						<h1><span data-count="6000">0</span></h1>
 						<h3>CLIENTES FELICES</h3>
 					</div>
-
 			</div>
 		</div>
 	</div>
