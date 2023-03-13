@@ -3,6 +3,8 @@
 var multipleCardCarouselArg = document.querySelector("#carouselArgControls");
 if (multipleCardCarouselArg) {
   if (window.matchMedia("(min-width: 768px)").matches) {
+    var element = document.getElementById("id-carousel-item");
+    element.classList.remove("active");
     var carousel = new bootstrap.Carousel(multipleCardCarouselArg, {
       interval: true,
     });
