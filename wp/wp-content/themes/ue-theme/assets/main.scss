@@ -564,6 +564,10 @@ section#proyectos-slider {
 	  max-height: 100%;
   }
   @media (max-width: 767px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: 40vh;
+	}
 	.card .img-wrapper {
 	  height: 17em;
 	}
