@@ -452,6 +452,9 @@ img {
 
 /** HOMEPAGE template **/ 
 //  Main section
+p#breadcrumbs {
+	padding-top: 1rem;
+}
 
 main.videofull {
 	padding: 0px;
@@ -465,9 +468,11 @@ main.videofull {
 	background-color: #00000050;
 }
 .content-over {
-	top: 30%;
-	padding-left: 8%;
-	color: white;
+	color: #fff;
+	display: flex;
+	top: 0px;
+    flex-direction: column;
+	top: 20vh;
 }
 
 

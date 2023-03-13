@@ -44,11 +44,13 @@ the_post();
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
 
-		<div class="content-over position-absolute animated appear delay2 duration4">
-			<h1 class="display-2">RENTABILIDAD</h1>
-			<h1 class="display-2">EXPERIENCIA</h1>
-			<h1 class="display-2">EXELENCIA</h1>
-			<h2 class="display-3">Viví mejor, viví como querés</h2>
+		<div class="container">
+			<div class="content-over position-absolute animated appear delay2 duration4">
+				<h1 class="display-2">RENTABILIDAD</h1>
+				<h1 class="display-2">EXPERIENCIA</h1>
+				<h1 class="display-2">EXELENCIA</h1>
+				<h2 class="display-3">Viví mejor, viví como querés</h2>
+			</div>
 		</div>
 
 	</section>
@@ -100,7 +102,7 @@ the_post();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_arg = $post_n_arg + 1?>
 					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
-						<div id="id-carousel-item" class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
 								<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 
@@ -145,7 +147,7 @@ the_post();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_uru = $post_n_uru + 1?>
 					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
 							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 								<div class="card-body">
@@ -182,7 +184,7 @@ the_post();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_esp = $post_n_esp + 1?>
 					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
 							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 								<div class="card-body">
@@ -273,11 +275,11 @@ the_post();
 	</div>
 </section>
 
-<section id="contact-form" class="fluid mb-3">
+<section id="contact-form" class="fluid mb-3 mt-5">
 			<div class="container">
 			<h1 class="entry-title">Contactanos</h1>
 				<div class="row">
-					<div class="col">
+					<div class="col-lg-6 col-md-12">
 					<form class="row g-3">
 						<div class="col-md-6">
 							<label for="inputEmail4" class="form-label">Email</label>
@@ -323,7 +325,7 @@ the_post();
 						</div>
 						</form>
 					</div>
-					<div class="col offset-1">
+					<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
 						<h3>UNITE A LA FAMILIA</h3>
 						<p>ARGENTINA: (+5411) 5258·8788</p>
 						<p>URUGUAY: (+598) 2927·2347</p>

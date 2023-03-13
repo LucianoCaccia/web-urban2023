@@ -3,7 +3,7 @@
 var multipleCardCarouselArg = document.querySelector("#carouselArgControls");
 if (multipleCardCarouselArg) {
   if (window.matchMedia("(min-width: 768px)").matches) {
-    var element = document.getElementById("id-carousel-item");
+    var element = document.getElementById("id-carousel-item-arg");
     element.classList.remove("active");
     var carousel = new bootstrap.Carousel(multipleCardCarouselArg, {
       interval: true,
@@ -42,6 +42,8 @@ if (multipleCardCarouselArg) {
 var multipleCardCarouselUru = document.querySelector("#carouselUruControls");
 if (multipleCardCarouselUru) {
   if (window.matchMedia("(min-width: 768px)").matches) {
+    var element = document.getElementById("id-carousel-item-uru");
+    element.classList.remove("active");
     var carousel = new bootstrap.Carousel(multipleCardCarouselUru, {
       interval: true,
     });
@@ -75,6 +77,8 @@ if (multipleCardCarouselUru) {
 var multipleCardCarouselEsp = document.querySelector("#carouselEspControls");
 if (multipleCardCarouselEsp) {
   if (window.matchMedia("(min-width: 768px)").matches) {
+    var element = document.getElementById("id-carousel-item-esp");
+    element.classList.remove("active");
     var carousel = new bootstrap.Carousel(multipleCardCarouselEsp, {
       interval: true,
     });

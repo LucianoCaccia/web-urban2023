@@ -17,9 +17,9 @@
 		<footer id="footer">
 			<div class="container">
 				<div class="row pb-4">
-					<div class="col-md-2">
+					<div class=" col-md-2 col-sm-6">
 						<img class="footer-logo" src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />
-						<div class="social-footer col-9">
+						<div class="social-footer col-md-9 col-4">
 							<span><i class="bi bi-facebook"></i></span>
 							<span><i class="bi bi-instagram"></i></span>
 							<span><i class="bi bi-youtube"></i></span>
@@ -27,7 +27,7 @@
 						</div>
 						
 					</div>
-					<div class="col-md-5 mt-5 d-flex justify-content-center">
+					<div class="col-md-5 mt-md-5 col-sm-6 mt-3 d-flex justify-content-center">
 						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347<br>
 						<span><i class="bi bi-envelope mt-2" style="font-size: 1rem;"></i><a href="#" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
 						</small>
