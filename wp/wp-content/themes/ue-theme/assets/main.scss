@@ -623,9 +623,15 @@ section#proyectos-slider {
 	  max-height: 100%;
   }
   @media (max-width: 767px) {
-	.carousel-control-prev,
-	.carousel-control-next {
+	.carousel-control-prev {
+		transform: translateX(40%);
 		width: 40vh;
+		filter: invert(99%) sepia(0%) saturate(7498%) hue-rotate(70deg) brightness(99%) contrast(105%);
+	}
+	.carousel-control-next {
+		transform: translateX(-40%);
+		width: 40vh;
+		filter: invert(99%) sepia(0%) saturate(7498%) hue-rotate(70deg) brightness(99%) contrast(105%);
 	}
 	.card .img-wrapper {
 	  height: 17em;
@@ -675,3 +681,25 @@ section#banner-proxima-inversion {
 }
 
 
+// *******************
+// Interior Poyecto  *
+// *******************
+
+.logo-pr {
+	max-width: 40%;
+}
+.text-vert {
+    position: relative;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    padding-top: 2rem;
+    top: 4rem;
+	@media (max-width: 768px) {
+		position: inherit;
+		transform: rotateX(0deg);
+		padding-top: 0%;
+		top: 0;
+		padding-top: 1rem;
+		text-transform: capitalize;
+	}
+}

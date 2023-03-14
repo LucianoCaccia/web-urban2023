@@ -25,13 +25,9 @@ get_header();
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
 		<?php $pepe = get_field('video_bg',$id_query->post->ID,[false]); ?>
 			<?php if ($pepe) : ?>
-				
 				<video loop="true" autoplay="autoplay" muted src="<?php echo $pepe;?>" type="video/mp4" class="hover-to-play w-100"></video>
-				
 			<?php else : ?>
-		
 				<img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
-			
 			<?php endif;  ?>
 		<?php endwhile; ?>
     	<?php wp_reset_postdata(); ?>
