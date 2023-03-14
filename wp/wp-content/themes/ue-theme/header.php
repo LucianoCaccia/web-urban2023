@@ -26,7 +26,7 @@
 <div id="wrapper">
 	<header class="position-absolute w-100">
 		<!-- Pre header -->
-		<div class="pre-header text-end">
+		<div class="pre-header text-end d-md-block d-none">
 			<div class="container">
 				<i class="bi bi-envelope me-2" style="font-size: 1rem; color: white;"></i>
 				<a href="#">contacto@urbanestate.com.ar</a>
