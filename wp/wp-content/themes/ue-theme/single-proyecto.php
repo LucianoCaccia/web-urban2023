@@ -32,26 +32,35 @@ if ( have_posts() ) {
 	<div class="container">	
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<h2><?php the_title(); ?></h2>
-				<a href="whatsapp://send?text=<?php the_permalink(); ?>" data-action="share/whatsapp/share">Share</a>
-				<h2>Tipología</h2>
-				<?php the_field('tipologia'); ?><br>
-
-				<a href="<?php the_field('pdf'); ?>" class="btn btn-primary" target="_blank">Descargar PDF</a>
-
-				<h2>Amanities</h2>
-				<?php the_field('amenities'); ?>
-
-				<h2>Avance de obra</h2>
-				<?php the_field('avance'); ?>
+				<div class="row">
+					<div class="col-12">
+						<h1 class="display-3"><?php the_title(); ?></h1>
+					</div>
+				</div>
+				<div class="mt-4">
+					<h2>Tipología</h2>
+					<?php the_field('tipologia'); ?><br>
+				</div>
+				<div class=" mt-4">
+					<h2>Amanities</h2>
+					<?php the_field('amenities'); ?>
+				</div>
+				<div class=" mt-4 mb-4">
+					<h2>Avance de obra</h2>
+					<?php the_field('avance'); ?>
+				</div>
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="row">
 					<div class="text-vert col-md-1">
 						<h1 class="display-3">barrio</h1>
 					</div>
-					<div class="col ">
+					<div class="col">
 						<?php the_content(); ?>
+						<div class="mt-4">
+							<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<a href="whatsapp://send?text=<?php the_permalink(); ?>" class="btn btn-secondary btn-card" data-action="share/whatsapp/share">Compartir <i class="bi bi-whatsapp"></i></a>
+						</div>
 					</div>
 				</div>
 
@@ -67,34 +76,30 @@ if ( have_posts() ) {
 	</div>
 </section>
 
-<section id="galery-masonry" class="galery-masonry container-fluid">
-	<div class="row">
+<section id="galery-masonry" class="galery-masonry">
         <?php
         if( class_exists('Dynamic_Featured_Image') ) {
         global $dynamic_featured_image;
         $featured_images = $dynamic_featured_image->get_featured_images( );
         } ?>
-
         <!-- Image Gallery -->
         <!-- For Lightbox config check wp-admin/options-general.php?page=jquery-lightbox-options -->
         <div class="container">
-            <div class="row">
             <h1 class="entry-title">Galería</h1>
-                <div class="grid">
+                <div class="masonry ">
                     <?php foreach ($featured_images as $key => $value): ?>
                         <?php $img_feature_url = $value['full']; ?>
                         <?php $img_feature_alt = $dynamic_featured_image->get_image_alt($img_feature_url);?>
                         <?php $img_feature_caption = $dynamic_featured_image->get_image_caption($img_feature_url);?>
-                        <div class="grid-item">
+                        <div class="masonry-item animated fadeIn duration2 eds-on-scroll">
                             <a href="<?php echo($img_feature_url);?>" rel="lightbox" title="<?php echo($img_feature_caption);?>">
                                 <img src="<?php echo($img_feature_url);?>" alt="<?php echo($img_feature_alt); ?>">
                             </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
         </div>
-	</div>
+
 </section>
 
 	<?php }

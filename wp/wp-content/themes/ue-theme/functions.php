@@ -543,14 +543,4 @@ function ue_theme_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'ue_theme_scripts_loader' );
 
-// Masonry Library Load
-
-function bps_masonry () {
-	if (is_singular('proyecto')) {
-		wp_enqueue_script('masonry-js', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array('jquery'));
-		wp_enqueue_script('masonry-init', get_stylesheet_directory_uri() . '/assets/masonry-init.js', array('masonry'), 1, true); 	
-	}
-}
-	
-add_action( 'wp_enqueue_scripts', 'bps_masonry' );
 
