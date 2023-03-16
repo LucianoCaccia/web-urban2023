@@ -4,37 +4,81 @@
  */
 
 get_header();
+?>
 
-// Breadcrumbs
-if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
+<main id="main" class="container-fluid videofull">
 
+<?php
 if ( have_posts() ) {
 	while ( have_posts() ) {
-
 		the_post(); ?>
+
+<section id="slider-video" class="fluid">		
         <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
-		<h2><?php the_title(); ?></h2>
-        <h4><?php the_permalink(); ?></h4>
-        <div><img src="<?php the_field('logo_pr');?>" alt="Logo del proyecto <?php the_title(); ?>">  </div>
-		<div class="col-6"><?php the_content(); ?></div>
-        <hr>
+		<div class="container">
+			<div class="content-over position-absolute animated appear delay2 duration4">
+				<img src="<?php the_field('logo_pr');?>" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>">  	
+			</div>			
+		</div>
+</section>
 
-        <h2>Tipología</h2>
-        <?php the_field('tipologia'); ?><br>
+<section id="breadcrumbs">
+	<div class="container">
+		<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );} ?>
+	</div>
+</section>
 
-        <a href="<?php the_field('pdf'); ?>" class="btn btn-primary" target="_blank">Descargar PDF</a>
+<section id="caracteristicas">
+	<div class="container">	
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="display-3"><?php the_title(); ?></h1>
+					</div>
+				</div>
+				<div class="mt-4">
+					<h2>Tipología</h2>
+					<?php the_field('tipologia'); ?><br>
+				</div>
+				<div class=" mt-4">
+					<h2>Amanities</h2>
+					<?php the_field('amenities'); ?>
+				</div>
+				<div class=" mt-4 mb-4">
+					<h2>Avance de obra</h2>
+					<?php the_field('avance'); ?>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="row align-items-end">
+					<div class="text-vert col-md-2 align-self-center">
+						<h1 class="">
+							<?php the_field('barrio'); ?>
+						</h1>
+					</div>
+					<div class="col">
+						<?php the_content(); ?>
+						<div class="mt-4">
+							<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<a href="whatsapp://send?text=<?php the_permalink(); ?>" class="btn btn-secondary btn-card" data-action="share/whatsapp/share">Compartir <i class="bi bi-whatsapp"></i></a>
+						</div>
+					</div>
+				</div>
 
-        <h2>Amanities</h2>
-        <?php the_field('amenities'); ?>
+			</div>
+		</div>
+	</div>
+</section>
 
-        <h2>Avance de obra</h2>
-        <?php the_field('avance'); ?>
-        
-        <?php $pepe = get_field('map_id',false); ?>
-        <?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
+<section id="mapa" class="container-fluid">
+	<div class="row">
+		<?php $pepe = get_field('map_id',false); ?>
+    	<?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
+	</div>
+</section>
 
+<section id="galery-masonry" class="galery-masonry">
         <?php
         if( class_exists('Dynamic_Featured_Image') ) {
         global $dynamic_featured_image;
@@ -44,22 +88,22 @@ if ( have_posts() ) {
         <!-- Image Gallery -->
         <!-- For Lightbox config check wp-admin/options-general.php?page=jquery-lightbox-options -->
         <div class="container">
-            <div class="row">
             <h1 class="entry-title">Galería</h1>
-                <div class="grid">
+                <div class="masonry ">
                     <?php foreach ($featured_images as $key => $value): ?>
                         <?php $img_feature_url = $value['full']; ?>
                         <?php $img_feature_alt = $dynamic_featured_image->get_image_alt($img_feature_url);?>
                         <?php $img_feature_caption = $dynamic_featured_image->get_image_caption($img_feature_url);?>
-                        <div class="grid-item">
+                        <div class="masonry-item animated fadeIn duration2 eds-on-scroll">
                             <a href="<?php echo($img_feature_url);?>" rel="lightbox" title="<?php echo($img_feature_caption);?>">
                                 <img src="<?php echo($img_feature_url);?>" alt="<?php echo($img_feature_alt); ?>">
                             </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
         </div>
+
+</section>
 
 	<?php }
 }
@@ -67,18 +111,19 @@ if ( have_posts() ) {
 wp_reset_postdata();
 ?>
 
-<section id="proyectos-slider" class="mt-3 mb-3">
+
+<section id="proyectos-slider">
 	<div class="container">
 		<h1 class="entry-title">Proyectos</h1>
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			<li class="nav-item" role="presentation">
-				<button class="nav-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
+				<button class="btn btn-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
 			</li>
 			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="pills-uru-tab" data-bs-toggle="pill" data-bs-target="#pills-uru" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">URUGUAY</button>
+			<span> | </span><button class="btn btn-link" id="pills-uru-tab" data-bs-toggle="pill" data-bs-target="#pills-uru" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">URUGUAY</button>
 			</li>
 			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="pills-esp-tab" data-bs-toggle="pill" data-bs-target="#pills-esp" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ESPAÑA</button>
+			<span> | </span><button class="btn btn-link" id="pills-esp-tab" data-bs-toggle="pill" data-bs-target="#pills-esp" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ESPAÑA</button>
 			</li>
 		</ul> 
 		<div class="tab-content" id="pills-tabContent"> <!-- content pills -->
@@ -96,12 +141,19 @@ wp_reset_postdata();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_arg = $post_n_arg + 1?>
 					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
-						<div class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+								<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
+
 								<div class="card-body">
-									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_arg?></span> <span><?php echo $pais;?></span>
-									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
+								<div class="row">
+									<div class="col-12 title">
+										<h5 class="card-title text-white"><?php the_title(); ?></h5>
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+									</div>									
+								</div>
 								</div>
 							</div>
 						</div>
@@ -133,12 +185,12 @@ wp_reset_postdata();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_uru = $post_n_uru + 1?>
 					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 								<div class="card-body">
-									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span>
-									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
+									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span> -->
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
 								</div>
 							</div>
 						</div>
@@ -170,12 +222,12 @@ wp_reset_postdata();
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $post_n_esp = $post_n_esp + 1?>
 					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div class="carousel-item <?php echo $post_class ?>">
+						<div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-								<div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 								<div class="card-body">
-									<h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span>
-									<a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
+									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span> -->
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
 								</div>
 							</div>
 						</div>
@@ -197,16 +249,16 @@ wp_reset_postdata();
 	</div>
 
 	<div class="container text-center">
-		<a href="./proyectos" class="btn btn-primary">Ver todos</a>
+
+		<a href="./proyectos" class="btn btn-secondary btn-card mt-4 mb-4">Ver todos</a>
 	</div>
 </section>
 
-
-<section id="contact-form" class="fluid mb-3 mt-3">
+<section id="contact-form" class="fluid mb-3 mt-5">
 			<div class="container">
 			<h1 class="entry-title">Contactanos</h1>
 				<div class="row">
-					<div class="col">
+					<div class="col-lg-6 col-md-12">
 					<form class="row g-3">
 						<div class="col-md-6">
 							<label for="inputEmail4" class="form-label">Email</label>
@@ -252,7 +304,7 @@ wp_reset_postdata();
 						</div>
 						</form>
 					</div>
-					<div class="col offset-1">
+					<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
 						<h3>UNITE A LA FAMILIA</h3>
 						<p>ARGENTINA: (+5411) 5258·8788</p>
 						<p>URUGUAY: (+598) 2927·2347</p>

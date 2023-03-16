@@ -25,23 +25,26 @@ get_header();
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
 		<?php $pepe = get_field('video_bg',$id_query->post->ID,[false]); ?>
 			<?php if ($pepe) : ?>
-				
 				<video loop="true" autoplay="autoplay" muted src="<?php echo $pepe;?>" type="video/mp4" class="hover-to-play w-100"></video>
-				
 			<?php else : ?>
-		
 				<img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
-			
 			<?php endif;  ?>
 		<?php endwhile; ?>
     	<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
+        <div class="container">
+            <?php
+            // Breadcrumbs
+            if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            }
+            ?>
 
-		<div class="content-over position-absolute">
-			<h1 class="display-2">Elegí tu mejor opción</h1>
-            <h1 class="display-2"> para invertir</h1>
-		</div>        
-
+            <div class="content-over position-absolute animated appear delay2 duration4">
+                <h1 class="display-2">Elegí tu mejor opción</h1>
+                <h1 class="display-2"> para invertir</h1>
+            </div>
+        </div>   
 	</section>
 
 <!-- End Main -->
@@ -56,40 +59,47 @@ get_header();
         </div>
         <div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
-                <!-- Projectos Loop Arg -->
-                <?php $args = array(
-                    'post_type' => 'proyecto',
-                    'meta_key' => 'pais',
-                    'meta_value' => 'arg'
-                );
-                $the_query = new WP_Query( $args ); ?>
-                <?php if ( $the_query->have_posts() ) : ?>
-                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                <?php $post_n_arg = $post_n_arg + 1?>
-                <?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
-                    <div class="carousel-item <?php echo $post_class ?>">
-                        <div class="card">
-                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_arg?></span> <span><?php echo $pais;?></span>
-                                <a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
-                            </div>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
-			</div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-		</div> <!-- end of slider -->
+				<!-- Projectos Loop Arg -->
+				<?php $args = array(
+						'post_type' => 'proyecto',
+						'meta_key' => 'pais',
+						'meta_value' => 'arg'
+				);
+				$the_query = new WP_Query( $args ); ?>
+				<?php if ( $the_query->have_posts() ) : ?>
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+				<?php $post_n_arg = $post_n_arg + 1?>
+				<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
+					<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
+						<div class="card">
+							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
 
+							<div class="card-body">
+							    <div class="row">
+									<div class="col-12 title">
+										<h5 class="card-title text-white"><?php the_title(); ?></h5>
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+									</div>									
+								</div>
+							</div>
+
+						</div>
+					</div>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
+			</div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+		</div> <!-- enf of slider -->
         <div class="mt-4 mb-4">
             <h1 class="entry-title">URUGUAY</h1>
             <h2>MONTEVIDEO</h2>
@@ -107,61 +117,72 @@ get_header();
                 <?php if ( $the_query->have_posts() ) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php $post_n_uru = $post_n_uru + 1?>
-                <?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>	
-                    <div class="carousel-item <?php echo $post_class ?>">
-                        <div class="card">
-                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                <?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
+                <div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
+                    <div class="card">
+                        <div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
                             <div class="card-body">
-                                <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span>
-                                <a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
+                                <div class="row">
+									<div class="col-12 title">
+										<h5 class="card-title text-white"><?php the_title(); ?></h5>
+									</div>
+									<div class="col-12 link">
+								    	<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+									</div>									
+								</div>                            
                             </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
-			</div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-		</div> <!-- end of slider -->
-
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        </div>	<!-- end of slider -->
         <div class="mt-4 mb-4">
             <h1 class="entry-title">ESPAÑA</h1>
             <h2>MADRID</h2>
             <hr>
         </div>        
         <div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
-			<div class="carousel-inner">
-                <!-- Projectos Loop Esp -->
-                <?php $args = array(
-                    'post_type' => 'proyecto',
-                    'meta_key' => 'pais',
-                    'meta_value' => 'esp'
-                );
-                $the_query = new WP_Query( $args ); ?>
-                <?php if ( $the_query->have_posts() ) : ?>
-                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                <?php $post_n_esp = $post_n_esp + 1?>
-                <?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>	
-                    <div class="carousel-item <?php echo $post_class ?>">
-                        <div class="card">
-                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span>
-                                <a href="<?php the_permalink();?>" class="btn btn-primary">Go <?php the_title(); ?></a>
+            <div class="carousel-inner">
+            <!-- Projectos Loop Esp -->
+            <?php $args = array(
+                'post_type' => 'proyecto',
+                'meta_key' => 'pais',
+                'meta_value' => 'esp'
+            );
+            $the_query = new WP_Query( $args ); ?>
+            <?php if ( $the_query->have_posts() ) : ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php $post_n_esp = $post_n_esp + 1?>
+            <?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
+            <div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
+                    <div class="card">
+                    <div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 title">
+                                <h5 class="card-title text-white"><?php the_title(); ?></h5>
                             </div>
-                        </div>
+                            <div class="col-12 link">
+                                <a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+                            </div>									
+                        </div>                            
                     </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
-			</div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+            </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -170,8 +191,7 @@ get_header();
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-		</div> <!-- end of slider -->
-
+        </div>	<!-- end of slider -->
     </div>
 </section>
 
@@ -179,7 +199,7 @@ get_header();
 			<div class="container">
 			<h1 class="entry-title">Contactanos</h1>
 				<div class="row">
-					<div class="col">
+					<div class="col-lg-6 col-md-12">
 					<form class="row g-3">
 						<div class="col-md-6">
 							<label for="inputEmail4" class="form-label">Email</label>
@@ -225,7 +245,7 @@ get_header();
 						</div>
 						</form>
 					</div>
-					<div class="col offset-1">
+					<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
 						<h3>UNITE A LA FAMILIA</h3>
 						<p>ARGENTINA: (+5411) 5258·8788</p>
 						<p>URUGUAY: (+598) 2927·2347</p>

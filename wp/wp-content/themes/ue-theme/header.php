@@ -24,27 +24,21 @@
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'ue-theme' ); ?></a>
 
 <div id="wrapper">
-	<header>
+	<header class="position-absolute w-100">
 		<!-- Pre header -->
-		<div class="pre-header container text-end">
-			<a href="#">contacto@urbanestate.com.ar</a>
-			<a href="#">+54 11 5258 8788</a>
+		<div class="pre-header text-end d-md-block d-none">
+			<div class="container">
+				<i class="bi bi-envelope me-2" style="font-size: 1rem; color: white;"></i>
+				<a href="#">contacto@urbanestate.com.ar</a>
+				<i class="bi bi-telephone ms-5 me-2" style="font-size: 1rem; color: white;"></i>
+				<a href="#">+54 11 5258 8788</a>
+			</div>
 		</div>
 		<!-- end pre-header -->
 		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php
-						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
-
-						if ( ! empty( $header_logo ) ) :
-					?>
-						<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-					<?php
-						else :
-							echo esc_attr( get_bloginfo( 'name', 'display' ) );
-						endif;
-					?>
+					<img src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ue-theme' ); ?>">
@@ -56,7 +50,7 @@
 					<label>
 						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
 								<span class="">
-									<input type="search" name="s" class="search-field form-control" placeholder="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
+									<input type="search" name="s" class="search-field form-control" placeholder="" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
 								</span>
 								<!-- <button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'ue-theme' ); ?></button> -->						
 						</form>

@@ -16,13 +16,21 @@
 		</main><!-- /#main -->
 		<footer id="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-2">
-						<p>Logo Urban Estate</p>
-						<p>Social Networks</p>
+				<div class="row pb-4">
+					<div class=" col-md-2 col-sm-6">
+						<img class="footer-logo" src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />
+						<div class="social-footer col-md-9 col-4">
+							<span><i class="bi bi-facebook"></i></span>
+							<span><i class="bi bi-instagram"></i></span>
+							<span><i class="bi bi-youtube"></i></span>
+							<span><i class="bi bi-linkedin"></i></span>
+						</div>
+						
 					</div>
-					<div class="col-md-6 mt-4 pt-1">
-						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347 - contacto@urbanestate.com.ar</small>
+					<div class="col-md-5 mt-md-5 col-sm-6 mt-3 d-flex justify-content-center">
+						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347<br>
+						<span><i class="bi bi-envelope mt-2" style="font-size: 1rem;"></i><a href="#" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
+						</small>
 					</div>					
 
 					<?php
@@ -35,11 +43,11 @@
 							wp_nav_menu(
 								array(
 									'container'       => 'nav',
-									'container_class' => 'col-md-4 mt-4',
+									'container_class' => 'col-md-5 mt-5',
 									//'fallback_cb'     => 'WP_Bootstrap4_Navwalker_Footer::fallback',
 									'walker'          => new WP_Bootstrap4_Navwalker_Footer(),
 									'theme_location'  => 'footer-menu',
-									'items_wrap'      => '<ul class="menu nav justify-content-end">%3$s</ul>',
+									'items_wrap'      => '<ul class="menu nav justify-content-center">%3$s</ul>',
 								),
 							);
 						endif;
