@@ -35,6 +35,7 @@ the_post();
 				<div class="video-overflow">
 				<video loop="true" autoplay="autoplay" muted src="<?php echo $video_url;?>" type="video/mp4" class="hover-to-play w-100"></video>
 				</div>
+
 			<?php else : ?>
 		
 				<img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">

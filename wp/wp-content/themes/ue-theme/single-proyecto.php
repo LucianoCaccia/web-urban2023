@@ -84,6 +84,7 @@ if ( have_posts() ) {
         global $dynamic_featured_image;
         $featured_images = $dynamic_featured_image->get_featured_images( );
         } ?>
+
         <!-- Image Gallery -->
         <!-- For Lightbox config check wp-admin/options-general.php?page=jquery-lightbox-options -->
         <div class="container">
@@ -109,6 +110,7 @@ if ( have_posts() ) {
 
 wp_reset_postdata();
 ?>
+
 
 <section id="proyectos-slider">
 	<div class="container">
@@ -153,7 +155,6 @@ wp_reset_postdata();
 									</div>									
 								</div>
 								</div>
-
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -248,11 +249,10 @@ wp_reset_postdata();
 	</div>
 
 	<div class="container text-center">
+
 		<a href="./proyectos" class="btn btn-secondary btn-card mt-4 mb-4">Ver todos</a>
 	</div>
 </section>
-
-
 
 <section id="contact-form" class="fluid mb-3 mt-5">
 			<div class="container">

@@ -504,6 +504,7 @@ img {
 
 /** HOMEPAGE template **/ 
 //  Main section
+
 p#breadcrumbs {
 	padding-top: 1rem;
 }
@@ -532,7 +533,10 @@ main.videofull {
 		top: 9vh;
 	}
 }
-
+.content-over {
+	top: 50%;
+	padding-left: 5%;
+}
 
 
 // Section proyectos-slider
@@ -745,3 +749,4 @@ section#galery-masonry {
 		}
 	}	
 }
+

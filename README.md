@@ -24,6 +24,9 @@ Use this section to remenber ideas..
 
 [readme.md syntax tool](https://readme.so/es/editor)
 
+
+[Animations:](https://lottiefiles.com/blog/guides/best-wordpress-plugins-for-animations)
+
 ### How to create custom content type
 [Custom content type programatically](https://www.cloudways.com/blog/how-to-create-custom-post-types-in-wordpress/)
 

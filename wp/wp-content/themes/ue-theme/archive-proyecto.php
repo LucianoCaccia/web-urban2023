@@ -45,7 +45,6 @@ get_header();
                 <h1 class="display-2"> para invertir</h1>
             </div>
         </div>   
-
 	</section>
 
 <!-- End Main -->
@@ -101,8 +100,6 @@ get_header();
                     <span class="visually-hidden">Next</span>
                 </button>
 		</div> <!-- enf of slider -->
-
-
         <div class="mt-4 mb-4">
             <h1 class="entry-title">URUGUAY</h1>
             <h2>MONTEVIDEO</h2>
@@ -195,7 +192,6 @@ get_header();
                 <span class="visually-hidden">Next</span>
             </button>
         </div>	<!-- end of slider -->
-
     </div>
 </section>
 
