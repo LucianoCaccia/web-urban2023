@@ -51,9 +51,11 @@ if ( have_posts() ) {
 				</div>
 			</div>
 			<div class="col-12 col-md-6">
-				<div class="row">
-					<div class="text-vert col-md-1">
-						<h1 class="display-3">barrio</h1>
+				<div class="row align-items-end">
+					<div class="text-vert col-md-2 align-self-center">
+						<h1 class="">
+							<?php the_field('barrio'); ?>
+						</h1>
 					</div>
 					<div class="col">
 						<?php the_content(); ?>

@@ -625,12 +625,10 @@ section#proyectos-slider {
   @media (max-width: 767px) {
 	.carousel-control-prev {
 		transform: translateX(40%);
-		width: 40vh;
 		filter: invert(99%) sepia(0%) saturate(7498%) hue-rotate(70deg) brightness(99%) contrast(105%);
 	}
 	.carousel-control-next {
 		transform: translateX(-40%);
-		width: 40vh;
 		filter: invert(99%) sepia(0%) saturate(7498%) hue-rotate(70deg) brightness(99%) contrast(105%);
 	}
 	.card .img-wrapper {
