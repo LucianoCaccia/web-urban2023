@@ -254,11 +254,11 @@ wp_reset_postdata();
 
 
 
-<section id="contact-form" class="fluid mb-3 mt-3">
+<section id="contact-form" class="fluid mb-3 mt-5">
 			<div class="container">
 			<h1 class="entry-title">Contactanos</h1>
 				<div class="row">
-					<div class="col">
+					<div class="col-lg-6 col-md-12">
 					<form class="row g-3">
 						<div class="col-md-6">
 							<label for="inputEmail4" class="form-label">Email</label>
@@ -304,7 +304,7 @@ wp_reset_postdata();
 						</div>
 						</form>
 					</div>
-					<div class="col offset-1">
+					<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
 						<h3>UNITE A LA FAMILIA</h3>
 						<p>ARGENTINA: (+5411) 5258·8788</p>
 						<p>URUGUAY: (+598) 2927·2347</p>
