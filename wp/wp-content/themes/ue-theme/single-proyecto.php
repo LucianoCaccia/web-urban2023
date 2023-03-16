@@ -53,7 +53,7 @@ if ( have_posts() ) {
 			<div class="col-12 col-md-6">
 				<div class="row align-items-end">
 					<div class="text-vert col-md-2 align-self-center">
-						<h1 class="">
+						<h1 class=" animated zoomIn duration1 eds-on-scroll ">
 							<?php the_field('barrio'); ?>
 						</h1>
 					</div>
