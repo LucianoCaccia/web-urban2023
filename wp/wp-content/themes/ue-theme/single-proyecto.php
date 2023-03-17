@@ -43,7 +43,51 @@ if ( have_posts() ) {
 				</div>
 				<div class=" mt-4">
 					<h2>Amanities</h2>
-					<?php the_field('amenities'); ?>
+					<div class="row">
+						<?php $amenities = get_field('amenities', false, false); ?>					
+						<?php // var_dump($amenities); ?>
+						<?php foreach ($amenities as $key => $value): ?>
+							<?php switch ($value) { 
+								case 'parrilla':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-fire" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Parrilla</small></p>');
+									echo('</div>');
+								break;
+								case 'loundry':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-droplet-fill" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Loundry</small></p>');
+									echo('</div>');
+								break;
+								case 'gimnasio':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-speedometer2" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Gimnasio</small></p>');
+									echo('</div>');
+								break;
+								case 'sum':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-egg-fried" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Salón de usos múltiples</small></p>');
+									echo('</div>');
+								break;
+								case 'cochera':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-p-circle" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Cochera</small></p>');
+									echo('</div>');
+								break;								
+								case 'bici':
+									echo('<div class="col-2 text-center">');
+									echo('<i class="bi bi-bicycle" style="font-size: 1.7rem;"></i>');
+									echo('<p><small>Parking para bicis</small></p>');
+									echo('</div>');
+								break;								
+
+							} ?>
+						<?php endforeach ?>
+					</div>
 				</div>
 				<div class=" mt-4 mb-4">
 					<h2>Avance de obra</h2>
