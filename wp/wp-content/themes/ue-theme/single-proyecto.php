@@ -51,37 +51,37 @@ if ( have_posts() ) {
 								case 'parrilla':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-fire" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Parrilla</small></p>');
+									echo('<p class="small">Parrilla</p>');
 									echo('</div>');
 								break;
 								case 'loundry':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-droplet-fill" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Loundry</small></p>');
+									echo('<p class="small">Loundry</p>');
 									echo('</div>');
 								break;
 								case 'gimnasio':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-speedometer2" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Gimnasio</small></p>');
+									echo('<p class="small">Gimnasio</p>');
 									echo('</div>');
 								break;
 								case 'sum':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-egg-fried" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Salón de usos múltiples</small></p>');
+									echo('<p class="small">Salón de usos múltiples</p>');
 									echo('</div>');
 								break;
 								case 'cochera':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-p-circle" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Cochera</small></p>');
+									echo('<p class="small">Cochera</p>');
 									echo('</div>');
 								break;								
 								case 'bici':
 									echo('<div class="col-2 text-center">');
 									echo('<i class="bi bi-bicycle" style="font-size: 1.7rem;"></i>');
-									echo('<p><small>Parking para bicis</small></p>');
+									echo('<p class="small">Parking para bicis</p>');
 									echo('</div>');
 								break;								
 
