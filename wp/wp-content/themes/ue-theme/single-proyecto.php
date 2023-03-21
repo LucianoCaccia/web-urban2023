@@ -91,8 +91,49 @@ if ( have_posts() ) {
 				</div>
 				<div class=" mt-4 mb-4">
 					<h2>Avance de obra</h2>
-					<?php the_field('avance'); ?>
 				</div>
+				<div class="row">
+					<?php $avances = get_field('avance', false, false); ?>					
+					<?php //var_dump($avances); ?>
+					<?php $count_avances = count($avances) / 4 * 100; ?>
+					<?php foreach ($avances as $key => $value): ?>
+						<?php switch ($value) { 
+							case 'pozo':
+								$style_pozo = "color: black;";
+							break;
+							case 'obra':
+								$style_obra = "color: black;";					
+							break;
+							case 'alba':
+								$style_alba = "color: black;";
+							break;
+							case 'detalles':
+								$style_detalles = "color: black;";
+							break;
+						} ?>
+					<?php endforeach ?>
+					<div class="col-2 text-center">
+						<i class="bi bi-minecart-loaded avance" style="font-size: 1.7rem; <?php echo $style_pozo ?> "></i>
+						<p class="small">Pozo</p>
+					</div>
+					<div class="col-2 text-center">
+						<i class="bi bi-gear avance" style="font-size: 1.7rem; <?php echo $style_obra ?>"></i>
+						<p class="small">Obra</p>
+					</div>
+					<div class="col-2 text-center">
+						<i class="bi bi-boxes avance" style="font-size: 1.7rem; <?php echo $style_alba ?>"></i>
+						<p class="small">Albañilería</p>
+					</div>
+					<div class="col-2 text-center">
+						<i class="bi bi-building-check avance" style="font-size: 1.7rem; <?php echo $style_detalles ?>"></i>
+						<p class="small">Detalles</p>
+					</div>
+				</div>
+
+				<div class="progress col-8 mb-4" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  					<div class="progress-bar bg-secondary" style="width: <?php echo($count_avances . '%');?>"></div>
+				</div>
+
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="row align-items-end">
