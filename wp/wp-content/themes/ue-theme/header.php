@@ -24,7 +24,15 @@
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'ue-theme' ); ?></a>
 
 <div id="wrapper">
-	<header class="position-absolute w-100">
+	<?php // If search page change the header class
+	if ( is_search() ) {
+		$header_class = 'position-relative bg-secondary';
+	}
+	else {
+		$header_class = 'position-absolute';
+	} 	
+	?>
+	<header class="<?php echo $header_class; ?> w-100">
 		<!-- Pre header -->
 		<div class="pre-header text-end d-md-block d-none">
 			<div class="container">
