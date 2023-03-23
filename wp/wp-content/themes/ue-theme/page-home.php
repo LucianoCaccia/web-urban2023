@@ -47,10 +47,9 @@ the_post();
 
 		<div class="container">
 			<div class="content-over position-absolute animated appear delay2 duration4">
-				<h1 class="display-2">RENTABILIDAD</h1>
-				<h1 class="display-2">EXPERIENCIA</h1>
-				<h1 class="display-2">EXELENCIA</h1>
-				<h2 class="display-3">Viví mejor, viví como querés</h2>
+				<h1 class="display-2">Rentabilidad</h1>
+				<h1 class="display-2">y excelencia</h1>
+				<h1 class="display-3">en desarrollos inmobiliarios</h1>
 			</div>
 		</div>
 

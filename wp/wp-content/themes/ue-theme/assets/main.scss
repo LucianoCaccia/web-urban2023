@@ -61,6 +61,15 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 $font-family-base: $font-family-sans-serif;
 $font-family-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+.display-2 {
+	font-size: 5.6rem !important;
+	line-height: 68pt !important;
+}
+.display-3 {
+	font-size: 4.4rem !important;
+	line-height: 68pt !important;
+}
+
 $link-decoration: none;
 @media (max-width: 767px) {
 	.display-2 {
@@ -184,6 +193,7 @@ img {
 .pre-header {
 	position: relative;
 	background-color: #ffffff5a;
+	padding: 0.3rem 0 0.3rem 0rem;
 	.container a {
 		color: $white;
 	}
@@ -206,7 +216,7 @@ img {
 
 .navbar-brand {
 	img {
-		height: 30px;
+		height: 50px;
 	}
 }
 @media (max-width: 768px) {
@@ -523,9 +533,8 @@ main.videofull {
 .content-over {
 	color: #fff;
 	display: flex;
-	top: 0px;
     flex-direction: column;
-	top: 20vh;
+	top: 9vh;
 	z-index: 0;
 }
 @media (max-width: 767px) {
@@ -534,8 +543,7 @@ main.videofull {
 	}
 }
 .content-over {
-	top: 50%;
-	padding-left: 5%;
+	top: 30vh;
 }
 
 
