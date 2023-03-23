@@ -62,7 +62,7 @@ the_post();
 	<div class="container clearfix">
 		<div class="row">
 			<div class="col-md-2 col-lg-1 col-xs-12 offset-md-4 offset-lg-5 offset-xl-5 mt-5 ">
-				<img src="/wp-content/uploads/2023/03/live.somos_.png" width="100px" alt="">
+				<img src="/wp-content/themes/ue-theme/img/live-somos.png" width="100px" alt="">
 			</div>
 			<div class="col mt-5 ms-2 ms-xl-4 ms-lg-5">
 				<p>Urban Estate, una empresa de desarrolladores de emprendimientos inmobiliarios con oficina ubicada en av. libertador 7766, en el barrio de nuñez, buenos aires, argentina.</p>
@@ -75,7 +75,7 @@ the_post();
 
 <section id="proyectos-slider">
 	<div class="container">
-		<h1 class="entry-title">Proyectos</h1>
+		<h1 class="entry-title">Desarrollos</h1>
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<button class="btn btn-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>

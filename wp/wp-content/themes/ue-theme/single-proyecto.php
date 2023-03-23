@@ -16,8 +16,8 @@ if ( have_posts() ) {
 <section id="slider-video" class="fluid">		
         <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
 		<div class="container">
-			<div class="content-over position-absolute animated appear delay2 duration4">
-				<img src="<?php the_field('logo_pr');?>" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>">  	
+			<div class="content-over position-absolute">
+				<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>">  	
 			</div>			
 		</div>
 </section>
