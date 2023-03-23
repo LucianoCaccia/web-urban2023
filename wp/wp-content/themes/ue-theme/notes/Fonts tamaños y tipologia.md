@@ -1,6 +1,6 @@
 # Fonts tamaños y tipologia
 
-## H1 Encabezado (Display en headers)
+## H1 Encabezado (Display-3 en headers)
 Helvetica neue LT Std
 90pt
 Bold

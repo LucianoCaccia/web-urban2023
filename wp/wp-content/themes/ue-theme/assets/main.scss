@@ -767,3 +767,13 @@ section#galery-masonry {
 p.small {
 	font-size: .7rem;
 }
+
+// ******** Results page ********
+
+
+.card.search {
+	border: none !important;
+	.card-body {
+		padding: 1rem 0rem 0rem 0rem;
+	}
+}
