@@ -104,15 +104,17 @@ the_post();
 					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
 						<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-								<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
+								<div class="img-wrapper" style="filter: brightness(65%);">
+									<img src="<?php the_field('carousel_img')?>" class="" alt="..."> 
+								</div>
 
 								<div class="card-body">
 								<div class="row">
-									<div class="col-12 title">
-										<h5 class="card-title text-white"><?php the_title(); ?></h5>
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
 									</div>
 									<div class="col-12 link">
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
 									</div>									
 								</div>
 								</div>
@@ -148,12 +150,22 @@ the_post();
 					<?php $post_n_uru = $post_n_uru + 1?>
 					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
 						<div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
-							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+						<div class="card">
+								<div class="img-wrapper" style="filter: brightness(65%);">
+									<img src="<?php the_field('carousel_img')?>" class="" alt="..."> 
 								</div>
+
+								<div class="card-body">
+								<div class="row">
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
+									</div>									
+								</div>
+								</div>
+
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -185,12 +197,22 @@ the_post();
 					<?php $post_n_esp = $post_n_esp + 1?>
 					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
 						<div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
-							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+						<div class="card">
+								<div class="img-wrapper" style="filter: brightness(65%);">
+									<img src="<?php the_field('carousel_img')?>" class="" alt="..."> 
 								</div>
+
+								<div class="card-body">
+								<div class="row">
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
+									</div>									
+								</div>
+								</div>
+
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -211,7 +233,7 @@ the_post();
 	</div>
 
 	<div class="container text-center">
-		<a href="./proyectos" class="btn btn-secondary btn-card mt-4 mb-4">Ver todos</a>
+		<a href="./proyectos" class="btn btn-secondary btn-card mt-4 mb-4 ps-4 pe-4">Ver todos</a>
 	</div>
 </section>
 
@@ -221,7 +243,7 @@ the_post();
 			<div class="text-center block-display">
 				<h1 class="display-2 text-white">Conocé tu próxima inversión</h1>
 				<h2 class="display-3 text-white">Tomemos un café</h1>
-				<a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1">Escríbenos</a>
+				<a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Escríbenos</a>
 			</div>
 	</div>
 </section>
@@ -234,7 +256,9 @@ the_post();
 				<div class="card text-bg-dark">
 					<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">
-						<h1 class="card-title">Invertí<br>en vivienda</h1>
+						<h1 class="card-title">Invertí<br>en ladrillos</h1>
+						<h4 class="card-title">Sé parte desde el principio</h4>
+						<img src="/wp-content/themes/ue-theme/img/live.svg" alt="">
 					</div>
 				</div>
 			</div>
@@ -242,7 +266,9 @@ the_post();
 				<div class="card text-bg-dark">
 						<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
-							<h1 class="card-title">Aumentá <br> tu rentabilidad</h1>
+							<h1 class="card-title">Comprá  <br>y rentá</h1>
+							<h4 class="card-title">Exclusivo para clientes</h4>
+							<img src="/wp-content/themes/ue-theme/img/UrbanRent.svg" alt="">
 						</div>
 				</div>
 			</div>

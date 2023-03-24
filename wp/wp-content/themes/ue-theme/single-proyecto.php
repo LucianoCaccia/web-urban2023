@@ -13,11 +13,11 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post(); ?>
 
-<section id="slider-video" class="fluid">		
-        <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
+<section id="slider-video" class="fluid">
+			<img class="img-filter" src="<?php echo the_post_thumbnail_url('large')?>">
 		<div class="container">
 			<div class="content-over position-absolute">
-				<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>">  	
+				<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr animated appear delay2 duration4" alt="Logo del proyecto <?php the_title(); ?>">  	
 			</div>			
 		</div>
 </section>
@@ -228,18 +228,25 @@ wp_reset_postdata();
 					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
 						<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-								<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
+								<div class="img-wrapper" style="filter: brightness(65%);">
+									<?php if (get_field('carousel_img')) : ?>
+										<img src="<?php the_field('carousel_img')?>"  alt="...">
+									<?php else : ?>
+										<img src="https://picsum.photos/311/461"  alt="...">
+									<?php endif; ?>
+								</div>
 
 								<div class="card-body">
 								<div class="row">
-									<div class="col-12 title">
-										<h5 class="card-title text-white"><?php the_title(); ?></h5>
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
 									</div>
 									<div class="col-12 link">
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
 									</div>									
 								</div>
 								</div>
+
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -272,11 +279,25 @@ wp_reset_postdata();
 					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
 						<div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+							<div class="img-wrapper" style="filter: brightness(65%);">
+									<?php if (get_field('carousel_img')) : ?>
+										<img src="<?php the_field('carousel_img')?>"  alt="...">
+									<?php else : ?>
+										<img src="https://picsum.photos/311/461"  alt="...">
+									<?php endif; ?>
 								</div>
+
+								<div class="card-body">
+								<div class="row">
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
+									</div>									
+								</div>
+								</div>
+
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -309,12 +330,26 @@ wp_reset_postdata();
 					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
 						<div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
 							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
+								<div class="img-wrapper" style="filter: brightness(65%);">
+									<?php if (get_field('carousel_img')) : ?>
+										<img src="<?php the_field('carousel_img')?>"  alt="...">
+									<?php else : ?>
+										<img src="https://picsum.photos/311/461"  alt="...">
+									<?php endif; ?>
 								</div>
-							</div>
+
+								<div class="card-body">
+								<div class="row">
+									<div class="col-12 title mb-4">
+										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
+									</div>
+									<div class="col-12 link">
+									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
+									</div>									
+								</div>
+								</div>
+
+							</div>						
 						</div>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>

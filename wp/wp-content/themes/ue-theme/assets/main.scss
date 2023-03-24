@@ -201,6 +201,9 @@ img {
 }
 
 /* Header */
+header {
+	z-index: 1000;
+}
 #header {
 	.search-form {
 		min-width: 60px;
@@ -566,7 +569,7 @@ section#proyectos-slider {
 
 	.card-body {
 		position: absolute;
-		top: 70%;
+		top: 40%;
 		width: 100%;
 		justify-content: center;
 		display: flex;
@@ -708,6 +711,15 @@ section#banner-proxima-inversion {
 }
 i.avance {
 	color: $gray-500;
+}
+body.page-template-archive-proyecto-php img.img-filter,
+body.single-proyecto img.img-filter {
+	-webkit-filter: brightness(65%);
+	-moz-filter: brightness(65%);
+	-o-filter: brightness(65%);
+	-ms-filter: brightness(65%);
+	filter: brightness(65%);
+	width: 100%;
 }
 
 // Masonry CSS only
