@@ -285,12 +285,12 @@ the_post();
 </section>
 
 <section id="numeros" class="mb-5 mt-5 pt-5">
-	<div class="container-fluid pt-4 pb-4" style="background-color:slategrey;">
-		<div class="container text-center">
+	<div class="container-fluid pt-4 pb-4">
+		<div class="container text-center pt-5">
 			<div class="counters row align-items-start">
 					<div class="counter col-md-3 col-xs-12">
 						<h1 class="display-1"><span data-count="3">0</span></h1>
-						<h3>PAÌSES</h3>
+						<h3>PAÍSES</h3>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
 						<h1 class="display-1"><span data-count="15">0</span></h1>
@@ -368,6 +368,7 @@ the_post();
 						<i class="bi bi-instagram"></i><span> @UrbanEstateLive</span><br>
 						<i class="bi bi-youtube"></i><span> @urbanestate4035</span><br>
 						<i class="bi bi-linkedin"></i><span> company/urban-estate-live/</span>
+						<?php echo do_shortcode('[contact-form-7 id="216" title="Staff"]'); ?>
 					</div>
 				</div>
 			</div>

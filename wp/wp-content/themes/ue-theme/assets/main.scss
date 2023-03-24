@@ -679,10 +679,22 @@ section#banner-proxima-inversion {
 
 
 // COUNTERS NUMBERS
+section#numeros {
+	h1.display-1 {
+		font-weight: 600;
+	}
+	.container-fluid {
+		background-color: #666766;
+		min-height: 18rem;
+	}
+
+}
 .counters {
 	color: #fff;
 	text-align: center;
 }
+
+
 
 // Section Servicios
 section#servicios {

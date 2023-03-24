@@ -8,6 +8,8 @@ services:
     - "127.0.0.1:8080:80"
     volumes:
     - "/Users/lucho/tooit/repositories/github.com/web-urban2023/wp:/var/www/html"
+    networks:
+      - wordpress
   mysql:
     image: mysql:5.7
     environment:
@@ -15,6 +17,9 @@ services:
       - MYSQL_DATABASE=wordpress
     volumes:
       - "/Users/lucho/tooit/repositories/github.com/web-urban2023/mysql:/var/lib/mysql"
+    networks:
+      - wordpress
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
@@ -25,3 +30,21 @@ services:
       credentials: root/password
     ports:
       - "127.0.0.1:8081:80"
+    networks:
+      - wordpress
+
+  
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      - wordpress
+
+networks:
+  wordpress:
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16

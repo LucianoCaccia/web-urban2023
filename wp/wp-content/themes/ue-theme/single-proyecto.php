@@ -42,7 +42,7 @@ if ( have_posts() ) {
 					<?php the_field('tipologia'); ?><br>
 				</div>
 				<div class=" mt-4">
-					<h2>Amanities</h2>
+					<h2>Amenities</h2>
 					<div class="row">
 						<?php $amenities = get_field('amenities', false, false); ?>					
 						<?php // var_dump($amenities); ?>

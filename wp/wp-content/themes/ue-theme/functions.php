@@ -543,5 +543,32 @@ function ue_theme_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'ue_theme_scripts_loader' );
 
+// define the wp_mail_failed callback
+function action_wp_mail_failed($wp_error) {
+    print_r($wp_error, true);
+    exit;
+}
+
+// add the action
+add_action('wp_mail_failed', 'action_wp_mail_failed', 10, 1);
+
+// configure PHPMailer to send through SMTP
+add_action('phpmailer_init', function ($phpmailer) {
+
+    $phpmailer->isSMTP();
+    // host details
+    $phpmailer->SMTPAuth = false;
+    $phpmailer->SMTPSecure = '';
+    $phpmailer->SMTPAutoTLS = false;
+    $phpmailer->Host = 'mailhog';
+    $phpmailer->Port = '1025';
+    // from details
+    $phpmailer->From = 'no-reply@urbanestate.com';
+    $phpmailer->FromName = 'Web Urban Estate';
+    // login details
+    // $phpmailer->Username = WORDPRESS_SMTP_USERNAME;
+    // $phpmailer->Password = WORDPRESS_SMTP_PASSWORD;
+
+});
 
 
