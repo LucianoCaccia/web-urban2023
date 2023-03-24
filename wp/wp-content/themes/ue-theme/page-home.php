@@ -253,24 +253,32 @@ the_post();
 		<h1 class="entry-title">Servicios</h1>
 		<div class="row">
 			<div class="col-md-6 mb-2">
-				<div class="card text-bg-dark">
-					<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
+				<a href="/inverti-en-ladrillos">
+				<div class="card  animated fadeIn duration2 eds-on-scroll  ">
+					<img src="/wp-content/themes/ue-theme/img/servicio-live.jpg" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">
 						<h1 class="card-title">Invertí<br>en ladrillos</h1>
 						<h4 class="card-title">Sé parte desde el principio</h4>
-						<img src="/wp-content/themes/ue-theme/img/live.svg" alt="">
+						<div class="img-container d-flex justify-content-end">
+							<img src="/wp-content/themes/ue-theme/img/live.svg" class="align-self-center" alt="Logo Live">
+						</div>
 					</div>
 				</div>
+				</a>
 			</div>
 			<div class="col-md-6">
-				<div class="card text-bg-dark">
-						<img src="https://dummyimage.com/200x130/616161/000000.png" class="img-fluid card-img" alt="">
+				<a href="/urban-rent">
+				<div class="card  animated fadeIn duration2 eds-on-scroll   ">
+						<img src="/wp-content/themes/ue-theme/img/servicio-rent.jpg" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
 							<h1 class="card-title">Comprá  <br>y rentá</h1>
 							<h4 class="card-title">Exclusivo para clientes</h4>
-							<img src="/wp-content/themes/ue-theme/img/UrbanRent.svg" alt="">
+							<div class="img-container d-flex justify-content-end">
+								<img src="/wp-content/themes/ue-theme/img/UrbanRent.svg" class="align-self-center" alt="Logo Urban Rent">
+							</div>
 						</div>
 				</div>
+				</a>
 			</div>
 		</div>
 	</div>
