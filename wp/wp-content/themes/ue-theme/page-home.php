@@ -370,12 +370,12 @@ the_post();
 				<i class="bi bi-linkedin"></i><span> company/urban-estate-live/</span>
 
 				<div class="container mt-5">
-				<h3 class="row">SUMATE AL STAFF</h3>
-				<button class="row btn btn-light btn-card mt-1 mb-2 ps-4 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">Adjuntar datos</button>
+						<div class="row">
+							<h3 class="col-7 row">SUMATE AL STAFF</h3>
+							<button class="col btn btn-light btn-card mt-1 mb-2 ps-4 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">Adjuntar datos</button>
+						</div>
 					<div class="collapse" id="collapseForm">
-
 						<?php echo do_shortcode('[contact-form-7 id="216" title="Staff"]'); ?>
-
 					</div>
 				</div>
 
