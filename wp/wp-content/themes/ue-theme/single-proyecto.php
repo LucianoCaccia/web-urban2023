@@ -145,7 +145,9 @@ if ( have_posts() ) {
 					<div class="col">
 						<?php the_content(); ?>
 						<div class="mt-4">
-							<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<?php if (get_field( "pdf" )): ?>
+								<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<?php endif; ?>
 							<a href="whatsapp://send?text=<?php the_permalink(); ?>" class="btn btn-secondary btn-card" data-action="share/whatsapp/share">Compartir <i class="bi bi-whatsapp"></i></a>
 						</div>
 					</div>
