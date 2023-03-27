@@ -655,8 +655,8 @@ section#proyectos-slider {
 section#banner-proxima-inversion {
 	.img-overflow {
 		overflow: hidden;
-		max-height: 300px;
-		background-color: #91610775;
+		max-height: 250px;
+		background-color: #bb9872a6;
 		display: flex;
 		align-content: center;
 		flex-wrap: wrap;
@@ -698,6 +698,19 @@ section#numeros {
 
 // Section Servicios
 section#servicios {
+	.mousehover {visibility: hidden;}
+	a:hover {
+		img.card-img {
+			-webkit-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-moz-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-o-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-ms-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+		}
+		.mousehover {
+			visibility: unset;
+		}
+	}
 	.card {
 		overflow: hidden;
 		max-height: 20rem;
@@ -725,9 +738,6 @@ section#servicios {
 	}
 	.img-container {
 		height: 53%;
-		img {
-			max-width: 7rem;
-		}
 		@include media-breakpoint-up(md) {
 			height: 38%;
 		}
