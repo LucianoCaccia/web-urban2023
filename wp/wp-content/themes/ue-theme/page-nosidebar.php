@@ -77,4 +77,8 @@ the_post();
 		comments_template();
 	}
 
+// Section Contacto
+include get_template_directory() . '/inc/section-contacto.html';
+	
+
 get_footer();
