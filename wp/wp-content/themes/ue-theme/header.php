@@ -37,9 +37,9 @@
 		<div class="pre-header text-end d-md-block d-none">
 			<div class="container">
 				<i class="bi bi-envelope me-2" style="font-size: 1rem; color: white;"></i>
-				<a href="#">contacto@urbanestate.com.ar</a>
+				<a href="mailto:contacto@urbanestate.com.ar">contacto@urbanestate.com.ar</a>
 				<i class="bi bi-telephone ms-5 me-2" style="font-size: 1rem; color: white;"></i>
-				<a href="#">+54 11 5258 8788</a>
+				<a href="tel:+541152588788">+54 11 5258 8788</a>
 			</div>
 		</div>
 		<!-- end pre-header -->
