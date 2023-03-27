@@ -156,58 +156,6 @@ get_header();
                     <span class="visually-hidden">Next</span>
                 </button>
         </div>	<!-- end of slider -->
-        <div class="mt-4 mb-4">
-            <h1 class="entry-title">ESPAÑA</h1>
-            <h2>MADRID</h2>
-            <hr>
-        </div>        
-        <div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <!-- Projectos Loop Esp -->
-            <?php $args = array(
-                'post_type' => 'proyecto',
-                'meta_key' => 'pais',
-                'meta_value' => 'esp'
-            );
-            $the_query = new WP_Query( $args ); ?>
-            <?php if ( $the_query->have_posts() ) : ?>
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <?php $post_n_esp = $post_n_esp + 1?>
-            <?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
-            <div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
-			<div class="card">
-				<div class="img-wrapper" style="filter: brightness(65%);">
-					<?php if (get_field('carousel_img')) : ?>
-						<img src="<?php the_field('carousel_img')?>"  alt="...">
-					<?php else : ?>
-						<img src="https://picsum.photos/311/461"  alt="...">
-					<?php endif; ?>	
-				</div>
-				<div class="card-body">
-					<div class="row">
-						<div class="col-12 title mb-4">
-							<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
-						</div>
-						<div class="col-12 link">
-						<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
-						</div>									
-					</div>
-				</div>
-			</div>
-            </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselEspControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>	<!-- end of slider -->
     </div>
 </section>
 
