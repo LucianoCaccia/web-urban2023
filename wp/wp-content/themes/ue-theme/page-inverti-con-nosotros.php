@@ -84,20 +84,20 @@ the_post();
                     </ul>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-2 ">
                         <img class="mt-4" src="/wp-content/themes/ue-theme/img/airbnb.svg" style="max-height: 2.2rem;">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-10">
                         <h2 class="pt-4">Airbnb ready</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-2">
                         <img class="mt-4" src="/wp-content/themes/ue-theme/img/geo.svg" style="max-height: 2.7rem;">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-10">
                         <h2 class="pt-4">Zonas premium</h2>
                     </div>                    
                 </div>
