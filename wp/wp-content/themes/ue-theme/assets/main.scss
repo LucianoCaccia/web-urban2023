@@ -46,7 +46,7 @@ $blue: #0d6efd;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
-$red: #dc3545;
+$red: #FF4A4A;
 $orange: #fd7e14;
 $yellow: #ffc107;
 $green: #198754;
@@ -60,6 +60,15 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 $font-family-helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+.display-2 {
+	font-size: 5.6rem !important;
+	line-height: 68pt !important;
+}
+.display-3 {
+	font-size: 4.4rem !important;
+	line-height: 68pt !important;
+}
 
 $link-decoration: none;
 @media (max-width: 767px) {
@@ -184,6 +193,7 @@ img {
 .pre-header {
 	position: relative;
 	background-color: #ffffff5a;
+	padding: 0.3rem 0 0.3rem 0rem;
 	.container a {
 		color: $white;
 	}
@@ -191,6 +201,9 @@ img {
 }
 
 /* Header */
+header {
+	z-index: 1000;
+}
 #header {
 	.search-form {
 		min-width: 60px;
@@ -206,7 +219,7 @@ img {
 
 .navbar-brand {
 	img {
-		height: 30px;
+		height: 50px;
 	}
 }
 @media (max-width: 768px) {
@@ -216,6 +229,14 @@ img {
 		}
 	}
 }
+@media (max-width: 768px) {
+	.navbar-brand {
+		img {
+			height: 20px;
+		}
+	}
+}
+
 
 
 .navbar-collapse {
@@ -523,9 +544,8 @@ main.videofull {
 .content-over {
 	color: #fff;
 	display: flex;
-	top: 0px;
     flex-direction: column;
-	top: 20vh;
+	top: 9vh;
 	z-index: 0;
 }
 @media (max-width: 767px) {
@@ -534,8 +554,16 @@ main.videofull {
 	}
 }
 .content-over {
-	top: 50%;
-	padding-left: 5%;
+	top: 30vh;
+	@include media-breakpoint-up(sd) {
+		top: 10vh;
+	}
+	@include media-breakpoint-up(md) {
+		top: 29vh;
+	}	
+	@include media-breakpoint-up(xl) {
+		top: 40vh;
+	}
 }
 
 
@@ -558,7 +586,7 @@ section#proyectos-slider {
 
 	.card-body {
 		position: absolute;
-		top: 70%;
+		top: 40%;
 		width: 100%;
 		justify-content: center;
 		display: flex;
@@ -644,8 +672,8 @@ section#proyectos-slider {
 section#banner-proxima-inversion {
 	.img-overflow {
 		overflow: hidden;
-		max-height: 300px;
-		background-color: #91610775;
+		max-height: 250px;
+		background-color: #bb9872a6;
 		display: flex;
 		align-content: center;
 		flex-wrap: wrap;
@@ -668,9 +696,85 @@ section#banner-proxima-inversion {
 
 
 // COUNTERS NUMBERS
+section#numeros {
+	h1.display-1 {
+		font-weight: 600;
+	}
+	.container-fluid {
+		background-color: #666766;
+		min-height: 18rem;
+	}
+
+}
 .counters {
 	color: #fff;
 	text-align: center;
+}
+
+
+
+// Section Servicios
+section#servicios {
+	.mousehover {visibility: hidden;}
+	a:hover {
+		img.card-img {
+			-webkit-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-moz-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-o-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			-ms-filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+			filter: brightness(50%) hue-rotate(12deg) contrast(0.8);
+		}
+		.mousehover {
+			visibility: unset;
+		}
+	}
+	.card {
+		overflow: hidden;
+		max-height: 20rem;
+		color: #fff;
+		border-radius: unset;
+		@include media-breakpoint-up(md) {
+			max-height: 16rem;
+		}
+		@include media-breakpoint-up(xl) {
+			max-height: 20rem;
+		}
+		@include media-breakpoint-up(xxl) {
+			max-height: 23rem;
+		}
+		img.card-img {
+			max-height: 100%;
+    		border-radius: unset;
+			-webkit-filter: brightness(65%) hue-rotate(12deg) contrast(0.8);
+			-moz-filter: brightness(65%) hue-rotate(12deg) contrast(0.8);
+			-o-filter: brightness(65%) hue-rotate(12deg) contrast(0.8);
+			-ms-filter: brightness(65%) hue-rotate(12deg) contrast(0.8);
+			filter: brightness(65%) hue-rotate(12deg) contrast(0.8);
+
+		}
+	}
+	.img-container {
+		height: 53%;
+		@include media-breakpoint-up(md) {
+			height: 38%;
+		}
+		@include media-breakpoint-up(xl) {
+			height: 65%;
+		}
+		@include media-breakpoint-up(xxl) {
+			height: 65%;
+		}
+
+	}
+}
+
+// Sumate al Staff Form
+div#wpcf7-f216-p14-o1 {
+	input.wpcf7-text {
+		border-style: none;
+    	border-bottom: 1px solid #a0a0a0;
+	}
+
 }
 
 
@@ -697,6 +801,18 @@ section#banner-proxima-inversion {
 }
 .btn-card {
 	border-radius: 20px;
+}
+i.avance {
+	color: $gray-500;
+}
+body.page-template-archive-proyecto-php img.img-filter,
+body.single-proyecto img.img-filter {
+	-webkit-filter: brightness(65%);
+	-moz-filter: brightness(65%);
+	-o-filter: brightness(65%);
+	-ms-filter: brightness(65%);
+	filter: brightness(65%);
+	width: 100%;
 }
 
 // Masonry CSS only
@@ -748,5 +864,28 @@ section#galery-masonry {
 			column-gap: 1rem;
 		}
 	}	
+}
+
+// **************************
+// FONTS DEFINITION
+// **************************
+p.small {
+	font-size: .7rem;
+}
+h1.entry-title {
+	font-size: 70px;
+}
+ul.nav-pills button.btn {
+	font-size: 22px;
+}
+
+// ******** Results page ********
+
+
+.card.search {
+	border: none !important;
+	.card-body {
+		padding: 1rem 0rem 0rem 0rem;
+	}
 }
 

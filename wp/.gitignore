@@ -9,3 +9,8 @@ wp-content/themes/index.php
 wp-content/themes/twentytwentyone
 wp-content/themes/twentytwentythree
 wp-content/themes/twentytwentytwo
+
+# Custom theme
+wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js
+wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js.map
+wp/wp-content/themes/ue-theme/assets/dist/main.css.map

@@ -24,21 +24,29 @@
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'ue-theme' ); ?></a>
 
 <div id="wrapper">
-	<header class="position-absolute w-100">
+	<?php // If search page change the header class
+	if ( is_search() ) {
+		$header_class = 'position-relative bg-secondary';
+	}
+	else {
+		$header_class = 'position-absolute';
+	} 	
+	?>
+	<header class="<?php echo $header_class; ?> w-100">
 		<!-- Pre header -->
 		<div class="pre-header text-end d-md-block d-none">
 			<div class="container">
 				<i class="bi bi-envelope me-2" style="font-size: 1rem; color: white;"></i>
-				<a href="#">contacto@urbanestate.com.ar</a>
+				<a href="mailto:contacto@urbanestate.com.ar">contacto@urbanestate.com.ar</a>
 				<i class="bi bi-telephone ms-5 me-2" style="font-size: 1rem; color: white;"></i>
-				<a href="#">+54 11 5258 8788</a>
+				<a href="tel:+541152588788">+54 11 5258 8788</a>
 			</div>
 		</div>
 		<!-- end pre-header -->
-		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar navbar-expand-md pt-3 <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<img src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />
+					<img src="/wp-content/themes/ue-theme/img/UrbanEstateLogo.svg" alt="Urban Estate Logo" />
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ue-theme' ); ?>">

@@ -13,11 +13,11 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post(); ?>
 
-<section id="slider-video" class="fluid">		
-        <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%;">
+<section id="slider-video" class="fluid">
+			<img class="img-filter" src="<?php echo the_post_thumbnail_url('large')?>">
 		<div class="container">
-			<div class="content-over position-absolute animated appear delay2 duration4">
-				<img src="<?php the_field('logo_pr');?>" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>">  	
+			<div class="content-over position-absolute">
+				<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr animated appear delay2 duration4" alt="Logo del proyecto <?php the_title(); ?>">  	
 			</div>			
 		</div>
 </section>
@@ -32,35 +32,127 @@ if ( have_posts() ) {
 	<div class="container">	
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div class="row">
-					<div class="col-12">
-						<h1 class="display-3"><?php the_title(); ?></h1>
-					</div>
-				</div>
-				<div class="mt-4">
-					<h2>Tipología</h2>
-					<?php the_field('tipologia'); ?><br>
+				<div class="mt-4 d-flex flex-row align-items-end">
+					<h2 class="mb-0">Tipología</h2>
+					<p class="lead mb-0 ms-3"><?php the_field('tipologia'); ?></p>
 				</div>
 				<div class=" mt-4">
-					<h2>Amanities</h2>
-					<?php the_field('amenities'); ?>
+					<h2>Amenities</h2>
+					<div class="row mt-4">
+						<?php $amenities = get_field('amenities', false, false); ?>					
+						<?php // var_dump($amenities); ?>
+						<?php foreach ($amenities as $key => $value): ?>
+							<?php switch ($value) { 
+								case 'parrilla':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Parrilla</p>');
+									echo('</div>');
+								break;
+								case 'loundry':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Laundry</p>');
+									echo('</div>');
+								break;
+								case 'gimnasio':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Gimnasio</p>');
+									echo('</div>');
+								break;
+								case 'sum':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Salón de usos múltiples</p>');
+									echo('</div>');
+								break;
+								case 'cochera':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Cochera</p>');
+									echo('</div>');
+								break;								
+								case 'bici':
+									echo('<div class="col-2 text-center">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;"><br>');
+									echo('<p class="small mt-2">Parking para bicis</p>');
+									echo('</div>');
+								break;								
+
+							} ?>
+						<?php endforeach ?>
+					</div>
 				</div>
-				<div class=" mt-4 mb-4">
+				<div class=" mt-2 mb-4">
 					<h2>Avance de obra</h2>
-					<?php the_field('avance'); ?>
 				</div>
+				<div class="row">
+					<?php $avances = get_field('avance', false, false); ?>
+					<?php if (empty($avances)) :?>
+						<?php $avances = array_fill(0,1,'pozo');?>
+					<?php endif;?>
+					<?php $count_avances = count($avances) / 4 * 100; ?>
+					<?php foreach ($avances as $key => $value): ?>
+						<?php switch ($value) { 
+							case 'pozo':
+								$style_pozo = "filter: brightness(0);";
+							break;
+							case 'obra':
+								$style_obra = "filter: brightness(0);";					
+							break;
+							case 'alba':
+								$style_alba = "filter: brightness(0);";
+							break;
+							case 'detalles':
+								$style_detalles = "filter: brightness(0);";
+							break;
+						} ?>
+					<?php endforeach ?>
+					<div class="col-2 text-center">
+						<img src="/wp-content/themes/ue-theme/img/avance/demo.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_pozo ?>">
+						<p class="small">Demolición</p>
+					</div>
+					<div class="col-2 text-center">
+						<img src="/wp-content/themes/ue-theme/img/avance/obra.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_obra?>">
+						<p class="small">Obra</p>
+					</div>
+					<div class="col-2 text-center">
+						<img src="/wp-content/themes/ue-theme/img/avance/alba.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_alba ?>">
+						<p class="small">Albañilería</p>
+					</div>
+					<div class="col-2 text-center">
+						<img src="/wp-content/themes/ue-theme/img/avance/term.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_detalles ?>">
+						<p class="small">Terminaciones</p>
+					</div>
+				</div>
+
+				<?php if ($count_avances == 100) : ?>
+					<?php $bar_color = 'bg-danger'; ?>
+					<?php $bar_text = 'DESARROLLO TERMINADO'; ?>
+				<?php else: ?>
+					<?php $bar_color = 'bg-secondary'; ?>
+					<?php $bar_text = ''; ?>
+				<?php endif; ?>
+
+				<div class="progress col-8 mb-5" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  					<div class="progress-bar <?php echo($bar_color); ?>" style="width: <?php echo($count_avances . '%');?>"><?php echo($bar_text); ?></div>
+				</div>
+
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="row align-items-end">
 					<div class="text-vert col-md-2 align-self-center">
-						<h1 class="">
+						<h1 class="animated fadeInDown delay1 duration1 eds-on-scroll ">
 							<?php the_field('barrio'); ?>
 						</h1>
 					</div>
 					<div class="col">
 						<?php the_content(); ?>
 						<div class="mt-4">
-							<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<?php if (get_field( "pdf" )): ?>
+								<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+							<?php endif; ?>
 							<a href="whatsapp://send?text=<?php the_permalink(); ?>" class="btn btn-secondary btn-card" data-action="share/whatsapp/share">Compartir <i class="bi bi-whatsapp"></i></a>
 						</div>
 					</div>
@@ -74,7 +166,7 @@ if ( have_posts() ) {
 <section id="mapa" class="container-fluid">
 	<div class="row">
 		<?php $pepe = get_field('map_id',false); ?>
-    	<?php echo do_shortcode('[mappress mapid="' . $pepe . '"]'); ?>
+    	<?php echo do_shortcode('[put_wpgm id=' . $pepe . ']'); ?>
 	</div>
 </section>
 
@@ -111,212 +203,12 @@ if ( have_posts() ) {
 wp_reset_postdata();
 ?>
 
+<!-- Component Projectos slider -->
+<?php $section_title = 'Invertí con nosotros'; ?>
+<?php include get_template_directory() . '/inc/projectos-slider.php'; ?>
 
-<section id="proyectos-slider">
-	<div class="container">
-		<h1 class="entry-title">Proyectos</h1>
-		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-			<li class="nav-item" role="presentation">
-				<button class="btn btn-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
-			</li>
-			<li class="nav-item" role="presentation">
-			<span> | </span><button class="btn btn-link" id="pills-uru-tab" data-bs-toggle="pill" data-bs-target="#pills-uru" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">URUGUAY</button>
-			</li>
-			<li class="nav-item" role="presentation">
-			<span> | </span><button class="btn btn-link" id="pills-esp-tab" data-bs-toggle="pill" data-bs-target="#pills-esp" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ESPAÑA</button>
-			</li>
-		</ul> 
-		<div class="tab-content" id="pills-tabContent"> <!-- content pills -->
-			<div class="tab-pane fade show active" id="pills-arg" role="tabpanel" aria-labelledby="pills-arg-tab" tabindex="0">
-				<div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
-					<div class="carousel-inner">
-					<!-- Projectos Loop Arg -->
-					<?php $args = array(
-						'post_type' => 'proyecto',
-						'meta_key' => 'pais',
-						'meta_value' => 'arg'
-					);
-					$the_query = new WP_Query( $args ); ?>
-					<?php if ( $the_query->have_posts() ) : ?>
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<?php $post_n_arg = $post_n_arg + 1?>
-					<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
-						<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
-							<div class="card">
-								<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-
-								<div class="card-body">
-								<div class="row">
-									<div class="col-12 title">
-										<h5 class="card-title text-white"><?php the_title(); ?></h5>
-									</div>
-									<div class="col-12 link">
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
-									</div>									
-								</div>
-								</div>
-							</div>
-						</div>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselArgControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselArgControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>
-			</div>
-			<div class="tab-pane fade" id="pills-uru" role="tabpanel" aria-labelledby="pills-uru-tab" tabindex="0">
-				<div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
-					<div class="carousel-inner">
-					<!-- Projectos Loop Uru -->
-					<?php $args = array(
-						'post_type' => 'proyecto',
-						'meta_key' => 'pais',
-						'meta_value' => 'uru'
-					);
-					$the_query = new WP_Query( $args ); ?>
-					<?php if ( $the_query->have_posts() ) : ?>
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<?php $post_n_uru = $post_n_uru + 1?>
-					<?php ($post_n_uru == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div id="id-carousel-item-uru" class="carousel-item <?php echo $post_class ?>">
-							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_uru?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
-								</div>
-							</div>
-						</div>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselUruControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselUruControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>					
-			</div>
-			<div class="tab-pane fade" id="pills-esp" role="tabpanel" aria-labelledby="pills-esp-tab" tabindex="0">
-				<div id="carouselEspControls" class="carousel" data-bs-ride="carousel">
-					<div class="carousel-inner">
-					<!-- Projectos Loop Esp -->
-					<?php $args = array(
-						'post_type' => 'proyecto',
-						'meta_key' => 'pais',
-						'meta_value' => 'esp'
-					);
-					$the_query = new WP_Query( $args ); ?>
-					<?php if ( $the_query->have_posts() ) : ?>
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<?php $post_n_esp = $post_n_esp + 1?>
-					<?php ($post_n_esp == 1) ? $post_class = "active" : $post_class = "" ?>						
-						<div id="id-carousel-item-esp" class="carousel-item <?php echo $post_class ?>">
-							<div class="card">
-							<div class="img-wrapper"><img src="<?php the_field('carousel_img')?>" class="" alt="..."> </div>
-								<div class="card-body">
-									<!-- <h5 class="card-title"><?php the_title(); ?></h5><span><?php echo $post_n_esp?></span> <span><?php echo $pais;?></span> -->
-									<a href="<?php the_permalink();?>" class="btn btn-light btn-card">Descubrir</a>
-								</div>
-							</div>
-						</div>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselEspControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselEspControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>					
-			</div>
-		</div>
-	</div>
-
-	<div class="container text-center">
-
-		<a href="./proyectos" class="btn btn-secondary btn-card mt-4 mb-4">Ver todos</a>
-	</div>
-</section>
-
-<section id="contact-form" class="fluid mb-3 mt-5">
-			<div class="container">
-			<h1 class="entry-title">Contactanos</h1>
-				<div class="row">
-					<div class="col-lg-6 col-md-12">
-					<form class="row g-3">
-						<div class="col-md-6">
-							<label for="inputEmail4" class="form-label">Email</label>
-							<input type="email" class="form-control" id="inputEmail4">
-						</div>
-						<div class="col-md-6">
-							<label for="inputPassword4" class="form-label">Password</label>
-							<input type="password" class="form-control" id="inputPassword4">
-						</div>
-						<div class="col-12">
-							<label for="inputAddress" class="form-label">Address</label>
-							<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-						</div>
-						<div class="col-12">
-							<label for="inputAddress2" class="form-label">Address 2</label>
-							<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-						</div>
-						<div class="col-md-6">
-							<label for="inputCity" class="form-label">City</label>
-							<input type="text" class="form-control" id="inputCity">
-						</div>
-						<div class="col-md-4">
-							<label for="inputState" class="form-label">State</label>
-							<select id="inputState" class="form-select">
-							<option selected>Choose...</option>
-							<option>...</option>
-							</select>
-						</div>
-						<div class="col-md-2">
-							<label for="inputZip" class="form-label">Zip</label>
-							<input type="text" class="form-control" id="inputZip">
-						</div>
-						<div class="col-12">
-							<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								Check me out
-							</label>
-							</div>
-						</div>
-						<div class="col-12">
-							<button type="submit" class="btn btn-primary">Sign in</button>
-						</div>
-						</form>
-					</div>
-					<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
-						<h3>UNITE A LA FAMILIA</h3>
-						<p>ARGENTINA: (+5411) 5258·8788</p>
-						<p>URUGUAY: (+598) 2927·2347</p>
-						<p>contacto@urbanestate.com.ar</p>
-						<i class="bi bi-facebook"></i><span> @UrbanEstateLive</span><br>
-						<i class="bi bi-instagram"></i><span> @UrbanEstateLive</span><br>
-						<i class="bi bi-youtube"></i><span> @urbanestate4035</span><br>
-						<i class="bi bi-linkedin"></i><span> company/urban-estate-live/</span>
-					</div>
-				</div>
-			</div>
-</section>
+<!-- Section Contacto -->
+<?php include get_template_directory() . '/inc/section-contacto.html'; ?>
 
 
 <?php get_footer(); ?>

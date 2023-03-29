@@ -80,4 +80,7 @@ DB: root / password / wordpress
 #### Custom fields
 https://www.advancedcustomfields.com/resources/
 
+#### Contenido inicial
+https://docs.google.com/document/d/1WauwNgxlCf77NClkR2ibcegNqY3orHXfDhP2GW8IPos/edit
+
 
