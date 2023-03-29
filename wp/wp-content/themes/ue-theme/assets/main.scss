@@ -547,6 +547,15 @@ main.videofull {
 }
 .content-over {
 	top: 30vh;
+	@include media-breakpoint-up(sd) {
+		top: 10vh;
+	}
+	@include media-breakpoint-up(md) {
+		top: 29vh;
+	}	
+	@include media-breakpoint-up(xl) {
+		top: 40vh;
+	}
 }
 
 
