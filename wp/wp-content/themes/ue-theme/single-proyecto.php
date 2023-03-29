@@ -32,56 +32,51 @@ if ( have_posts() ) {
 	<div class="container">	
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div class="row">
-					<div class="col-12">
-						<h1 class="display-3"><?php the_title(); ?></h1>
-					</div>
-				</div>
-				<div class="mt-4">
-					<h2>Tipología</h2>
-					<?php the_field('tipologia'); ?><br>
+				<div class="mt-4 d-flex flex-row align-items-end">
+					<h2 class="mb-0">Tipología</h2>
+					<p class="lead mb-0 ms-3"><?php the_field('tipologia'); ?></p>
 				</div>
 				<div class=" mt-4">
 					<h2>Amenities</h2>
-					<div class="row">
+					<div class="row mt-4">
 						<?php $amenities = get_field('amenities', false, false); ?>					
 						<?php // var_dump($amenities); ?>
 						<?php foreach ($amenities as $key => $value): ?>
 							<?php switch ($value) { 
 								case 'parrilla':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-fire" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Parrilla</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Parrilla</p>');
 									echo('</div>');
 								break;
 								case 'loundry':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-droplet-fill" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Loundry</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Laundry</p>');
 									echo('</div>');
 								break;
 								case 'gimnasio':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-speedometer2" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Gimnasio</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Gimnasio</p>');
 									echo('</div>');
 								break;
 								case 'sum':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-egg-fried" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Salón de usos múltiples</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Salón de usos múltiples</p>');
 									echo('</div>');
 								break;
 								case 'cochera':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-p-circle" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Cochera</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg" style="max-height:3rem;"><br>');
+									echo('<p class="small mt-2">Cochera</p>');
 									echo('</div>');
 								break;								
 								case 'bici':
 									echo('<div class="col-2 text-center">');
-									echo('<i class="bi bi-bicycle" style="font-size: 1.7rem;"></i>');
-									echo('<p class="small">Parking para bicis</p>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;"><br>');
+									echo('<p class="small mt-2">Parking para bicis</p>');
 									echo('</div>');
 								break;								
 
@@ -89,49 +84,56 @@ if ( have_posts() ) {
 						<?php endforeach ?>
 					</div>
 				</div>
-				<div class=" mt-4 mb-4">
+				<div class=" mt-2 mb-4">
 					<h2>Avance de obra</h2>
 				</div>
 				<div class="row">
 					<?php $avances = get_field('avance', false, false); ?>					
-					<?php //var_dump($avances); ?>
 					<?php $count_avances = count($avances) / 4 * 100; ?>
 					<?php foreach ($avances as $key => $value): ?>
 						<?php switch ($value) { 
 							case 'pozo':
-								$style_pozo = "color: black;";
+								$style_pozo = "filter: brightness(0);";
 							break;
 							case 'obra':
-								$style_obra = "color: black;";					
+								$style_obra = "filter: brightness(0);";					
 							break;
 							case 'alba':
-								$style_alba = "color: black;";
+								$style_alba = "filter: brightness(0);";
 							break;
 							case 'detalles':
-								$style_detalles = "color: black;";
+								$style_detalles = "filter: brightness(0);";
 							break;
 						} ?>
 					<?php endforeach ?>
 					<div class="col-2 text-center">
-						<i class="bi bi-minecart-loaded avance" style="font-size: 1.7rem; <?php echo $style_pozo ?> "></i>
-						<p class="small">Pozo</p>
+						<img src="/wp-content/themes/ue-theme/img/avance/demo.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_pozo ?>">
+						<p class="small">Demolición</p>
 					</div>
 					<div class="col-2 text-center">
-						<i class="bi bi-gear avance" style="font-size: 1.7rem; <?php echo $style_obra ?>"></i>
+						<img src="/wp-content/themes/ue-theme/img/avance/obra.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_obra?>">
 						<p class="small">Obra</p>
 					</div>
 					<div class="col-2 text-center">
-						<i class="bi bi-boxes avance" style="font-size: 1.7rem; <?php echo $style_alba ?>"></i>
+						<img src="/wp-content/themes/ue-theme/img/avance/alba.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_alba ?>">
 						<p class="small">Albañilería</p>
 					</div>
 					<div class="col-2 text-center">
-						<i class="bi bi-building-check avance" style="font-size: 1.7rem; <?php echo $style_detalles ?>"></i>
-						<p class="small">Detalles</p>
+						<img src="/wp-content/themes/ue-theme/img/avance/term.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_detalles ?>">
+						<p class="small">Terminaciones</p>
 					</div>
 				</div>
 
+				<?php if ($count_avances == 100) : ?>
+					<?php $bar_color = 'bg-danger'; ?>
+					<?php $bar_text = 'DESARROLLO TERMINADO'; ?>
+				<?php else: ?>
+					<?php $bar_color = 'bg-secondary'; ?>
+					<?php $bar_text = ''; ?>
+				<?php endif; ?>
+
 				<div class="progress col-8 mb-4" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  					<div class="progress-bar bg-secondary" style="width: <?php echo($count_avances . '%');?>"></div>
+  					<div class="progress-bar <?php echo($bar_color); ?>" style="width: <?php echo($count_avances . '%');?>"><?php echo($bar_text); ?></div>
 				</div>
 
 			</div>
