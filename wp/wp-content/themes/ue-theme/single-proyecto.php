@@ -88,7 +88,10 @@ if ( have_posts() ) {
 					<h2>Avance de obra</h2>
 				</div>
 				<div class="row">
-					<?php $avances = get_field('avance', false, false); ?>					
+					<?php $avances = get_field('avance', false, false); ?>
+					<?php if (empty($avances)) :?>
+						<?php $avances = array_fill(0,1,'pozo');?>
+					<?php endif;?>
 					<?php $count_avances = count($avances) / 4 * 100; ?>
 					<?php foreach ($avances as $key => $value): ?>
 						<?php switch ($value) { 
