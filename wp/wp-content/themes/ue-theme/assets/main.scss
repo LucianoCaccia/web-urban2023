@@ -229,6 +229,14 @@ header {
 		}
 	}
 }
+@media (max-width: 768px) {
+	.navbar-brand {
+		img {
+			height: 20px;
+		}
+	}
+}
+
 
 
 .navbar-collapse {
@@ -770,7 +778,6 @@ div#wpcf7-f216-p14-o1 {
 }
 
 
-
 // *******************
 // Interior Poyecto  *
 // *******************
@@ -881,3 +888,4 @@ ul.nav-pills button.btn {
 		padding: 1rem 0rem 0rem 0rem;
 	}
 }
+
