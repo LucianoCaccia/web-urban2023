@@ -76,6 +76,7 @@ the_post();
 </section>
 
 <!-- Component Projectos slider -->
+<?php $section_title = 'Desarrollos'; ?>
 <?php include get_template_directory() . '/inc/projectos-slider.php'; ?>
 
 <section id="banner-proxima-inversion" class="fluid mt-5 mb-5">

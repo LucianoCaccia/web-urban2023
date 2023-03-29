@@ -135,7 +135,7 @@ if ( have_posts() ) {
 					<?php $bar_text = ''; ?>
 				<?php endif; ?>
 
-				<div class="progress col-8 mb-4" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+				<div class="progress col-8 mb-5" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
   					<div class="progress-bar <?php echo($bar_color); ?>" style="width: <?php echo($count_avances . '%');?>"><?php echo($bar_text); ?></div>
 				</div>
 
@@ -204,6 +204,7 @@ wp_reset_postdata();
 ?>
 
 <!-- Component Projectos slider -->
+<?php $section_title = 'Invertí con nosotros'; ?>
 <?php include get_template_directory() . '/inc/projectos-slider.php'; ?>
 
 <!-- Section Contacto -->

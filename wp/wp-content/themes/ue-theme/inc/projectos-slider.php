@@ -1,7 +1,7 @@
 <!-- Component Projectos Slider -->
 <section id="proyectos-slider">
 	<div class="container">
-		<h1 class="entry-title">Proyectos</h1>
+		<h1 class="entry-title"><?php echo($section_title); ?></h1>
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<button class="btn btn-link active" id="pills-arg-tab" data-bs-toggle="pill" data-bs-target="#pills-arg" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ARGENTINA</button>
