@@ -562,7 +562,7 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->SMTPAutoTLS = false;
     $phpmailer->Host = 'smtp.dreamhost.com';
     $phpmailer->Port = '465';
-	$phpmailer->Password = 'secret';
+	  $phpmailer->Password = 'secret';
     // from details
     $phpmailer->From = 'no-reply@urbanestate.com';
     $phpmailer->FromName = 'Web Urban Estate';
