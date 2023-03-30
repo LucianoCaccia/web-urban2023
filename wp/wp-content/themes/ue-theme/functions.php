@@ -557,12 +557,15 @@ add_action('phpmailer_init', function ($phpmailer) {
 
     $phpmailer->isSMTP();
     // host details
-    $phpmailer->SMTPAuth = false;
-    $phpmailer->SMTPSecure = '';
-    $phpmailer->SMTPAutoTLS = false;
-    $phpmailer->Host = 'smtp.dreamhost.com';
-    $phpmailer->Port = '465';
-	  $phpmailer->Password = 'secret';
+    $phpmailer->SMTPDebug = 2;                                 // Enable verbose debug output
+    $phpmailer->isSMTP();                                      // Set phpmailerer to use SMTP
+    $phpmailer->Host = 'smtp.dreamhost.com';                  // Specify main and backup SMTP servers
+    $phpmailer->SMTPAuth = true;                               // Enable SMTP authentication
+    $phpmailer->Username = 'contact@example.com';             // SMTP username
+    $phpmailer->Password = 'secret';                           // SMTP password
+    $phpmailer->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
+    $phpmailer->Port = 465;                                    // TCP port to connect to
+
     // from details
     $phpmailer->From = 'no-reply@urbanestate.com';
     $phpmailer->FromName = 'Web Urban Estate';
