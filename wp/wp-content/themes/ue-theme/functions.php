@@ -560,8 +560,9 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->SMTPAuth = false;
     $phpmailer->SMTPSecure = '';
     $phpmailer->SMTPAutoTLS = false;
-    $phpmailer->Host = 'mailhog';
-    $phpmailer->Port = '1025';
+    $phpmailer->Host = 'smtp.dreamhost.com';
+    $phpmailer->Port = '465';
+	  $phpmailer->Password = 'secret';
     // from details
     $phpmailer->From = 'no-reply@urbanestate.com';
     $phpmailer->FromName = 'Web Urban Estate';

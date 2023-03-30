@@ -14,3 +14,7 @@ wp-content/themes/twentytwentytwo
 wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js
 wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js.map
 wp/wp-content/themes/ue-theme/assets/dist/main.css.map
+
+# Wordpress config
+wp-config.php
+
