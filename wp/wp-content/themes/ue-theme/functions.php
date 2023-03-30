@@ -565,7 +565,7 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->Password = 'secret';                           // SMTP password
     $phpmailer->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
     $phpmailer->Port = 465;                                    // TCP port to connect to
-
+	
     // from details
     $phpmailer->From = 'no-reply@urbanestate.com';
     $phpmailer->FromName = 'Web Urban Estate';
