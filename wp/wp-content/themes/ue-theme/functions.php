@@ -543,37 +543,6 @@ function ue_theme_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'ue_theme_scripts_loader' );
 
-// define the wp_mail_failed callback
-function action_wp_mail_failed($wp_error) {
-    print_r($wp_error, true);
-    exit;
-}
-
-// add the action
-add_action('wp_mail_failed', 'action_wp_mail_failed', 10, 1);
-
-// configure PHPMailer to send through SMTP
-add_action('phpmailer_init', function ($phpmailer) {
-
-    $phpmailer->isSMTP();
-    // host details
-    $phpmailer->SMTPDebug = 2;                                 // Enable verbose debug output
-    $phpmailer->isSMTP();                                      // Set phpmailerer to use SMTP
-    $phpmailer->Host = 'smtp.dreamhost.com';                  // Specify main and backup SMTP servers
-    $phpmailer->SMTPAuth = true;                               // Enable SMTP authentication
-    $phpmailer->Username = 'contact@example.com';             // SMTP username
-    $phpmailer->Password = 'M4n3j4l01972';                           // SMTP password
-    $phpmailer->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
-    $phpmailer->Port = 587;                                    // TCP port to connect to
-
-    // from details
-    $phpmailer->From = 'no-reply@urbanestate.com';
-    $phpmailer->FromName = 'Web Urban Estate';
-    // login details
-    // $phpmailer->Username = WORDPRESS_SMTP_USERNAME;
-    // $phpmailer->Password = WORDPRESS_SMTP_PASSWORD;
-
-});
 
 
 
