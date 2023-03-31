@@ -107,13 +107,13 @@ the_post();
 </div>
 <div class="fluid">
     <section id="banner-proxima-inversion" class="fluid mt-5 mb-5">
-	    <div class="img-overflow">
-			<img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
-			<div class="text-center block-display">
-				<h1 class="display-3 text-white pb-4">Descubrí tu próxima inversión</h1>
-				<a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
-			</div>
-	    </div>
+        <div class="img-overflow">
+            <img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
+            <div class="text-center block-display">
+                <h1 class="display-2 text-white pb-2 pt-2">Descubrí tu próxima inversión</h1>
+                <a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
+            </div>
+        </div>
     </section>
 </div>
 <!-- /#post-<?php the_ID(); ?> -->

@@ -52,10 +52,10 @@ get_header();
 
 <section id="proyectos-slider">
 	<div class="container">
-        <div class="mt-4 mb-4">
-            <h1 class="entry-title">ARGENTINA</h1>
-            <h2>BUENOS AIRES</h2>
-            <hr>
+        <div class="mt-4 mb-4 pt-5">
+            <h1>ARGENTINA</h1>
+            <h2>Buenos Aires</h2>
+            <hr class="mb-5">
         </div>
         <div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
@@ -104,10 +104,10 @@ get_header();
                     <span class="visually-hidden">Next</span>
                 </button>
 		</div> <!-- enf of slider -->
-        <div class="mt-4 mb-4">
-            <h1 class="entry-title">URUGUAY</h1>
-            <h2>MONTEVIDEO</h2>
-            <hr>
+        <div class="mt-4 mb-4 pt-5">
+            <h1>URUGUAY</h1>
+            <h2>Montevideo</h2>
+            <hr class="mb-5">
         </div>        
         <div id="carouselUruControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">

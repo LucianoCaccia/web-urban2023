@@ -49,8 +49,8 @@ the_post();
 
 		<div class="container">
 			<div class="content-over position-absolute animated appear delay2 duration4">
-				<h1 class="display-2">Rentabilidad</h1>
-				<h1 class="display-2">y excelencia</h1>
+				<h1 class="display-1">Rentabilidad</h1>
+				<h1 class="display-1">y excelencia</h1>
 				<h1 class="display-3">en desarrollos inmobiliarios</h1>
 			</div>
 		</div>
@@ -63,8 +63,8 @@ the_post();
 <section id="live-somos">
 	<div class="container clearfix">
 		<div class="row">
-			<div class="col-md-2 col-lg-1 col-xs-12 offset-md-4 offset-lg-5 offset-xl-5 mt-5 ">
-				<img src="/wp-content/themes/ue-theme/img/live-somos.png" width="100px" alt="">
+			<div class="col-md-3 col-lg-2 col-xs-12 offset-md-3 offset-lg-4 offset-xl-4 mt-5">
+				<img src="/wp-content/themes/ue-theme/img/live-somos.png" width="180px" alt="">
 			</div>
 			<div class="col mt-5 ms-2 ms-xl-4 ms-lg-5">
 				<p>Urban Estate, una empresa de desarrolladores de emprendimientos inmobiliarios con oficina ubicada en av. libertador 7766, en el barrio de nuñez, buenos aires, argentina.</p>
@@ -83,7 +83,7 @@ the_post();
 	<div class="img-overflow">
 			<img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
 			<div class="text-center block-display">
-				<h1 class="display-3 text-white pb-4">Descubrí tu próxima inversión</h1>
+				<h1 class="display-2 text-white pb-2 pt-2">Descubrí tu próxima inversión</h1>
 				<a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
 			</div>
 	</div>
@@ -91,11 +91,11 @@ the_post();
 
 <section id="servicios" class="mb-5 mt-5">
 	<div class="container-md">
-		<h1 class="entry-title">Servicios</h1>
+		<h1 class="entry-title">Inversiones inmobiliarias</h1>
 		<div class="row">
 			<div class="col-md-6 mb-2">
 				<a href="/inverti-en-ladrillos">
-				<div class="card  animated fadeIn duration2 eds-on-scroll  ">
+				<div class="card animated slideInLeft duration2 eds-on-scroll">
 					<img src="/wp-content/themes/ue-theme/img/servicio-live.jpg" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">
 						<h1 class="card-title">Invertí<br>en ladrillos</h1>
@@ -109,7 +109,7 @@ the_post();
 			</div>
 			<div class="col-md-6">
 				<a href="/urban-rent">
-				<div class="card  animated fadeIn duration2 eds-on-scroll   ">
+				<div class="card animated slideInRight duration2 eds-on-scroll ">
 						<img src="/wp-content/themes/ue-theme/img/servicio-rent.jpg" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
 							<h1 class="card-title">Comprá  <br>y rentá</h1>
@@ -127,23 +127,23 @@ the_post();
 
 <section id="numeros" class="mb-5 mt-5 pt-5">
 	<div class="container-fluid pt-4 pb-4">
-		<div class="container text-center pt-5">
+		<div class="container text-center pt-2">
 			<div class="counters row align-items-start">
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="display-1"><span data-count="3">0</span></h1>
-						<h3>PAÍSES</h3>
+						<h1 class="numero"><span data-count="3">0</span></h1>
+						<h4>PAÍSES</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="display-1"><span data-count="15">0</span></h1>
-						<h3>AÑOS DE EXPERIENCIA</h3>
+						<h1 class="numero"><span data-count="15">0</span></h1>
+						<h4>AÑOS DE EXPERIENCIA</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="display-1"><span data-count="60">0</span></h1>
-						<h3>DESARROLLOS</h3>
+						<h1 class="numero"><span data-count="60">0</span></h1>
+						<h4>DESARROLLOS</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="display-1"><span data-count="6000">0</span></h1>
-						<h3>CLIENTES FELICES</h3>
+						<h1 class="numero"><span data-count="6000">0</span></h1>
+						<h4>CLIENTES FELICES</h4>
 					</div>
 			</div>
 		</div>

@@ -40,7 +40,7 @@
 									<div class="col-12 title mb-4">
 										<img src="<?php the_field('logo_pr');?>" style="width:12rem;" class="logo-pr" alt="Logo del proyecto <?php the_title(); ?>"> 
 									</div>
-									<div class="col-12 link">
+									<div class="col-12 link pt-4">
 									<a href="<?php the_permalink();?>" class="btn btn-light btn-card ps-4 pe-4">Descubrir</a>
 									</div>									
 								</div>
