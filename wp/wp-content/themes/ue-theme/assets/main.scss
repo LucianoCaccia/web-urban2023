@@ -954,6 +954,17 @@ section#galery-masonry {
     	border-bottom: 1px solid #a0a0a0;
 	}
 	input.submit {
-		background-color: var(--bs-btn-bg) !important;
+		background-color: #575756!important;
+		border-color: #545556!important;
+		color: #ffffff;
+		border-radius: 20px;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	input.submit:hover {
+			background-color: grey !important;
+			border-color: grey !important;
 	}
 }
