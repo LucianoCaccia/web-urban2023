@@ -11,9 +11,9 @@ wp-content/themes/twentytwentythree
 wp-content/themes/twentytwentytwo
 
 # Custom theme
-wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js
-wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js.map
-wp/wp-content/themes/ue-theme/assets/dist/main.css.map
+# wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js
+# wp/wp-content/themes/ue-theme/assets/dist/main.bundle.js.map
+# wp/wp-content/themes/ue-theme/assets/dist/main.css.map
 
 # Wordpress config
 wp-config.php
