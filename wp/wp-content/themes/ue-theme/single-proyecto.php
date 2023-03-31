@@ -33,11 +33,11 @@ if ( have_posts() ) {
 		<div class="row">
 			<div class="col-12 col-md-6">
 				<div class="mt-4 d-flex flex-row align-items-end">
-					<h2 class="mb-0">Tipología</h2>
+					<h3 class="mb-0">Tipología</h3>
 					<p class="lead mb-0 ms-3"><?php the_field('tipologia'); ?></p>
 				</div>
 				<div class=" mt-4">
-					<h2>Amenities</h2>
+					<h3>Amenities</h3>
 					<div class="row mt-4">
 						<?php $amenities = get_field('amenities', false, false); ?>					
 						<?php // var_dump($amenities); ?>
@@ -85,7 +85,7 @@ if ( have_posts() ) {
 					</div>
 				</div>
 				<div class=" mt-2 mb-4">
-					<h2>Avance de obra</h2>
+					<h3>Avance de obra</h3>
 				</div>
 				<div class="row">
 					<?php $avances = get_field('avance', false, false); ?>
@@ -170,7 +170,7 @@ if ( have_posts() ) {
 	</div>
 </section>
 
-<section id="galery-masonry" class="galery-masonry">
+<section id="galery-masonry" class="galery-masonry mt-5 mb-5">
         <?php
         if( class_exists('Dynamic_Featured_Image') ) {
         global $dynamic_featured_image;
