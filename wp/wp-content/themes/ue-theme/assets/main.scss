@@ -940,8 +940,6 @@ section#galery-masonry {
 }
 
 // ******** Results page ********
-
-
 .card.search {
 	border: none !important;
 	.card-body {
@@ -949,3 +947,13 @@ section#galery-masonry {
 	}
 }
 
+// *** Form Zoho ***
+#crmWebToEntityForm {
+	input, textarea {
+		border-style: none;
+    	border-bottom: 1px solid #a0a0a0;
+	}
+	input.submit {
+		background-color: var(--bs-btn-bg) !important;
+	}
+}
