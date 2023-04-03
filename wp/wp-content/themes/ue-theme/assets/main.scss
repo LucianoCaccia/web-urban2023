@@ -859,17 +859,13 @@ div#wpcf7-f216-p14-o1 {
 	max-width: 40%;
 }
 .text-vert {
-    position: relative;
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-    padding-top: 2rem;
-	@media (max-width: 768px) {
-		position: inherit;
-		transform: rotateX(0deg);
-		padding-top: 0%;
-		top: 0;
-		padding-top: 1rem;
-		text-transform: capitalize;
+
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		writing-mode: vertical-lr;
+		text-orientation: inherit;
+		height: max-content;
+		left: 42%;
 	}
 }
 .btn-card {

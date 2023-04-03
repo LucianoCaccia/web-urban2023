@@ -154,7 +154,7 @@ if ( have_posts() ) {
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="row align-items-end">
-					<div class="text-vert col-md-2 align-self-center">
+					<div class="text-vert align-self-center">
 						<h1 class="animated fadeInDown delay1 duration1 eds-on-scroll ">
 							<?php the_field('barrio'); ?>
 						</h1>
