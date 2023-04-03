@@ -67,9 +67,11 @@ the_post();
 				<img src="/wp-content/themes/ue-theme/img/live-somos.png" width="180px" alt="">
 			</div>
 			<div class="col mt-5 ms-2 ms-xl-4 ms-lg-5">
-				<p>Urban Estate, una empresa de desarrolladores de emprendimientos inmobiliarios con oficina ubicada en av. libertador 7766, en el barrio de nuñez, buenos aires, argentina.</p>
-				<p>Realizamos proyectos a medida de los inversores, prevaleciendo siempre una buena ubicación y el mejor precio de reventa.</p>
-				<p>Trabajamos con un equipo de profesionales de diseño, construcción, administración y venta de inmuebles para brindar la mejor rentabilidad en su inversión.</p>
+				<p>Somos Urban Estate, una empresa de desarrollos inmobiliarios a medida de los inversores en Argentina y Uruguay. 
+					Trabajamos en los proyectos desde el inicio hasta su completa entrega y posventa. Además ofrecemos servicio de renting para nuestros clientes.</p>
+				<p>Ofrecemos posibilidades de inversión de gran rentabilidad, en ubicaciones privilegiadas de las ciudades más importantes de la región.</p>
+				<p>Nuestro equipo de profesionales, de amplia experiencia y trayectoria, trabaja de manera interdisciplinaria, 
+					logrando proyectos de gran calidad de diseño y construcción, y asesorando desde la administración, venta y renta de los inmuebles.</p>
 			</div>
 		</div>
 	</div>

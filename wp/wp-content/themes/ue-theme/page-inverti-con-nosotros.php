@@ -23,16 +23,16 @@ the_post();
 	?>
 
 	<section id="slider-video" class="fluid">	
-			<?php if (has_post_thumbnail( $post->ID ) ) : ?>
+        <?php if (has_post_thumbnail( $post->ID ) ) : ?>
 
-				<img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%; filter: brightness(65%);">
+            <img src="<?php echo the_post_thumbnail_url('large')?>" style="width: 100%; filter: brightness(65%);">
 
-			<?php else : ?>
-				<div class="video-overflow">
-				<img src="/wp-content/themes/ue-theme/img/default-header.jpeg" style="width:100%;"alt="">
-				</div>
-			
-			<?php endif;  ?>
+        <?php else : ?>
+            <div class="video-overflow">
+            <img src="/wp-content/themes/ue-theme/img/default-header.jpeg" style="width:100%;"alt="">
+            </div>
+        
+        <?php endif;  ?>
 
 		<div class="container">
             <div class="content-over position-absolute animated appear delay2 duration4">
