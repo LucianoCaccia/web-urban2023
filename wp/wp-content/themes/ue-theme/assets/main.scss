@@ -121,6 +121,13 @@ $link-decoration: none;
 		line-height: 1 !important;
 	}
 }
+@media (max-width: 576px) {
+	.display-1 {
+		font-size: 2rem !important;
+		line-height: 25pt !important;
+	}
+}
+
 
 // Buttons customization
 .btn-secondary {
@@ -632,6 +639,15 @@ main.videofull {
 	}
 }
 
+// Live somos
+img#live-somos {
+	width: 8rem;
+	@include media-breakpoint-up(sm) {
+		width: 11rem;
+	}
+}
+
+
 
 // Section proyectos-slider
 section#proyectos-slider {
@@ -767,7 +783,10 @@ section#banner-proxima-inversion {
 section#numeros {
 	h1.numero {
 		font-weight: 400;
-		font-size: 7.5rem;
+		font-size: 4rem;
+		@include media-breakpoint-up(sm) {
+			font-size: 7.5rem;
+		}
 	}
 	.container-fluid {
 		background-color: #666766;
@@ -964,5 +983,15 @@ section#galery-masonry {
 	input.submit:hover {
 			background-color: grey !important;
 			border-color: grey !important;
+	}
+}
+
+// ***  URBAN RENT ***
+img.logo-rent {
+	height: 2rem;
+}
+@include media-breakpoint-up(sm) {
+	img.logo-rent {
+		height: 3.3rem;
 	}
 }

@@ -76,7 +76,7 @@ get_header();
 							<?php if (get_field('carousel_img')) : ?>
 								<img src="<?php the_field('carousel_img')?>"  alt="...">
 							<?php else : ?>
-								<img src="https://picsum.photos/311/461"  alt="...">
+								<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(3px);" alt="...">
 							<?php endif; ?>						
 						</div>
 						<div class="card-body">
@@ -128,7 +128,7 @@ get_header();
 							<?php if (get_field('carousel_img')) : ?>
 								<img src="<?php the_field('carousel_img')?>"  alt="...">
 							<?php else : ?>
-								<img src="https://picsum.photos/311/461"  alt="...">
+								<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(3px);" alt="...">
 							<?php endif; ?>	
 						</div>
 						<div class="card-body">
