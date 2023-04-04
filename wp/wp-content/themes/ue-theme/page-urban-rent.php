@@ -36,7 +36,7 @@ the_post();
 
 		<div class="container">
             <div class="content-over position-absolute animated appear delay2 duration4">
-            <img class="mt-4 mb-4" src="/wp-content/themes/ue-theme/img/UrbanRent2.svg" style="height: 3.3rem;">
+            <img class="mt-4 mb-4 logo-rent" src="/wp-content/themes/ue-theme/img/UrbanRent2.svg">
                 <h1 class="display-2">Rentá y ganá</h1>
             </div>
 		</div>

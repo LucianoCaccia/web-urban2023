@@ -64,7 +64,7 @@ the_post();
 	<div class="container clearfix">
 		<div class="row">
 			<div class="col-md-3 col-lg-2 col-xs-12 offset-md-3 offset-lg-4 offset-xl-4 mt-5">
-				<img src="/wp-content/themes/ue-theme/img/live-somos.png" width="180px" alt="">
+				<img id="live-somos" src="/wp-content/themes/ue-theme/img/live-somos.png" alt="live somos">
 			</div>
 			<div class="col mt-5 ms-2 ms-xl-4 ms-lg-5">
 				<p>Somos Urban Estate, una empresa de desarrollos inmobiliarios a medida de los inversores en Argentina y Uruguay. 
