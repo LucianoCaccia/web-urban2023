@@ -20,16 +20,14 @@ if ( have_posts() ) {
 
 	<?php else : ?>
 		<div class="video-overflow">
-			<img src="/wp-content/themes/ue-theme/img/default-header.jpeg" style="width:100%;"alt="">
+			<img src="/wp-content/themes/ue-theme/img/default-header.jpeg" style="width:100%; filter: brightness(0.65);" alt="">
 		</div>
-
 	<?php endif;  ?>		
-		
-		
-		
 			<div class="container">
 			<div class="content-over position-absolute">
-				<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr animated appear delay2 duration4" alt="Logo del proyecto <?php the_title(); ?>">  	
+				<?php if (get_field('logo_pr')) : ?>
+					<img src="<?php the_field('logo_pr');?>" style="width:55rem;" class="logo-pr animated appear delay2 duration4" alt="Logo del proyecto <?php the_title(); ?>">  	
+				<?php endif; ?>
 			</div>			
 		</div>
 </section>
