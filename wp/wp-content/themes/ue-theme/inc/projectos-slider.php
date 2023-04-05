@@ -31,7 +31,7 @@
 									<?php if (get_field('carousel_img')) : ?>
 										<img src="<?php the_field('carousel_img')?>"  alt="...">
 									<?php else : ?>
-										<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(3px);" alt="...">
+										<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(2px) saturate(0.3);" alt="...">
 									<?php endif; ?>
 								</div>
 
