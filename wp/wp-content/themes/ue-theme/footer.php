@@ -17,19 +17,20 @@
 		<footer id="footer">
 			<div class="container">
 				<div class="row pb-4">
-					<div class=" col-md-2 col-sm-6">
-						<img class="footer-logo" src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />
-						<div class="social-footer col-md-9 col-4">
+					<div class=" col-md-3 col-sm-8 pt-1">
+						<img class="footer-logo" src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />						
+					</div>
+					<div class=" col-md-2 col-sm-4">
+						<div class="social-footer pt-4">
 							<a href="http://www.facebook.com/urbanestatelive" target="_blank" style="color:#ffffff;"><span><i class="bi bi-facebook" style="font-size: 1rem;"></i></span></a>
 							<a href="http://www.instagram.com/urbanestatelive" target="_blank" style="color:#ffffff;"><span><i class="bi bi-instagram" style="font-size: 1rem;"></i></span></a>
 							<a href="https://www.youtube.com/@urbanestate4035" target="_blank" style="color:#ffffff;"><span><i class="bi bi-youtube" style="font-size: 1rem;"></i></span></a>
 							<a href="https://www.linkedin.com/company/urban-estate-live/" target="_blank" style="color:#ffffff;"><span><i class="bi bi-linkedin" style="font-size: 1rem;"></i></span></a>
 						</div>
-						
 					</div>
-					<div class="col-md-5 mt-md-5 col-sm-6 mt-3 d-flex justify-content-center">
-						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347<br>
-						<span><i class="bi bi-envelope mt-2" style="font-size: 1rem;"></i><a href="mailto:contacto@urbanestate.com.ar" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
+					<div class="col d-flex justify-content-end pt-4 pe-5">
+						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347
+						<span><i class="bi bi-envelope ms-4" style="font-size: 1rem;"></i><a href="mailto:contacto@urbanestate.com.ar" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
 						</small>
 					</div>					
 

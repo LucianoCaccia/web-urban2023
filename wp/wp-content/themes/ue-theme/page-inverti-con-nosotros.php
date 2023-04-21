@@ -36,8 +36,8 @@ the_post();
 
 		<div class="container">
             <div class="content-over position-absolute animated appear delay2 duration4">
-                <h1 class="display-2">Invertí con</h1>
-                <h1 class="display-2">nosotros</h1>
+                <h1 class="display-1">Invertí con</h1>
+                <h1 class="display-1">nosotros</h1>
             </div>
 		</div>
 
@@ -52,8 +52,10 @@ the_post();
 	</section>
     <section id="fixed-content">
         <div class="row">
-            <div class="offset-md-2 col-md-6">
-                <h2>Desarrollamos proyectos inmobiliarios desde el inicio hasta la posventa.</h2>
+        <div class="offset-md-2 col-md-8 mb-4 mt-5">
+            <h2>Desarrollamos proyectos inmobiliarios <br>desde el inicio hasta la posventa.</h2>
+        </div>
+            <div class="offset-md-2 col-md-6 pe-5 mb-5">
                 <p>Seleccionamos rigurosamente la zona de emplazamiento de cada desarrollo a través de un estudio que nos permita evaluar el valor añadido para los inversores.</p>
                 <p>Nos enfocamos en abarcar la totalidad de la cadena de valor del negocio, comprando el suelo y diseñando un proyecto de altos estándares de ubicación y habitabilidad, así como de reventa.</p>
                 <p>Preparamos el entorno de manera inteligente, optimizando los recursos.</p>
@@ -70,8 +72,8 @@ the_post();
         <div class="row">
             <div class="offset-md-2 col-md-6">
                 <div class="background pt-4 ps-4 pb-4" style="background-color: #E8E8E8;">
-                    <h2> Invertí con nosotros</h2>
-                    <ul class="ps-0">
+                    <h2 class="mt-2 mb-4"> Invertí con nosotros</h2>
+                    <ul class="ps-0" style="line-height: 30px;">
                         <ol class="ps-0">• Estamos al día con las últimas tendencias</ol>
                         <ol class="ps-0">• Pensamos en la sostenibilidad</ol>
                         <ol class="ps-0">• Creamos proyectos rentables</ol>
@@ -86,18 +88,18 @@ the_post();
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="row">
-                    <div class="col-2 ">
+                    <div class="col-2 ms-5">
                         <img class="mt-4" src="/wp-content/themes/ue-theme/img/airbnb.svg" style="max-height: 2.2rem;">
                     </div>
-                    <div class="col-10">
+                    <div class="col-8">
                         <h2 class="pt-4">Airbnb ready</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-2 ms-5">
                         <img class="mt-4" src="/wp-content/themes/ue-theme/img/geo.svg" style="max-height: 2.7rem;">
                     </div>
-                    <div class="col-10">
+                    <div class="col-8">
                         <h2 class="pt-4">Zonas premium</h2>
                     </div>                    
                 </div>
@@ -106,15 +108,10 @@ the_post();
     </section>
 </div>
 <div class="fluid">
-    <section id="banner-proxima-inversion" class="fluid mt-5 mb-5">
-        <div class="img-overflow">
-            <img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
-            <div class="text-center block-display">
-                <h1 class="display-2 text-white pb-2 pt-2">Descubrí tu próxima inversión</h1>
-                <a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
-            </div>
-        </div>
-    </section>
+
+<!-- Banner Próxima Inversión -->
+<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
+
 </div>
 <!-- /#post-<?php the_ID(); ?> -->
 <?php
