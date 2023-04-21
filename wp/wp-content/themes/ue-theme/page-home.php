@@ -66,7 +66,7 @@ the_post();
 			<div class="col-md-3 col-lg-2 col-xs-12 offset-md-3 offset-lg-4 offset-xl-4 mt-5">
 				<img id="live-somos" src="/wp-content/themes/ue-theme/img/live-somos.png" alt="live somos">
 			</div>
-			<div class="col mt-5 ms-2 ms-xl-4 ms-lg-5">
+			<div class="col mt-5 ms-2 ms-xl-2 ms-lg-3">
 				<p>Somos Urban Estate, una empresa de desarrollos inmobiliarios a medida de los inversores en Argentina y Uruguay. 
 					Trabajamos en los proyectos desde el inicio hasta su completa entrega y posventa. Además ofrecemos servicio de renting para nuestros clientes.</p>
 				<p>Ofrecemos posibilidades de inversión de gran rentabilidad, en ubicaciones privilegiadas de las ciudades más importantes de la región.</p>
@@ -81,22 +81,15 @@ the_post();
 <?php $section_title = 'Desarrollos'; ?>
 <?php include get_template_directory() . '/inc/projectos-slider.php'; ?>
 
-<section id="banner-proxima-inversion" class="fluid mt-5 mb-5">
-	<div class="img-overflow">
-			<img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
-			<div class="text-center block-display">
-				<h1 class="display-2 text-white pb-2 pt-2">Descubrí tu próxima inversión</h1>
-				<a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
-			</div>
-	</div>
-</section>
+<!-- Banner Próxima Inversión -->
+<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
 
 <section id="servicios" class="mb-5 mt-5">
 	<div class="container-md">
 		<h1 class="entry-title">Inversiones inmobiliarias</h1>
 		<div class="row">
 			<div class="col-md-6 mb-2">
-				<a href="/inverti-en-ladrillos">
+				<a href="/inverti-con-nosotros">
 				<div class="card animated slideInLeft duration2 eds-on-scroll">
 					<img src="/wp-content/themes/ue-theme/img/servicio-live.jpg" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">

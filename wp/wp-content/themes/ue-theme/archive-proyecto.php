@@ -41,8 +41,8 @@ get_header();
             ?>
 
             <div class="content-over position-absolute animated appear delay2 duration4">
-                <h1 class="display-2">Elegí tu mejor opción</h1>
-                <h1 class="display-2"> para invertir</h1>
+                <h1 class="display-1">Elegí tu mejor opción</h1>
+                <h1 class="display-1"> para invertir</h1>
             </div>
         </div>   
 	</section>
@@ -53,8 +53,8 @@ get_header();
 <section id="proyectos-slider">
 	<div class="container">
         <div class="mt-4 mb-4 pt-5">
-            <h1>ARGENTINA</h1>
-            <h2>Buenos Aires</h2>
+            <h2>ARGENTINA</h2>
+            <h3>Buenos Aires</h3>
             <hr class="mb-5">
         </div>
         <div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
@@ -105,8 +105,8 @@ get_header();
                 </button>
 		</div> <!-- enf of slider -->
         <div class="mt-4 mb-4 pt-5">
-            <h1>URUGUAY</h1>
-            <h2>Montevideo</h2>
+            <h2>URUGUAY</h2>
+            <h3>Montevideo</h3>
             <hr class="mb-5">
         </div>        
         <div id="carouselUruControls" class="carousel" data-bs-ride="carousel">

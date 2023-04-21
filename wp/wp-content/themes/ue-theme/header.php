@@ -56,7 +56,7 @@
 				<div id="navbar" class="collapse navbar-collapse">
 
 					<label>
-						<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
+						<form class="search-form my-2 my-lg-0 pe-3" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
 								<span class="">
 									<input type="search" name="s" class="search-field form-control" placeholder="" title="<?php esc_attr_e( 'Search', 'ue-theme' ); ?>" />
 								</span>

@@ -97,15 +97,10 @@ the_post();
     </section>
 </div>
 <div class="fluid">
-    <section id="banner-proxima-inversion" class="fluid mt-5 mb-5">
-        <div class="img-overflow">
-            <img src="/wp-content/themes/ue-theme/img/tomemoscafe.jpg" class="img-fluid">
-            <div class="text-center block-display">
-                <h1 class="display-2 text-white pb-2 pt-2">Descubrí tu próxima inversión</h1>
-                <a href="#contact-form" class="btn btn-secondary btn-card mt-1 mb-1 ps-4 pe-4">Tomemos un café</a>
-            </div>
-        </div>
-    </section>
+
+<!-- Banner Próxima Inversión -->
+<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
+
 </div>
 <!-- /#post-<?php the_ID(); ?> -->
 <?php
