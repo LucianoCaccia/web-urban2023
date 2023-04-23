@@ -199,7 +199,7 @@ $link-decoration: none;
  */
 
 a:hover > i {
-	color: $gray-600 !important;
+	color: $white !important;
 }
 
 hr {
@@ -893,11 +893,12 @@ input.wpcf7-form-control.filecv {
 .text-vert {
 
 	@include media-breakpoint-up(md) {
-		position: absolute;
-		writing-mode: vertical-lr;
+		// position: absolute;
+		writing-mode: vertical-rl;
 		text-orientation: inherit;
-		height: max-content;
-		left: 42%;
+		transform: scale(-1, -1);
+		// height: max-content;
+		// left: 42%;
 	}
 }
 .btn-card {
@@ -915,6 +916,26 @@ body.single-proyecto img.img-filter {
 	filter: brightness(65%);
 	width: 100%;
 }
+div.amenities {
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+	@include media-breakpoint-up(md) {
+		justify-content: flex-start;
+
+	}
+	.item {
+		width: auto;
+    	max-width: 4.7rem;
+		img {
+			max-height: 3rem;
+		}
+	}
+}
+
 
 // Masonry CSS only
 section#galery-masonry {
