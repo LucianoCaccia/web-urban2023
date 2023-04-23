@@ -651,7 +651,7 @@ main.videofull {
 	}
 }
 section#slider-video {
-	max-height: 700px;
+	max-height: 810px;
     overflow: hidden;
 }
 
@@ -736,7 +736,7 @@ section#proyectos-slider {
   @media (min-width: 768px) {
 	.carousel-item {
 	  margin-right: 1rem;
-	  flex: 0 0 24%;
+	  flex: 0 0 23.9%;
 	  display: block;
 	  overflow: hidden;
 	}
