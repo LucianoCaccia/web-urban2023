@@ -18,7 +18,8 @@
 					<?php $args = array(
 						'post_type' => 'proyecto',
 						'meta_key' => 'pais',
-						'meta_value' => 'arg'
+						'meta_value' => 'arg',
+						'order' => 'DESC'
 					);
 					$the_query = new WP_Query( $args ); ?>
 					<?php if ( $the_query->have_posts() ) : ?>
