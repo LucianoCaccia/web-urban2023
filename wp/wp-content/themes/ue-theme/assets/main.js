@@ -14,7 +14,7 @@ if (multipleCardCarouselArg) {
     var scrollPosition = 0;
     $("#carouselArgControls .carousel-control-next").on("click", function () {
       if (scrollPosition < carouselWidth - cardWidth * 4) {
-        scrollPosition += cardWidth;
+        scrollPosition += cardWidth + 15;
         $("#carouselArgControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
@@ -23,7 +23,7 @@ if (multipleCardCarouselArg) {
     });
     $("#carouselArgControls .carousel-control-prev").on("click", function () {
       if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
+        scrollPosition -= cardWidth + 15;
         $("#carouselArgControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
@@ -55,7 +55,7 @@ if (multipleCardCarouselUru) {
     var scrollPosition = 0;
     $("#carouselUruControls .carousel-control-next").on("click", function () {
       if (scrollPosition < carouselWidth - cardWidth * 4) {
-        scrollPosition += cardWidth;
+        scrollPosition += cardWidth + 15;
         $("#carouselUruControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
@@ -64,7 +64,7 @@ if (multipleCardCarouselUru) {
     });
     $("#carouselUruControls .carousel-control-prev").on("click", function () {
       if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
+        scrollPosition -= cardWidth + 15;
         $("#carouselUruControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
@@ -92,7 +92,7 @@ if (multipleCardCarouselEsp) {
     var scrollPosition = 0;
     $("#carouselEspControls .carousel-control-next").on("click", function () {
       if (scrollPosition < carouselWidth - cardWidth * 4) {
-        scrollPosition += cardWidth;
+        scrollPosition += cardWidth +15;
         $("#carouselEspControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
@@ -101,7 +101,7 @@ if (multipleCardCarouselEsp) {
     });
     $("#carouselEspControls .carousel-control-prev").on("click", function () {
       if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
+        scrollPosition -= cardWidth + 15;
         $("#carouselEspControls .carousel-inner").animate(
           { scrollLeft: scrollPosition },
           600
