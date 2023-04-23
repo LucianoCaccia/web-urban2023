@@ -38,53 +38,53 @@ if ( have_posts() ) {
 	</div>
 </section>
 
-<section id="caracteristicas">
+<section id="caracteristicas" class="mt-5">
 	<div class="container">	
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div class="mt-4 d-flex flex-row align-items-end">
+				<div class="mb-5 d-flex flex-row align-items-end">
 					<h3 class="mb-0">Tipología</h3>
 					<p class="lead mb-0 ms-3"><?php the_field('tipologia'); ?></p>
 				</div>
-				<div class=" mt-4">
+				<div class=" mt-4 mb-4">
 					<h3>Amenities</h3>
-					<div class="row mt-4">
+					<div class="row mt-4 amenities">
 						<?php $amenities = get_field('amenities', false, false); ?>					
 						<?php // var_dump($amenities); ?>
 						<?php foreach ($amenities as $key => $value): ?>
 							<?php switch ($value) { 
 								case 'parrilla':
-									echo('<div class="col-2 text-center">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg" style="max-height:3rem;"><br>');
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg"<br>');
 									echo('<p class="small mt-2">Parrilla</p>');
 									echo('</div>');
 								break;
 								case 'loundry':
-									echo('<div class="col-2 text-center">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg" style="max-height:3rem;"><br>');
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg"<br>');
 									echo('<p class="small mt-2">Laundry</p>');
 									echo('</div>');
 								break;
 								case 'gimnasio':
-									echo('<div class="col-2 text-center">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg" style="max-height:3rem;"><br>');
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg"<br>');
 									echo('<p class="small mt-2">Gimnasio</p>');
 									echo('</div>');
 								break;
 								case 'sum':
-									echo('<div class="col-2 text-center">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg" style="max-height:3rem;"><br>');
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg"<br>');
 									echo('<p class="small mt-2">Salón de usos múltiples</p>');
 									echo('</div>');
 								break;
 								case 'cochera':
-									echo('<div class="col-2 text-center">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg" style="max-height:3rem;"><br>');
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg"<br>');
 									echo('<p class="small mt-2">Cochera</p>');
 									echo('</div>');
 								break;								
 								case 'bici':
-									echo('<div class="col-2 text-center">');
+									echo('<div class="item me-4">');
 									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;"><br>');
 									echo('<p class="small mt-2">Parking para bicis</p>');
 									echo('</div>');
@@ -94,10 +94,10 @@ if ( have_posts() ) {
 						<?php endforeach ?>
 					</div>
 				</div>
-				<div class=" mt-2 mb-4">
+				<div class=" mt-2 mb-5">
 					<h3>Avance de obra</h3>
 				</div>
-				<div class="row">
+				<div class="row mb-1">
 					<?php $avances = get_field('avance', false, false); ?>
 					<?php if (empty($avances)) :?>
 						<?php $avances = array_fill(0,1,'pozo');?>
@@ -121,19 +121,19 @@ if ( have_posts() ) {
 					<?php endforeach ?>
 					<div class="col-2 text-center">
 						<img src="/wp-content/themes/ue-theme/img/avance/demo.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_pozo ?>">
-						<p class="small">Demolición</p>
+						<p class="small mt-2">Demolición</p>
 					</div>
 					<div class="col-2 text-center">
 						<img src="/wp-content/themes/ue-theme/img/avance/obra.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_obra?>">
-						<p class="small">Obra</p>
+						<p class="small mt-2">Obra</p>
 					</div>
 					<div class="col-2 text-center">
 						<img src="/wp-content/themes/ue-theme/img/avance/alba.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_alba ?>">
-						<p class="small">Albañilería</p>
+						<p class="small mt-2">Albañilería</p>
 					</div>
 					<div class="col-2 text-center">
 						<img src="/wp-content/themes/ue-theme/img/avance/term.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_detalles ?>">
-						<p class="small">Terminaciones</p>
+						<p class="small mt-2">Terminaciones</p>
 					</div>
 				</div>
 
@@ -150,22 +150,24 @@ if ( have_posts() ) {
 				</div>
 
 			</div>
-			<div class="col-12 col-md-6">
-				<div class="row align-items-end">
-					<div class="text-vert align-self-center">
-						<h1 class="animated fadeInDown delay1 duration1 eds-on-scroll ">
-							<?php the_field('barrio'); ?>
-						</h1>
-					</div>
-					<div class="col">
+			<div class="col-12 col-md-1">
+
+				<div class="row text-vert align-self-center">
+					<h1 class="animated fadeInDown delay1 duration1 eds-on-scroll ">
+						<?php the_field('barrio'); ?>
+					</h1>
+				</div>
+			</div>
+
+			<div class="col-12 col-md-5">
+				<div class="row mt-1">
 						<?php the_content(); ?>
 						<div class="mt-4">
 							<?php if (get_field( "pdf" )): ?>
-								<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card" target="_blank">Descargar PDF</a>
+								<a href="<?php the_field('pdf'); ?>" class="btn btn-secondary btn-card me-3" target="_blank">Descargar PDF</a>
 							<?php endif; ?>
 							<a href="whatsapp://send?text=<?php the_permalink(); ?>" class="btn btn-secondary btn-card" data-action="share/whatsapp/share">Compartir <i class="bi bi-whatsapp"></i></a>
 						</div>
-					</div>
 				</div>
 
 			</div>
