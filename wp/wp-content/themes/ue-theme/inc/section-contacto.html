@@ -1,9 +1,12 @@
 <section id="contact-form" class="fluid mb-3 mt-5">
 	<div class="container">
-	<h1 class="entry-title">Contactanos</h1>
-		<div class="row">
-			<div class="col-lg-6 col-md-12">
-
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-md-12">
+				<h1 class="entry-title">Contactanos</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-5 col-md-12">				
 			<!-- Note :
 			- You can modify the font style and form style to suit your website. 
 			- Code lines with comments ���Do not remove this code���  are required for the form to work properly, make sure that you do not remove these lines of code. 
@@ -57,8 +60,13 @@
 				<div>
 					<textarea name='Description' maxlength='32000'>&nbsp;</textarea>
 				</div>
-				<div class="mt-5">
-					<div class='g-recaptcha' data-sitekey='6LeUUfcUAAAAABSlqePdrrxomy5XdzSVxJsO8PBC' data-theme='light' data-callback='rccallback' captcha-verified='false' id='recap'></div>
+				<div class="row justify-content-center mt-5 mb-5">
+					<div class='col-10 col-lg-7 g-recaptcha' data-sitekey='6LeUUfcUAAAAABSlqePdrrxomy5XdzSVxJsO8PBC' data-theme='light' data-callback='rccallback' captcha-verified='false' id='recap'></div>
+					<div class="col-6 col-lg-4 col-sm-4 mt-3">
+						<input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmit' type='submit' value='Enviar' disabled ></input> 
+					</div>
+
+					
 				</div>
 				<div style='display:none;'>
 					<label for="emprendimiento">Emprendimiento</label>
@@ -76,105 +84,100 @@
 						<option value='Referido'>Referido</option>
 					</select>
 				</div>
-			<div>
-			<div class="col-6 col-sm-4 mt-3">
-				<input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmit' type='submit' value='Enviar' disabled ></input> 
-			</div>
-			
+			<div>			
 
-<script>
-		var mndFileds=new Array('First Name','Last Name','Email');
-		var fldLangVal=new Array('Nombre','Apellido','Email'); 
-		 var name='';
-		 var email='';
- 
-   /* Do not remove this code. */
-		function rccallback() {
-		  document.getElementById('formsubmit').removeAttribute('disabled');
-	 if(document.getElementById('privacyTool')!=undefined){ 
-	  var recap = document.getElementById('recap');
-	  recap.setAttribute('captcha-verified',true);
-	   }
-	   }
-	   function checkReCapSubmit() { 
-	  if(document.getElementById('recap') != undefined){ 
-	  var submitbutton = document.getElementById('formsubmit');
-	   var recap = document.getElementById('recap');
-	 if( recap.getAttribute('captcha-verified') == 'false'){
-	 submitbutton.setAttribute('disabled', true);
-	 }
-	  }
-	  } 
- 
- 
-		function checkMandatory2682538000000282001() {
-		 for(i=0;i<mndFileds.length;i++) {
-		   var fieldObj=document.forms['WebToLeads2682538000000282001'][mndFileds[i]];
-		   if(fieldObj) {
-			 if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
-			  if(fieldObj.type =='file')
-				 { 
-				  alert('Seleccione un archivo para cargar.'); 
-				  fieldObj.focus(); 
-				  return false;
-				 } 
-			 alert(fldLangVal[i] +' no puede estar vacío.'); 
-					   fieldObj.focus();
-					   return false;
-			 }  else if(fieldObj.nodeName=='SELECT') {
-					  if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-				 alert(fldLangVal[i] +' no puede ser nulo.'); 
-				 fieldObj.focus();
-				 return false;
-				}
-			 } else if(fieldObj.type =='checkbox'){
-				 if(fieldObj.checked == false){
-				 alert('Please accept  '+fldLangVal[i]);
-				 fieldObj.focus();
-				 return false;
-				} 
-			  } 
-			  try {
-				  if(fieldObj.name == 'Last Name') {
-				 name = fieldObj.value;
+				<script>
+						var mndFileds=new Array('First Name','Last Name','Email');
+						var fldLangVal=new Array('Nombre','Apellido','Email'); 
+						var name='';
+						var email='';
+				
+				/* Do not remove this code. */
+						function rccallback() {
+						document.getElementById('formsubmit').removeAttribute('disabled');
+					if(document.getElementById('privacyTool')!=undefined){ 
+					var recap = document.getElementById('recap');
+					recap.setAttribute('captcha-verified',true);
 					}
-			 } catch (e) {}
-			 }
-		 }
-		 document.getElementById('formsubmit').disabled=true;
-	 }
-</script>
+					}
+					function checkReCapSubmit() { 
+					if(document.getElementById('recap') != undefined){ 
+					var submitbutton = document.getElementById('formsubmit');
+					var recap = document.getElementById('recap');
+					if( recap.getAttribute('captcha-verified') == 'false'){
+					submitbutton.setAttribute('disabled', true);
+					}
+					}
+					} 
+				
+				
+						function checkMandatory2682538000000282001() {
+						for(i=0;i<mndFileds.length;i++) {
+						var fieldObj=document.forms['WebToLeads2682538000000282001'][mndFileds[i]];
+						if(fieldObj) {
+							if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+							if(fieldObj.type =='file')
+								{ 
+								alert('Seleccione un archivo para cargar.'); 
+								fieldObj.focus(); 
+								return false;
+								} 
+							alert(fldLangVal[i] +' no puede estar vacío.'); 
+									fieldObj.focus();
+									return false;
+							}  else if(fieldObj.nodeName=='SELECT') {
+									if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+								alert(fldLangVal[i] +' no puede ser nulo.'); 
+								fieldObj.focus();
+								return false;
+								}
+							} else if(fieldObj.type =='checkbox'){
+								if(fieldObj.checked == false){
+								alert('Please accept  '+fldLangVal[i]);
+								fieldObj.focus();
+								return false;
+								} 
+							} 
+							try {
+								if(fieldObj.name == 'Last Name') {
+								name = fieldObj.value;
+									}
+							} catch (e) {}
+							}
+						}
+						document.getElementById('formsubmit').disabled=true;
+					}
+				</script>
 	 		</form>			
 			</div>
 		</div>
 		</div>
 
-			<div class="col-lg-5 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
-				<h3>SUMATE A LA FAMILIA</h3>
-				<p>ARGENTINA: (+5411) 5258·8788</p>
-				<p>URUGUAY: (+598) 2927·2347</p>
-				<p>contacto@urbanestate.com.ar</p>
-				<a href="http://www.facebook.com/urbanestatelive" target="_blank">
-					<i class="bi bi-facebook pe-4" style="font-size: 1.5rem;"></i>
-				</a>
-				<a href="http://www.instagram.com/urbanestatelive" target="_blank">
-					<i class="bi bi-instagram pe-4" style="font-size: 1.5rem;"></i>
-				</a>
-				<a href="https://www.youtube.com/@urbanestate4035" target="_blank">
-					<i class="bi bi-youtube pe-4" style="font-size: 1.5rem;"></i>
-				</a>
-				<a href="https://www.linkedin.com/company/urban-estate-live/" target="_blank">
-					<i class="bi bi-linkedin pe-4" style="font-size: 1.5rem;"></i>
-				</a>
+		<div class="col-lg-3 col-md-12 offset-lg-1 mt-lg-0 mt-5 mb-2">
+			<h3>SUMATE A LA FAMILIA</h3>
+			<p>ARGENTINA: (+5411) 5258·8788</p>
+			<p>URUGUAY: (+598) 2927·2347</p>
+			<p>contacto@urbanestate.com.ar</p>
+			<a href="http://www.facebook.com/urbanestatelive" target="_blank">
+				<i class="bi bi-facebook pe-4" style="font-size: 1.5rem;"></i>
+			</a>
+			<a href="http://www.instagram.com/urbanestatelive" target="_blank">
+				<i class="bi bi-instagram pe-4" style="font-size: 1.5rem;"></i>
+			</a>
+			<a href="https://www.youtube.com/@urbanestate4035" target="_blank">
+				<i class="bi bi-youtube pe-4" style="font-size: 1.5rem;"></i>
+			</a>
+			<a href="https://www.linkedin.com/company/urban-estate-live/" target="_blank">
+				<i class="bi bi-linkedin pe-4" style="font-size: 1.5rem;"></i>
+			</a>
 
-				<div class="container mt-5">
-					<h3 class="col-7 row">SUMATE AL STAFF</h3>
-					<div class="row">
-						<button class="col-6 col-sm-4 btn btn-secondary btn-card mt-1 mb-2 ps-4 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">Adjuntar datos</button>
-					</div>					
-					<div class="collapse" id="collapseForm">
-						<?php echo do_shortcode('[contact-form-7 id="216" title="Staff"]'); ?>
-					</div>
+			<div class="container mt-5 mb-5">
+				<h3 class="col row">SUMATE AL STAFF</h3>
+				<div class="row">
+					<button class="col-8 col-sm-8 offset-2 offset-lg-0 btn btn-secondary btn-card mt-2 mb-2 ps-3 pe-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">Adjuntar datos</button>
+				</div>					
+				<div class="collapse mt-4" id="collapseForm">
+					<?php echo do_shortcode('[contact-form-7 id="216" title="Staff"]'); ?>
 				</div>
 			</div>
 		</div>

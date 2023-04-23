@@ -1028,3 +1028,14 @@ img.logo-rent {
 		height: 3.3rem;
 	}
 }
+
+// *** Join Chat ***
+
+div.joinchat__qr {
+	width: 130px;
+    min-height: 130px;
+	canvas {
+		width: 100px !important;
+		height: 100px !important;
+	}
+}
