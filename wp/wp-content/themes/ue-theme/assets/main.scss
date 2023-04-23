@@ -650,6 +650,10 @@ main.videofull {
 		top: 40vh;
 	}
 }
+section#slider-video {
+	max-height: 700px;
+    overflow: hidden;
+}
 
 // Live somos
 img#live-somos {
