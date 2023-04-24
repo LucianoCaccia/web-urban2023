@@ -795,6 +795,10 @@ section#banner-proxima-inversion {
 		z-index: -1;
 		position: relative;
 		height: 400px;
+		@include media-breakpoint-up(sm) {
+			height: initial;
+			width: 100%;
+		}
 	}
 	.btn {
 		border-radius: 20px;
