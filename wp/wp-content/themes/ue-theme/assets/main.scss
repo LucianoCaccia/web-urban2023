@@ -723,6 +723,9 @@ section#proyectos-slider {
 	// border-radius: 50%;
 	top: 50%;
 	transform: translateY(-50%);
+	@include media-breakpoint-up(md) {
+		top: 38%;
+	}
   }
   .carousel-control-prev {
 	justify-content: left;
@@ -731,6 +734,9 @@ section#proyectos-slider {
   .carousel-control-next {
 	justify-content: right;
 	right: -3rem;
+	@include media-breakpoint-up(md) {
+		right: -9rem;
+	}
   }  
   
   @media (min-width: 768px) {
@@ -764,7 +770,7 @@ section#proyectos-slider {
 		filter: invert(99%) sepia(0%) saturate(7498%) hue-rotate(70deg) brightness(99%) contrast(105%);
 	}
 	.card .img-wrapper {
-	  height: 17em;
+	//   height: 17em;
 	}
   }
 
