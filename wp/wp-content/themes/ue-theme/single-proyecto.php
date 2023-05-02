@@ -177,8 +177,8 @@ if ( have_posts() ) {
 
 <section id="mapa" class="container-fluid mt-5">
 	<div class="row">
-		<?php $pepe = get_field('map_id',false); ?>
-    	<?php echo do_shortcode('[put_wpgm id=' . $pepe . ']'); ?>
+		<?php $mapid = get_field('map_id',false); ?>
+    	<?php echo do_shortcode('[put_wpgm id=' . $mapid . ']'); ?>
 	</div>
 </section>
 
