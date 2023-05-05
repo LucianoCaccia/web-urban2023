@@ -72,7 +72,7 @@ $font-family: 'Raleway', sans-serif;
 	--bs-body-color: #575756 !important;
 	--bs-link-color: $gray-700 !important;
 	--bs-link-hover-color: $gray-900 !important;
-	--bs-body-font-weight: 300 !important;
+	--bs-body-font-weight: 400 !important;
 	--bs-body-font-size: 14px !important;
 }
 .card {
@@ -110,7 +110,8 @@ ul.nav-pills button.btn {
 	font-weight: 400 !important;
 }
 @media (min-width: 1200px) {
-	h3 {font-size: 1.5rem !important;}
+	h3 { font-size: 1.5rem !important; }
+	h4 { font-size: 1.2rem !important; }
 }
 
 $link-decoration: none;
@@ -132,6 +133,7 @@ $link-decoration: none;
 		line-height: 25pt !important;
 	}
 }
+
 
 
 // Buttons customization
@@ -389,6 +391,9 @@ header {
 		}
 	}
 }
+i.snih:hover {
+	color: $gray-600  !important;
+}
 
 /* Sidebar */
 
@@ -612,7 +617,7 @@ header {
 //  Main section
 
 p#breadcrumbs {
-	padding-top: 1rem;
+	padding-top: 3rem;
 }
 
 main.videofull {
@@ -654,12 +659,48 @@ section#slider-video {
 	max-height: 810px;
     overflow: hidden;
 }
+body.page-template-page-home {
+	section#slider-video {
+		div.content-over {
+			h1#l1 {
+				letter-spacing: 3px;
+			}
+			h1#l2 {
+				letter-spacing: 3px;
+				word-spacing: 9px;
+			}
+			h1#l3 {
+				letter-spacing: -1px;
+			}
+		}
+	}
+}
 
 // Live somos
+div#logo-live {
+	text-align: end;
+	padding: 0;
+	@media (max-width: 767px) {
+		text-align: initial;
+		padding-left: calc(var(--bs-gutter-x)*.5);
+		padding-left: calc(var(--bs-gutter-x)*.5);
+
+	}
+}
+h1#somos { 
+	padding: 0;
+	margin-bottom: 3rem;
+	@media (max-width: 767px) {
+		padding-left: calc(var(--bs-gutter-x)*.5);
+		padding-left: calc(var(--bs-gutter-x)*.5);
+		margin: 0;
+		margin-left: 0.5rem;
+	}
+} 
 img#live-somos {
-	width: 8rem;
+	width: 7rem;
 	@include media-breakpoint-up(sm) {
-		width: 11rem;
+		width: 9rem;
 	}
 }
 
@@ -724,7 +765,7 @@ section#proyectos-slider {
 	top: 50%;
 	transform: translateY(-50%);
 	@include media-breakpoint-up(md) {
-		top: 38%;
+		top: 50%;
 	}
   }
   .carousel-control-prev {
@@ -776,10 +817,11 @@ section#proyectos-slider {
 
 // Block tomemos un cafe
 section#banner-proxima-inversion {
+	margin: 11rem 0 11rem 0;
 	.img-overflow {
 		overflow: hidden;
-		max-height: 450px;
-		background-color: #bb9872a6;
+		max-height: 20rem;
+		background-color: #57575680;
 		display: flex;
 		align-content: center;
 		flex-wrap: wrap;
@@ -787,7 +829,7 @@ section#banner-proxima-inversion {
 		.block-display {
 			position: absolute;
     		width: 100%;
-    		padding-top: 8rem;
+    		padding-top: 5rem;
 		}
 	}
 	img {
@@ -808,6 +850,7 @@ section#banner-proxima-inversion {
 
 // COUNTERS NUMBERS
 section#numeros {
+	margin: 10rem 0 10rem 0;
 	h1.numero {
 		font-weight: 400;
 		font-size: 4rem;
@@ -834,6 +877,7 @@ section#numeros {
 
 // Section Servicios
 section#servicios {
+	margin: 0 0 10rem 0;
 	.mousehover {visibility: hidden;}
 	a:hover {
 		img.card-img {
@@ -886,6 +930,11 @@ section#servicios {
 
 	}
 }
+// Section contact
+section#contact-form {
+	margin: 5rem 0 10rem 0;
+}
+
 
 // Sumate al Staff Form
 input.wpcf7-form-control {
@@ -918,6 +967,7 @@ input.wpcf7-form-control.filecv {
 }
 .btn-card {
 	border-radius: 20px;
+	font-weight: 500;
 }
 i.avance {
 	color: $gray-500;
@@ -954,6 +1004,7 @@ div.amenities {
 
 // Masonry CSS only
 section#galery-masonry {
+	margin: 10rem 0 10rem 0;
 	.masonry {
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
@@ -1027,6 +1078,8 @@ section#galery-masonry {
 		padding-bottom: 0.5rem;
 		padding-left: 3rem;
 		padding-right: 3rem;
+		font-size: 16px;
+		font-weight: 500;
 	}
 	input.submit:hover {
 			background-color: grey !important;
@@ -1042,6 +1095,11 @@ img.logo-rent {
 	img.logo-rent {
 		height: 3.3rem;
 	}
+}
+
+// *** Invertí con nosotros ***
+div.box-gray ol {
+	font-weight: 500 !important;
 }
 
 // *** Join Chat ***

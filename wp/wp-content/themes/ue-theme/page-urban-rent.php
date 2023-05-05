@@ -52,10 +52,10 @@ the_post();
 	</section>
     <section id="fixed-content">
         <div class="row">
-            <div class="col-md-7">
-                <h2>¿Compraste una propiedad con nosotros?</h2>
-                <h2>Sacale más provecho rentandola en dólares.</h2>
-                <p class="lead">Nos encargamos de todo.</p>
+            <div class="offset-md-2 col-md-5">
+                <h2 class="mb-4">¿Compraste una propiedad con nosotros?</h2>
+                <p class="lead mb-1">Sacale más provecho rentandola en dólares.</p>
+                <p class="lead mb-3">Nos encargamos de todo.</p>
                 <p>Desde Urban Rent nos ocupamos de valorar la propiedad, calculando una renta en dólares para pasajeros temporarios. Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en AirBnB, garantizando un
                 gran potencial de alcance y posibilidad de renta temporaria.<br>
                 Gestionamos el contrato con tus inquilinos y nos encargamos de los cobros mensuales o temporales.</p>
@@ -68,28 +68,28 @@ the_post();
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-7 col-md-12 col-12">
+            <div class="offset-md-2 col-lg-7 col-md-12 col-12 mt-5">
                 <h2>Beneficios</h2>
                 <div class="row text-center mt-5 mb-5">
                     <div class="col">
                         <img class="img-fluid mb-3" src="/wp-content/themes/ue-theme/img/beneficios/asistencia.svg" style="max-height: 3rem;">
-                        <p class="lead">Asistencia a los huéspedes</p>
+                        <p>Asistencia a los huéspedes</p>
                     </div>
                     <div class="col">
                         <img class="img-fluid mb-3" src="/wp-content/themes/ue-theme/img/beneficios/calendar.svg" style="max-height: 3rem;">
-                        <p class="lead">Gestión de reservas</p>
+                        <p>Gestión de reservas</p>
                     </div>
                     <div class="col">
                         <img class="img-fluid mb-3" src="/wp-content/themes/ue-theme/img/beneficios/tiempo.svg" style="max-height: 3rem;">
-                        <p class="lead">Optimización de reservas</p>
+                        <p>Optimización de reservas</p>
                     </div>
                     <div class="col">
                         <img class="img-fluid mb-3" src="/wp-content/themes/ue-theme/img/beneficios/mano.svg" style="max-height: 3rem;">
-                        <p class="lead">Cuidado de la propiedad</p>
+                        <p>Cuidado de la propiedad</p>
                     </div>
                     <div class="col">
                         <img class="img-fluid mb-3" src="/wp-content/themes/ue-theme/img/beneficios/cash.svg" style="max-height: 3rem;">
-                        <p class="lead">Manejo de pagos</p>
+                        <p>Manejo de pagos</p>
                     </div>
                 </div>                
             </div>
@@ -99,7 +99,7 @@ the_post();
 <div class="fluid">
 
 <!-- Banner Próxima Inversión -->
-<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
+<?php include get_template_directory() . '/inc/banner-inv-sala.html'; ?>
 
 </div>
 <!-- /#post-<?php the_ID(); ?> -->

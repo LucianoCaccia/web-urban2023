@@ -182,7 +182,7 @@ if ( have_posts() ) {
 	</div>
 </section>
 
-<section id="galery-masonry" class="galery-masonry mt-5 mb-5">
+<section id="galery-masonry" class="galery-masonry">
         <?php
         if( class_exists('Dynamic_Featured_Image') ) {
         global $dynamic_featured_image;
