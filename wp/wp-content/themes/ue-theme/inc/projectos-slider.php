@@ -1,5 +1,5 @@
 <!-- Component Projectos Slider -->
-<section id="proyectos-slider" class="pb-5 pt-5 mt-5">
+<section id="proyectos-slider" class="pt-5 mt-5">
 	<div class="container">
 		<h1 class="entry-title"><?php echo($section_title); ?></h1>
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -119,6 +119,6 @@
 
 	<div class="container text-center">
 
-		<a href="./proyectos" class="btn btn-secondary btn-card mt-5 mb-5">Ver todos</a>
+		<a href="./proyectos" class="btn btn-secondary btn-card mt-5 mb-5 ps-4 pe-4">Ver todos</a>
 	</div>
 </section>

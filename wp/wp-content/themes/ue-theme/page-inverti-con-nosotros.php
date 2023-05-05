@@ -69,9 +69,9 @@ the_post();
                 <img class="img-fluid" src="/wp-content/themes/ue-theme/img/inverti-con-nosotros.jpg" alt="">
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-5 pt-3">
             <div class="offset-md-2 col-md-6">
-                <div class="background pt-4 ps-4 pb-4" style="background-color: #E8E8E8;">
+                <div class="background pt-4 ps-4 pb-4 box-gray" style="background-color: #E8E8E8;">
                     <h2 class="mt-2 mb-4"> Invertí con nosotros</h2>
                     <ul class="ps-0" style="line-height: 30px;">
                         <ol class="ps-0">• Estamos al día con las últimas tendencias</ol>
@@ -110,7 +110,7 @@ the_post();
 <div class="fluid">
 
 <!-- Banner Próxima Inversión -->
-<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
+<?php include get_template_directory() . '/inc/banner-inv-reunion.html'; ?>
 
 </div>
 <!-- /#post-<?php the_ID(); ?> -->

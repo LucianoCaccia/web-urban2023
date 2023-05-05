@@ -49,9 +49,9 @@ the_post();
 
 		<div class="container">
 			<div class="content-over position-absolute animated appear delay2 duration4">
-				<h1 class="display-1">Rentabilidad</h1>
-				<h1 class="display-1">y excelencia</h1>
-				<h1 class="display-3">en desarrollos inmobiliarios</h1>
+				<h1 class="display-1" id="l1">Rentabilidad</h1>
+				<h1 class="display-1" id="l2">y excelencia</h1>
+				<h1 class="display-3" id="l3">en desarrollos inmobiliarios</h1>
 			</div>
 		</div>
 
@@ -63,10 +63,18 @@ the_post();
 <section id="live-somos">
 	<div class="container clearfix">
 		<div class="row">
-			<div class="col-md-3 col-lg-2 col-xs-12 offset-md-3 offset-lg-4 offset-xl-4 mt-5">
-				<img id="live-somos" src="/wp-content/themes/ue-theme/img/live-somos.png" alt="live somos">
+			<div id="logo-live" class="col-md-3 col-lg-2 col-xs-12 offset-md-3 offset-lg-4 offset-xl-4 mt-5">
+				<img id="live-somos" src="/wp-content/themes/ue-theme/img/live.svg" alt="live somos">
 			</div>
-			<div class="col mt-5 ms-2 ms-xl-2 ms-lg-3">
+			<div class="col-12 col-md-1">
+			<div class="row text-vert align-self-center">
+					<h1 id="somos" class="eds-on-scroll eds-scroll-visible">
+						Somos
+					</h1>
+				</div>
+			</div>
+
+			<div class="col mt-3 mt-md-5 ms-xl-2 ms-lg-3">
 				<p>Somos Urban Estate, una empresa de desarrollos inmobiliarios a medida de los inversores en Argentina y Uruguay. 
 					Trabajamos en los proyectos desde el inicio hasta su completa entrega y posventa. Además ofrecemos servicio de renting para nuestros clientes.</p>
 				<p>Ofrecemos posibilidades de inversión de gran rentabilidad, en ubicaciones privilegiadas de las ciudades más importantes de la región.</p>
@@ -82,15 +90,15 @@ the_post();
 <?php include get_template_directory() . '/inc/projectos-slider.php'; ?>
 
 <!-- Banner Próxima Inversión -->
-<?php include get_template_directory() . '/inc/banner-prox-inversion.html'; ?>
+<?php include get_template_directory() . '/inc/banner-inv-sala.html'; ?>
 
-<section id="servicios" class="mb-5 mt-5">
+<section id="servicios">
 	<div class="container-md">
 		<h1 class="entry-title">Inversiones inmobiliarias</h1>
 		<div class="row">
 			<div class="col-md-6 mb-2">
 				<a href="/inverti-con-nosotros">
-				<div class="card animated slideInLeft duration2 eds-on-scroll">
+				<div class="card animated fadeIn duration2 eds-on-scroll ">
 					<img src="/wp-content/themes/ue-theme/img/servicio-live.jpg" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">
 						<h1 class="card-title">Invertí<br>en ladrillos</h1>
@@ -104,7 +112,7 @@ the_post();
 			</div>
 			<div class="col-md-6">
 				<a href="/urban-rent">
-				<div class="card animated slideInRight duration2 eds-on-scroll ">
+				<div class="card animated fadeIn duration2 eds-on-scroll ">
 						<img src="/wp-content/themes/ue-theme/img/servicio-rent.jpg" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
 							<h1 class="card-title">Comprá  <br>y rentá</h1>
@@ -120,7 +128,7 @@ the_post();
 	</div>
 </section>
 
-<section id="numeros" class="mb-5 mt-5 pt-5">
+<section id="numeros">
 	<div class="container-fluid pt-4 pb-4">
 		<div class="container text-center pt-2">
 			<div class="counters row align-items-start">
