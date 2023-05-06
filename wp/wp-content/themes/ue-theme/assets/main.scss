@@ -770,13 +770,13 @@ section#proyectos-slider {
   }
   .carousel-control-prev {
 	justify-content: left;
-	left: -3.5rem;
+	left: -4.5rem;
   }
   .carousel-control-next {
 	justify-content: right;
-	right: -3rem;
+	right: -4rem;
 	@include media-breakpoint-up(md) {
-		right: -3rem;
+		right: -4rem;
 	}
   }  
   
