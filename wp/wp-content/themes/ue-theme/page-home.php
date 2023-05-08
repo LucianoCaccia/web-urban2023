@@ -101,7 +101,7 @@ the_post();
 				<div class="card animated fadeIn duration2 eds-on-scroll ">
 					<img src="/wp-content/themes/ue-theme/img/servicio-live.jpg" class="img-fluid card-img" alt="">
 					<div class="card-img-overlay">
-						<h1 class="card-title">Invertí<br>en ladrillos</h1>
+						<h1 class="card-title" style="font-weight: 600 !important;">Invertí<br>en ladrillos</h1>
 						<h4 class="mousehover">Sé parte desde el principio</h4>
 						<div class="img-container d-flex justify-content-end">
 							<img src="/wp-content/themes/ue-theme/img/live.svg" class="align-self-center" alt="Logo Live" style="max-width:7rem;">
@@ -115,7 +115,7 @@ the_post();
 				<div class="card animated fadeIn duration2 eds-on-scroll ">
 						<img src="/wp-content/themes/ue-theme/img/servicio-rent.jpg" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
-							<h1 class="card-title">Comprá  <br>y rentá</h1>
+							<h1 class="card-title" style="font-weight: 600 !important;">Comprá  <br>y rentá</h1>
 							<h4 class="mousehover">Exclusivo para clientes</h4>
 							<div class="img-container d-flex justify-content-end">
 								<img src="/wp-content/themes/ue-theme/img/UrbanRent.svg" class="align-self-center" alt="Logo Urban Rent" style="max-width:14rem";>
