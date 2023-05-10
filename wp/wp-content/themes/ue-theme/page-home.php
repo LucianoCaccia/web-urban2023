@@ -74,7 +74,7 @@ the_post();
 				</div>
 			</div>
 
-			<div class="col mt-3 mt-md-5 ms-xl-2 ms-lg-3">
+			<div class="col mt-3 mt-md-5 ms-xl-2 ms-lg-3 txt-somos">
 				<p>Somos Urban Estate, una empresa de desarrollos inmobiliarios a medida de los inversores en Argentina y Uruguay. 
 					Trabajamos en los proyectos desde el inicio hasta su completa entrega y posventa. Además ofrecemos servicio de renting para nuestros clientes.</p>
 				<p>Ofrecemos posibilidades de inversión de gran rentabilidad, en ubicaciones privilegiadas de las ciudades más importantes de la región.</p>
@@ -133,7 +133,7 @@ the_post();
 		<div class="container text-center pt-2">
 			<div class="counters row align-items-start">
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="3">0</span></h1>
+						<h1 class="numero"><span data-count="2">0</span></h1>
 						<h4>PAÍSES</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
@@ -141,11 +141,11 @@ the_post();
 						<h4>AÑOS DE EXPERIENCIA</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="60">0</span></h1>
+						<h1 class="numero"><span data-count="14">0</span></h1>
 						<h4>DESARROLLOS</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="6000">0</span></h1>
+						<h1 class="numero"><span data-count="300">0</span></h1>
 						<h4>CLIENTES FELICES</h4>
 					</div>
 			</div>

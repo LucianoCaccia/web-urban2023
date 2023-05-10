@@ -56,7 +56,8 @@ the_post();
                 <h2 class="mb-4">¿Compraste una propiedad con nosotros?</h2>
                 <p class="lead mb-1">Sacale más provecho rentandola en dólares.</p>
                 <p class="lead mb-3">Nos encargamos de todo.</p>
-                <p>Desde UrbanRent nos ocupamos de valorar la propiedad, calculando una renta en dólares para pasajeros temporarios. Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en AirBnB, garantizando un
+                <p>Desde UrbanRent nos ocupamos de valorar la propiedad, calculando una renta en dólares para pasajeros temporarios. 
+                    Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en AirBnB, garantizando un
                 gran potencial de alcance y posibilidad de renta temporaria.<br>
                 Gestionamos el contrato con tus inquilinos y nos encargamos de los cobros mensuales o temporales.</p>
                 <p>Nos encargamos del check in y check out de los huéspedes, así como de las reparaciones o acondicionamientos
