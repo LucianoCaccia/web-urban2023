@@ -689,6 +689,11 @@ body.page-template-page-home {
 }
 
 // Live somos
+section#live-somos {
+	.txt-somos p {
+		text-align: justify;
+	}
+}
 div#logo-live {
 	text-align: end;
 	padding: 0;
