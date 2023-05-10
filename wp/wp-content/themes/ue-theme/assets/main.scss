@@ -672,6 +672,18 @@ body.page-template-page-home {
 			h1#l3 {
 				letter-spacing: -1px;
 			}
+			@media (max-width: 576px) {
+				h1#l1 {
+					line-height: 1rem !important;
+					font-size: 34px !important;
+				}
+				h1#l2 {
+					font-size: 34px !important;
+				}
+				h1#l3 {
+					font-size: 22px !important;
+				}
+			}
 		}
 	}
 }
@@ -825,11 +837,16 @@ section#banner-proxima-inversion {
 		display: flex;
 		align-content: center;
 		flex-wrap: wrap;
-
+		@include media-breakpoint-down(md) {
+			max-height: 14rem;
+		}
 		.block-display {
 			position: absolute;
     		width: 100%;
     		padding-top: 5rem;
+			@include media-breakpoint-down(md) {
+				padding-top: 3rem;
+			}
 		}
 	}
 	img {
