@@ -111,7 +111,7 @@ the_post();
 				</a>
 			</div>
 			<div class="col-md-6">
-				<a href="/urban-rent">
+				<a href="/urbanrent">
 				<div class="card animated fadeIn duration2 eds-on-scroll ">
 						<img src="/wp-content/themes/ue-theme/img/servicio-rent.jpg" class="img-fluid card-img" alt="">
 						<div class="card-img-overlay">
