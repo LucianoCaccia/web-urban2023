@@ -54,7 +54,7 @@ the_post();
         <div class="row">
             <div class="offset-md-2 col-md-5">
                 <h2 class="mb-4">¿Compraste una propiedad con nosotros?</h2>
-                <p class="lead mb-1">Sacale más provecho rentandola en dólares.</p>
+                <p class="lead mb-1">Sacale más provecho rentándola en dólares.</p>
                 <p class="lead mb-3">Nos encargamos de todo.</p>
                 <p>Desde UrbanRent nos ocupamos de valorar la propiedad, calculando una renta en dólares para pasajeros temporarios. 
                     Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en AirBnB, garantizando un
