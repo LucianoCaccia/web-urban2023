@@ -20,7 +20,7 @@
 					<div class=" col-md-3 col-sm-8 pt-1">
 						<img class="footer-logo" src="/wp-content/themes/ue-theme/img/URBAN-ESTATE-LOGO.svg" alt="Urban Estate Logo" />						
 					</div>
-					<div class=" col-md-2 col-sm-4">
+					<div class=" col-md-2 col-sm-4 hidem">
 						<div class="social-footer pt-4">
 							<a href="http://www.facebook.com/urbanestatelive" target="_blank" style="color:#ffffff;"><span><i class="bi bi-facebook" style="font-size: 1rem;"></i></span></a>
 							<a href="http://www.instagram.com/urbanestatelive" target="_blank" style="color:#ffffff;"><span><i class="bi bi-instagram" style="font-size: 1rem;"></i></span></a>
@@ -28,7 +28,7 @@
 							<a href="https://www.linkedin.com/company/urban-estate-live/" target="_blank" style="color:#ffffff;"><span><i class="bi bi-linkedin" style="font-size: 1rem;"></i></span></a>
 						</div>
 					</div>
-					<div class="col d-flex justify-content-end pt-4 pe-5">
+					<div class="col d-flex justify-content-end pt-4 pe-5 hidem">
 						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347
 						<span><i class="bi bi-envelope ms-4" style="font-size: 1rem;"></i><a href="mailto:contacto@urbanestate.com.ar" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
 						</small>
