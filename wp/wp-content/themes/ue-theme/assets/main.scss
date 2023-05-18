@@ -390,6 +390,11 @@ header {
 			color: $gray-300 !important;
 		}
 	}
+	@media (max-width: 768px) {
+		.hidem {
+			display: none !important;
+		}
+	}
 }
 i.snih:hover {
 	color: $gray-600  !important;
@@ -691,7 +696,7 @@ body.page-template-page-home {
 // Live somos
 section#live-somos {
 	.txt-somos p {
-		text-align: justify;
+		// text-align: justify;
 	}
 }
 div#logo-live {
@@ -834,7 +839,10 @@ section#proyectos-slider {
 
 // Block tomemos un cafe
 section#banner-proxima-inversion {
-	margin: 11rem 0 11rem 0;
+	margin: 10rem 0 11rem 0;
+	@media (max-width: 768px) {
+		margin: 4rem 0 5rem 0;
+	}
 	.img-overflow {
 		overflow: hidden;
 		max-height: 20rem;
@@ -955,6 +963,11 @@ section#servicios {
 // Section contact
 section#contact-form {
 	margin: 5rem 0 10rem 0;
+	@media (max-width: 768px) {
+		.centerm {
+			text-align: center !important;
+		}
+	}
 }
 
 

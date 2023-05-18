@@ -53,7 +53,7 @@ the_post();
     <section id="fixed-content">
         <div class="row">
         <div class="offset-md-2 col-md-8 mb-4 mt-5">
-            <h2>Desarrollamos proyectos inmobiliarios <br><b>el inicio hasta la posventa.</b></h2>
+            <h2>Desarrollamos proyectos inmobiliarios <br><b>desde el inicio hasta la posventa.</b></h2>
         </div>
             <div class="offset-md-2 col-md-6 pe-5 mb-5">
                 <p>Seleccionamos rigurosamente la <b>zona de emplazamiento</b> de cada desarrollo a través de un estudio que nos permita evaluar el <b>valor añadido</b> para los inversores.</p>
@@ -74,15 +74,15 @@ the_post();
                 <div class="background pt-4 ps-4 pb-4 box-gray" style="background-color: #E8E8E8;">
                     <h2 class="mt-2 mb-4"> Invertí con nosotros</h2>
                     <ul class="ps-0" style="line-height: 30px;">
-                        <ol class="ps-0">• Estamos al día con las últimas tendencias</ol>
-                        <ol class="ps-0">• Pensamos en la sostenibilidad</ol>
-                        <ol class="ps-0">• Creamos proyectos rentables</ol>
-                        <ol class="ps-0">• Diseñamos entornos funcionales y acogedores</ol>
-                        <ol class="ps-0">• Pensamos en todos los detalles y terminaciones</ol>
-                        <ol class="ps-0">• Construimos en las mejores zonas</ol>
-                        <ol class="ps-0">• Brindamos formas de financiación</ol>
-                        <ol class="ps-0">• Te asesoramos para rentar tu departamento o local</ol>
-                        <ol class="ps-0">• Nos encargamos del servicio de renta temporal 100%</ol>
+                        <ol class="ps-0"><b>• Estamos al día con las últimas tendencias</b></ol>
+                        <ol class="ps-0"><b>• Pensamos en la sostenibilidad</b></ol>
+                        <ol class="ps-0"><b>• Creamos proyectos rentables</b></ol>
+                        <ol class="ps-0"><b>• Diseñamos entornos funcionales y acogedores</b></ol>
+                        <ol class="ps-0"><b>• Pensamos en todos los detalles y terminaciones</b></ol>
+                        <ol class="ps-0"><b>• Construimos en las mejores zonas</b></ol>
+                        <ol class="ps-0"><b>• Brindamos formas de financiación</b></ol>
+                        <ol class="ps-0"><b>• Te asesoramos para rentar tu departamento o local</b></ol>
+                        <ol class="ps-0"><b>• Nos encargamos del servicio de renta temporal 100%</b></ol>
                     </ul>
                 </div>
             </div>

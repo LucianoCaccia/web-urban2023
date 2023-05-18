@@ -188,6 +188,18 @@ if (document.querySelector('section#numeros')) {
   });
 }
 
+// Toogle mobile navbar menu, collapse when click any link
+if (document.querySelector('div#navbar')) {
+  let elemLink = document.getElementsByClassName("nav-link");
+  let elemNavbar = document.getElementById("navbar");
+  for (let i = 0; i < elemLink.length; i++) {
+    elemLink[i].addEventListener("click", closeMenu)
+  }
+  function closeMenu() {
+    elemNavbar.classList.remove("show");
+  }
+}
+
 
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
@@ -215,3 +227,6 @@ import * as bootstrap from 'bootstrap';
 		} );
 	} );
 } )();
+
+
+
