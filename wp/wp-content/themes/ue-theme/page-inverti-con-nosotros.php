@@ -53,17 +53,17 @@ the_post();
     <section id="fixed-content">
         <div class="row">
         <div class="offset-md-2 col-md-8 mb-4 mt-5">
-            <h2>Desarrollamos proyectos inmobiliarios <br>desde el inicio hasta la posventa.</h2>
+            <h2>Desarrollamos proyectos inmobiliarios <br><b>el inicio hasta la posventa.</b></h2>
         </div>
             <div class="offset-md-2 col-md-6 pe-5 mb-5">
-                <p>Seleccionamos rigurosamente la zona de emplazamiento de cada desarrollo a través de un estudio que nos permita evaluar el valor añadido para los inversores.</p>
-                <p>Nos enfocamos en abarcar la totalidad de la cadena de valor del negocio, comprando el suelo y diseñando un proyecto de altos estándares de ubicación y habitabilidad, así como de reventa.</p>
-                <p>Preparamos el entorno de manera inteligente, optimizando los recursos.</p>
-                <p>Construimos edificios de alta calidad con diferentes funcionalidades y tipologías, pensando en las necesidades de los inversores y de las personas y familias que los habitarán.</p>
-                <p>Tenemos en cuenta la posibilidad de usufructo de las viviendas como bienes rentables en dólares para ayudar a nuestros clientes a optimizar sus inversiones.</p>
-                <p>Gestionamos el servicio de venta de manera eficiente, asesorando a los posibles compradores desde todos los puntos de vista profesionales, dentro de nuestra propia empresa. Por eso contamos con un equipo multidisciplinario que se implica en cada decisión.</p>
-                <p>Pensamos en todas las oportunidades y posibilidades de los inversores asesorándolos para una compra exitosa y rentable, ofreciéndoles distintas modalidades de financiación.</p>
-                <p>Una vez finalizado el proyecto y adquirido el inmueble, ofrecemos un servicio de posventa orientado a ayudar a los compradores a rentar las viviendas o a tener una experiencia óptima durante su estadía en ellas.</p>
+                <p>Seleccionamos rigurosamente la <b>zona de emplazamiento</b> de cada desarrollo a través de un estudio que nos permita evaluar el <b>valor añadido</b> para los inversores.</p>
+                <p>Nos enfocamos en abarcar la totalidad de la cadena de valor del negocio, comprando el suelo y diseñando un proyecto de <b>altos estándares de ubicación y habitabilidad, así como de reventa.</b></p>
+                <p>Preparamos el <b>entorno</b> de manera <b>inteligente, optimizando los recursos.</b></p>
+                <p>Construimos edificios de <b>alta calidad</b> con diferentes funcionalidades y tipologías, pensando en las necesidades de los inversores y de las personas y familias que los habitarán.</p>
+                <p>Tenemos en cuenta la posibilidad de <b>usufructo de las viviendas como bienes rentables en dólares</b> para ayudar a nuestros clientes a <b>optimizar sus inversiones.</b></p>
+                <p>Gestionamos el servicio de venta de manera eficiente, asesorando a los posibles compradores desde todos los <b>puntos de vista profesionales</b>, dentro de nuestra propia empresa. Por eso contamos con un equipo multidisciplinario que se implica en cada decisión.</p>
+                <p>Pensamos en todas las oportunidades y posibilidades de los inversores asesorándolos para una <b>compra exitosa y rentable</b>, ofreciéndoles distintas <b>modalidades de financiación.</b></p>
+                <p>Una vez finalizado el proyecto y adquirido el inmueble, ofrecemos un <b>servicio de posventa</b> orientado a ayudar a los compradores a rentar las viviendas o a tener una experiencia óptima durante su estadía en ellas.</p>
             </div>
             <div class="col-md-4">
                 <img class="img-fluid" src="/wp-content/themes/ue-theme/img/inverti-con-nosotros.jpg" alt="">

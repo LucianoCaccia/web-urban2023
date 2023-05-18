@@ -56,11 +56,11 @@ the_post();
                 <h2 class="mb-4">¿Compraste una propiedad con nosotros?</h2>
                 <p class="lead mb-1">Sacale más provecho rentándola en dólares.</p>
                 <p class="lead mb-3">Nos encargamos de todo.</p>
-                <p>Desde UrbanRent nos ocupamos de valorar la propiedad, calculando una renta en dólares para pasajeros temporarios. 
-                    Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en AirBnB, garantizando un
+                <p>Desde UrbanRent nos ocupamos de <b>valorar la propiedad</b>, calculando una <b>renta en dólares</b> para pasajeros temporarios. 
+                    Publicamos el hospedaje en las mejores plataformas, logrando la aprobación en <b>AirBnB</b>, garantizando un
                 gran potencial de alcance y posibilidad de renta temporaria.<br>
-                Gestionamos el contrato con tus inquilinos y nos encargamos de los cobros mensuales o temporales.</p>
-                <p>Nos encargamos del check in y check out de los huéspedes, así como de las reparaciones o acondicionamientos
+                Gestionamos el <b>contrato con tus inquilinos</b> y nos encargamos de los <b>cobros</b> mensuales o temporales.</p>
+                <p>Nos encargamos del <b>check in y check out</b> de los huéspedes, así como de las reparaciones o acondicionamientos
                 que sean necesarios. </p>
                 
             </div>
