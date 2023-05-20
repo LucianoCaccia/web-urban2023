@@ -41,8 +41,6 @@ Use this section to remenber ideas..
 
 ### How to use Them.es
 
-
-
 This Theme comes with a built in gulp/webpack task automation. Sass files will be compiled if changed, vendor prefixes will be added automatically and the CSS will be minified. JS source files will be bundled and minified.
 
 Prerequisites: Node.js (NPM) needs to be installed on your system
@@ -103,4 +101,15 @@ Run the watch script on /wp/wp-content/themes/ue-theme to build the css and js f
 $ npm run watch
 ```
 
-## Pull code from repository
+## Hosting and pull code to Live
+
+Use ssh dh_hhknpb@baker.dreamhost.com to ssh connect. 
+The Live version of the website root path is:
+```bash
+[baker]$ /home/dh_hhknpb/dev.urbanestate.com.ar/web-urban2023/wp
+```
+
+Before pull fules check using `git status` that the branch is up to date with `origin/main`.
+
+Please don't check out or commit any change and conserve the wp-config.php configuration.
+
