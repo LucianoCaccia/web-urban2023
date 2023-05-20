@@ -1,5 +1,17 @@
 /mysql
-/assets
+assets/*
 # /wp/wp-content/themes/ue-theme/node_modules
 
 /.vscode
+assets/mysql-bkp/wordpress__2023-01-03_03-29-00.sql.zip
+assets/mysql-bkp/wordpress__2023-01-03_03-44-55.sql
+assets/mysql-bkp/wordpress__2023-02-14_09-52.sql
+assets/mysql-bkp/wordpress__2023-02-24.sql
+assets/mysql-bkp/wordpress__2023-03-06.sql
+assets/mysql-bkp/wordpress__2023-03-16.sql
+assets/mysql-bkp/wordpress__2023-03-23.sql
+assets/mysql-bkp/wordpress__2023-03-28.sql
+assets/mysql-bkp/wordpress__2023-03-28_20-53-00.sql
+assets/mysql-bkp/wordpress__2023-04-21.sql
+assets/ue-theme.zip
+assets/URBAN-ESTATE-LOGO.svg
