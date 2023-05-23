@@ -35,7 +35,9 @@ the_post();
 		<?php $video_url = get_field('video_bg',$id_query->post->ID,[false]); ?>
 			<?php if ($video_url) : ?>
 				<div class="video-overflow">
-				<video loop="true" autoplay="autoplay" muted src="<?php echo $video_url;?>" type="video/mp4" class="hover-to-play w-100"></video>
+				<video autoplay muted loop class="hover-to-play w-100">
+					<source src="<?php echo $video_url;?>" type="video/mp4">
+				</video>
 				</div>
 
 			<?php else : ?>
