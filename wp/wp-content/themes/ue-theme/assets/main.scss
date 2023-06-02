@@ -636,6 +636,12 @@ main.videofull {
 .video-overflow {
 	background-color: #00000050;
 }
+img#img-on-mobile {
+	max-height: 36rem;
+	width: 100%;
+	float: right;
+	filter: brightness(.7);
+}
 .content-over {
 	color: #fff;
 	display: flex;
@@ -651,7 +657,7 @@ main.videofull {
 .content-over {
 	top: 30vh;
 	@include media-breakpoint-up(sd) {
-		top: 10vh;
+		top: 20vh;
 	}
 	@include media-breakpoint-up(md) {
 		top: 29vh;
@@ -679,14 +685,15 @@ body.page-template-page-home {
 			}
 			@media (max-width: 576px) {
 				h1#l1 {
-					line-height: 1rem !important;
-					font-size: 34px !important;
+					line-height: 2rem !important;
+					font-size: 37px !important;
 				}
 				h1#l2 {
-					font-size: 34px !important;
+					font-size: 37px !important;
 				}
 				h1#l3 {
-					font-size: 22px !important;
+					font-size: 23px !important;
+					line-height: 2rem !important;
 				}
 			}
 		}

@@ -35,7 +35,8 @@ the_post();
 		<?php $video_url = get_field('video_bg',$id_query->post->ID,[false]); ?>
 			<?php if ($video_url) : ?>
 				<div class="video-overflow">
-				<video autoplay muted loop class="hover-to-play w-100">
+				<img class="d-block d-sm-none" id="img-on-mobile" src="/wp-content/themes/ue-theme/img/baires.png" alt="live somos">
+				<video autoplay muted loop class="hover-to-play w-100 d-none d-sm-block">
 					<source src="<?php echo $video_url;?>" type="video/mp4">
 				</video>
 				</div>
