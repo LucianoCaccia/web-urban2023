@@ -26,6 +26,18 @@ This Theme comes with a built in gulp/webpack task automation. Sass files will b
 * `$ npm run watch`
 * Modify `/assets/main.scss` and `/assets/main.js`
 
+## How to deploy
+* Login on Dreamhost server `ssh dh_hhknpb@baker.dreamhost.com + password`
+* Move to `/home/dh_hhknpb/dev.urbanestate.com.ar/web-urban2023/wp/`
+* Check the branch Main using status `git status`
+* Pull lastes changes `git pull origin main`
+
+### Deploy notes
+
+Include the main.css, main.css.map files compiled and main.scss in the commmit.
+
+
+
 
 ## Technology
 
