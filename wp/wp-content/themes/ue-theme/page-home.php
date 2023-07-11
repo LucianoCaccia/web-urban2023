@@ -156,6 +156,8 @@ the_post();
 	</div>
 </section>
 
+<?php include get_template_directory() . '/inc/newsletter-form.html'; ?>
+
 <?php include get_template_directory() . '/inc/section-contacto.html'; ?>
 
 <?php
