@@ -887,7 +887,7 @@ section#banner-proxima-inversion {
 
 // COUNTERS NUMBERS
 section#numeros {
-	margin: 10rem 0 10rem 0;
+	margin: 10rem 0 0 0;
 	h1.numero {
 		font-weight: 400;
 		font-size: 4rem;
@@ -969,7 +969,7 @@ section#servicios {
 }
 // Section contact
 section#contact-form {
-	margin: 5rem 0 10rem 0;
+	margin: 0 0 10rem 0;
 	@media (max-width: 768px) {
 		.centerm {
 			text-align: center !important;
