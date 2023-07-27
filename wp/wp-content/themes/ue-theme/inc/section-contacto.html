@@ -63,7 +63,7 @@
 				<div class="row justify-content-lg-end justify-content-center mt-5 mb-5">
 					<div class='col-10 col-lg-7 g-recaptcha' data-sitekey='6LeUUfcUAAAAABSlqePdrrxomy5XdzSVxJsO8PBC' data-theme='light' data-callback='rccallback' captcha-verified='false' id='recap'></div>
 					<div class="col-6 col-lg-4 col-sm-4 mt-3">
-						<input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmit' type='submit' value='Enviar' disabled ></input> 
+						<input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmitContact' type='submit' value='Enviar' disabled ></input> 
 					</div>
 
 					
@@ -169,7 +169,7 @@
 						  if(!validateEmail2682538000000282001()){return false;}
 						  
 						  if(!reCaptchaAlert2682538000000282001()){return false;}
-						  document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+						  document.querySelector('.crmWebToEntityForm .formsubmitContact').setAttribute('disabled', true);
 					  }
 				  
 				  function tooltipShow2682538000000282001(el){
