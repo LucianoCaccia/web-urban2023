@@ -61,11 +61,11 @@
                     </div>
                     <!-- End hidden fields -->
                     <div class="col-3 col-lg-3 col-sm-4">
-                        <input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmitNews' type='submit' value='Enviar' disabled ></input> 
+                        <input class="submit ps-3 pe-3" style='cursor: pointer;' id='formsubmitNews' type='submit' value='Enviar'></input> 
                     </div>
                     <div class="row justify-content-center mt-4 mb-5">
                         <div class='col-10 col-lg-7 g-recaptcha' data-sitekey='6LeUUfcUAAAAABSlqePdrrxomy5XdzSVxJsO8PBC' data-theme='light' data-callback='rccallback2682538000019468011' captcha-verified='false' id='recap2682538000019468011'></div>
-						<div  id='recapErr2682538000019468011' style='color:red;visibility:hidden;'>Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.</div>
+						<div  id='recapErr2682538000019468011' style='color:red;visibility:hidden;'>Error en validación de Captcha.</div>
                     </div>
                 </div>
 				<div style='display:none;'>
@@ -115,7 +115,7 @@
 								  var dotpos=emailVal.lastIndexOf('.');
 								  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
 								  {
-									  alert('Introduzca una dirección de correo electrónico válida. ');
+									  alert('Introduzca un email válido. ');
 									  emailFld[i].focus();
 									  return false;
 								  }
