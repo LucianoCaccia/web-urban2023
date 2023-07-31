@@ -14,7 +14,38 @@ the_post();
 
 <!-- Add main tag to each one template page -->
 <main id="main" class="container-fluid videofull"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
-
+	<!-- Check Url parameters to show the Toast mesages -->
+	<script>
+		function getUrl() {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			msg = urlParams.get('msg');
+			return msg
+		}
+		if (getUrl() == '913716') {
+				$(document).ready(function(){
+  				$('#toast-n').toast('show');
+			});		
+		} if (getUrl() == '812559'){
+			$(document).ready(function(){
+  				$('#toast-c').toast('show');
+			});		
+		}
+	</script>
+	<div class="toast position-absolute top-50 start-50 translate-middle" role="alert" aria-live="assertive" aria-atomic="true" id="toast-n" style="z-index:1000;">
+		<div class="toast-header">
+			<strong class="me-auto">Suscripción newsletter</strong>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">Muchas gracias por suscribirte, pronto recibirás las novedades.</div>
+	</div>
+	<div class="toast position-absolute top-50 start-50 translate-middle" role="alert" aria-live="assertive" aria-atomic="true" id="toast-c" style="z-index:1000;">
+		<div class="toast-header">
+			<strong class="me-auto">Contacto</strong>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">¡Gracias por contactarte! <br>A la brevedad nos comunicaremos.</div>
+	</div>	
 	<?php
 		// If Single or Archive (Category, Tag, Author or a Date based page).
 		if ( is_single() || is_archive() ) :
