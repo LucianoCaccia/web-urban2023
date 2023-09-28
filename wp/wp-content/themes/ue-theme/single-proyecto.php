@@ -73,7 +73,7 @@ if ( have_posts() ) {
 								break;
 								case 'sum':
 									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg"<br>');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg" style="max-height:2.2rem;"><br>');
 									echo('<p class="small mt-2">Salón de usos múltiples</p>');
 									echo('</div>');
 								break;
@@ -88,8 +88,19 @@ if ( have_posts() ) {
 									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;"><br>');
 									echo('<p class="small mt-2">Parking para bicis</p>');
 									echo('</div>');
-								break;								
-
+								break;
+								case 'piscina':
+									echo('<div class="item me-4">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/piscina.svg" style="max-height:3.1rem;"><br>');
+									echo('<p class="small mt-2">Piscina</p>');
+									echo('</div>');
+								break;																
+								case 'rooftop':
+									echo('<div class="item">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/piscina.svg" style="max-height:3.1rem;"><br>');
+									echo('<p class="small mt-2">Rooftop</p>');
+									echo('</div>');
+								break;
 							} ?>
 						<?php endforeach ?>
 					</div>
