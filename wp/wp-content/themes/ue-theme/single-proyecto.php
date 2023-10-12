@@ -54,42 +54,69 @@ if ( have_posts() ) {
 						<?php foreach ($amenities as $key => $value): ?>
 							<?php switch ($value) { 
 								case 'parrilla':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg"<br>');
-									echo('<p class="small mt-2">Parrilla</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/parrilla.svg">');
+										echo('<div>');
+										echo('<p class="small mt-2">Parrilla</p>');
+										echo('</div>');
 									echo('</div>');
 								break;
 								case 'loundry':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg"<br>');
-									echo('<p class="small mt-2">Laundry</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg">');
+										echo('<div>');
+										echo('<p class="small mt-2">Laundry</p>');
+										echo('</div>');
 									echo('</div>');
 								break;
 								case 'gimnasio':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg"<br>');
-									echo('<p class="small mt-2">Gimnasio</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/gimnasio.svg">');
+										echo('<div>');
+										echo('<p class="small mt-2">Gimnasio</p>');
+										echo('</div>');
 									echo('</div>');
 								break;
 								case 'sum':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg"<br>');
-									echo('<p class="small mt-2">Salón de usos múltiples</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/sum.svg" style="max-height:2.2rem;">');
+										echo('<div>');
+										echo('<p class="small mt-2">Salón usos múltiples</p>');
+										echo('</div>');
 									echo('</div>');
 								break;
 								case 'cochera':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg"<br>');
-									echo('<p class="small mt-2">Cochera</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/cochera.svg">');
+										echo('<div>');
+										echo('<p class="small mt-2">Cochera</p>');
+										echo('</div>');
 									echo('</div>');
 								break;								
 								case 'bici':
-									echo('<div class="item me-4">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;"><br>');
-									echo('<p class="small mt-2">Parking para bicis</p>');
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/bicis.svg" style="max-height:3.1rem;">');
+										echo('<div>');
+										echo('<p class="small mt-2">Parking para bicis</p>');
+										echo('</div>');
 									echo('</div>');
-								break;								
-
+								break;
+								case 'piscina':
+									echo('<div class="item me-2">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/piscina.svg" style="max-height:3.1rem;">');
+										echo('<div>');
+										echo('<p class="small mt-2">Piscina</p>');
+										echo('</div>');
+									echo('</div>');
+								break;																
+								case 'rooftop':
+									echo('<div class="item">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/rooftop.svg" style="max-height:3.1rem;">');
+										echo('<div>');
+										echo('<p class="small mt-2">Rooftop</p>');
+										echo('</div>');
+									echo('</div>');
+								break;
 							} ?>
 						<?php endforeach ?>
 					</div>
