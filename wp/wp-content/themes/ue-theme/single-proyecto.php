@@ -111,7 +111,7 @@ if ( have_posts() ) {
 								break;																
 								case 'rooftop':
 									echo('<div class="item">');
-									echo('<img src="/wp-content/themes/ue-theme/img/amenities/piscina.svg" style="max-height:3.1rem;">');
+									echo('<img src="/wp-content/themes/ue-theme/img/amenities/rooftop.svg" style="max-height:3.1rem;">');
 										echo('<div>');
 										echo('<p class="small mt-2">Rooftop</p>');
 										echo('</div>');
