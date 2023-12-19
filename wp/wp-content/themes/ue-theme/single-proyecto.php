@@ -129,7 +129,7 @@ if ( have_posts() ) {
 					<?php if (empty($avances)) :?>
 						<?php $avances = array_fill(0,1,'pozo');?>
 					<?php endif;?>
-					<?php $count_avances = count($avances) / 4 * 100; ?>
+					<?php $count_avances = count($avances) / 5 * 100; ?>
 					<?php foreach ($avances as $key => $value): ?>
 						<?php switch ($value) { 
 							case 'pozo':
@@ -141,8 +141,8 @@ if ( have_posts() ) {
 							case 'alba':
 								$style_alba = "filter: brightness(0);";
 							break;
-							case 'detalles':
-								$style_detalles = "filter: brightness(0);";
+							case 'terminaciones':
+								$style_terminaciones = "filter: brightness(0);";
 							break;
 						} ?>
 					<?php endforeach ?>
@@ -159,7 +159,7 @@ if ( have_posts() ) {
 						<p class="small mt-2">Albañilería</p>
 					</div>
 					<div class="col-2 text-center">
-						<img src="/wp-content/themes/ue-theme/img/avance/term.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_detalles ?>">
+						<img src="/wp-content/themes/ue-theme/img/avance/term.svg" style="max-height:3rem; filter: brightness(2.4); <?php echo $style_terminaciones ?>">
 						<p class="small mt-2">Terminaciones</p>
 					</div>
 				</div>
