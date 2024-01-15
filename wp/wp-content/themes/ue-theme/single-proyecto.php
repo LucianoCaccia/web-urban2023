@@ -61,7 +61,7 @@ if ( have_posts() ) {
 										echo('</div>');
 									echo('</div>');
 								break;
-								case 'loundry':
+								case 'laundry':
 									echo('<div class="item me-2">');
 									echo('<img src="/wp-content/themes/ue-theme/img/amenities/laundry.svg">');
 										echo('<div>');
