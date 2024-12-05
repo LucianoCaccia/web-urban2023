@@ -31,6 +31,7 @@
 					<div class="col d-flex justify-content-end pt-4 pe-5 hidem">
 						<small>ARGENTINA: (+5411) 5258·8788 - URUGUAY: (+598) 2927·2347
 						<span><i class="bi bi-envelope ms-4" style="font-size: 1rem;"></i><a href="mailto:contacto@urbanestate.com.ar" style="color:#ffffff;"> contacto@urbanestate.com.ar</a></span>
+						<span style="margin-left:2rem;">Urban Estate SRL</span>
 						</small>
 					</div>					
 
