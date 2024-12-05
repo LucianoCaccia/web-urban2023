@@ -103,7 +103,7 @@ $ npm run watch
 
 ## Hosting and pull code to Live
 
-Use ssh dh_hhknpb@baker.dreamhost.com to ssh connect. 
+Use ```ssh dh_hhknpb@iad1-shared-b7-03.dreamhost.com``` to ssh connect. 
 The Live version of the website root path is:
 ```bash
 [baker]$ /home/dh_hhknpb/dev.urbanestate.com.ar/web-urban2023/wp
