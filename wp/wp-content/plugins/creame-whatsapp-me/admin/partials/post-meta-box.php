@@ -3,8 +3,8 @@
  * Joinchat admin post meta box
  *
  * @since      4.3.0
- * @package    JoinChat
- * @subpackage JoinChat/admin
+ * @package    Joinchat
+ * @subpackage Joinchat/admin
  * @author     Creame <hola@crea.me>
  */
 
@@ -15,7 +15,7 @@ defined( 'WPINC' ) || exit;
 	<?php wp_nonce_field( 'joinchat_data', 'joinchat_nonce' ); ?>
 	<p>
 		<label for="joinchat_phone"><?php esc_html_e( 'Telephone', 'creame-whatsapp-me' ); ?></label><br>
-		<input id="joinchat_phone" <?php echo $this->common->get_intltel() ? 'data-' : ''; ?>name="joinchat_telephone" value="<?php echo esc_attr( $metadata['telephone'] ); ?>" type="text" placeholder="<?php echo esc_attr( $placeholders['telephone'] ); ?>">
+		<input id="joinchat_phone" <?php echo jc_common()->get_intltel() ? 'data-' : ''; ?>name="joinchat_telephone" value="<?php echo esc_attr( $metadata['telephone'] ); ?>" type="text" placeholder="<?php echo esc_attr( $placeholders['telephone'] ); ?>">
 	</p>
 	<p>
 		<label for="joinchat_message"><?php esc_html_e( 'Call to Action', 'creame-whatsapp-me' ); ?></label><br>
@@ -25,7 +25,7 @@ defined( 'WPINC' ) || exit;
 		<label for="joinchat_message_send"><?php esc_html_e( 'Message', 'creame-whatsapp-me' ); ?></label><br>
 		<textarea id="joinchat_message_send" name="joinchat_message_send" rows="2" placeholder="<?php echo esc_attr( $placeholders['message_send'] ); ?>" class="large-text"><?php echo esc_textarea( $metadata['message_send'] ); ?></textarea>
 		<?php if ( count( $metabox_vars ) ) : ?>
-			<small><?php esc_html_e( 'Can use vars', 'creame-whatsapp-me' ); ?> <code>{<?php echo join( '}</code> <code>{', $metabox_vars ); ?>}</code></small>
+			<small><?php esc_html_e( 'Can use vars', 'creame-whatsapp-me' ); ?> <code>{<?php echo wp_kses( join( '}</code> <code>{', $metabox_vars ), array( 'code' => array() ) ); ?>}</code></small>
 		<?php endif; ?>
 		<small><?php esc_html_e( 'to leave it blank use', 'creame-whatsapp-me' ); ?> <code>{}</code></small>
 	</p>
