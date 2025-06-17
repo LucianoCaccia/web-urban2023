@@ -96,6 +96,35 @@ the_post();
             </div>
         </div>
     </section>
+
+    <section id="galery-masonry" class="galery-masonry">
+            <?php
+            if( class_exists('Dynamic_Featured_Image') ) {
+            global $dynamic_featured_image;
+            $featured_images = $dynamic_featured_image->get_featured_images( );
+            } ?>
+
+            <!-- Image Gallery -->
+            <!-- For Lightbox config check wp-admin/options-general.php?page=jquery-lightbox-options -->
+            <div class="container">
+                <h1 class="entry-title">Galería</h1>
+                    <div class="masonry ">
+                        <?php foreach ($featured_images as $key => $value): ?>
+                            <?php $img_feature_url = $value['full']; ?>
+                            <?php $img_feature_alt = $dynamic_featured_image->get_image_alt($img_feature_url);?>
+                            <?php $img_feature_caption = $dynamic_featured_image->get_image_caption($img_feature_url);?>
+                            <div class="masonry-item animated fadeIn duration2 eds-on-scroll">
+                                <a href="<?php echo($img_feature_url);?>" rel="lightbox" title="<?php echo($img_feature_caption);?>">
+                                    <img src="<?php echo($img_feature_url);?>" alt="<?php echo($img_feature_alt); ?>">
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+            </div>
+
+    </section>
+
+
 </div>
 <div class="fluid">
 
