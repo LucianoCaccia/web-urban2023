@@ -29,7 +29,7 @@ define( 'DB_USER', 'usr_wp2023' );
 define( 'DB_PASSWORD', 'G5j8d5b7!' );
 
 /** Database hostname */
-define( 'DB_HOST', 'http://mysql.urbanestate.com.ar/' );
+define( 'DB_HOST', 'mysql.urbanestate.com.ar' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
