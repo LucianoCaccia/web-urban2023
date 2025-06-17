@@ -155,10 +155,11 @@ function wpcf7_constant_contact_editor_panels( $panels ) {
 		)
 	);
 
-	$editor_panel = function () use ( $prop, $service ) {
+	$editor_panel = static function () use ( $prop, $service ) {
 
 		$description = sprintf(
 			esc_html(
+				/* translators: %s: link labeled 'Constant Contact integration' */
 				__( "You can set up the Constant Contact integration here. For details, see %s.", 'contact-form-7' )
 			),
 			wpcf7_link(

@@ -75,7 +75,7 @@ class WPCF7_FormTagsManager {
 	 */
 	public static function get_instance() {
 		if ( empty( self::$instance ) ) {
-			self::$instance = new self;
+			self::$instance = new self();
 		}
 
 		return self::$instance;
@@ -230,8 +230,7 @@ class WPCF7_FormTagsManager {
 	 */
 	private function normalize_callback( $matches ) {
 		// allow [[foo]] syntax for escaping a tag
-		if ( $matches[1] == '['
-		and $matches[6] == ']' ) {
+		if ( '[' === $matches[1] and ']' === $matches[6] ) {
 			return $matches[0];
 		}
 
@@ -393,7 +392,7 @@ class WPCF7_FormTagsManager {
 			'feature' => array(),
 		) );
 
-		$cond = array_map( function ( $c ) {
+		$cond = array_map( static function ( $c ) {
 			return array_filter( array_map( 'trim', (array) $c ) );
 		}, $cond );
 
@@ -466,8 +465,7 @@ class WPCF7_FormTagsManager {
 	 */
 	private function scan_callback( $matches, $replace = false ) {
 		// allow [[foo]] syntax for escaping a tag
-		if ( $matches[1] == '['
-		and $matches[6] == ']' ) {
+		if ( '[' === $matches[1] and ']' === $matches[6] ) {
 			return substr( $matches[0], 1, -1 );
 		}
 
