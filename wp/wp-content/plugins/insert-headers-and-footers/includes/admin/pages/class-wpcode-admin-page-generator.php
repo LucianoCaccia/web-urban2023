@@ -53,6 +53,20 @@ class WPCode_Admin_Page_Generator extends WPCode_Admin_Page {
 	public $snippet;
 
 	/**
+	 * The capability required to view this page.
+	 *
+	 * @var string
+	 */
+	protected $capability = 'wpcode_edit_php_snippets';
+
+	/**
+	 * Hide the generator menu item.
+	 *
+	 * @var bool
+	 */
+	public $hide_menu = true;
+
+	/**
 	 * Call this just to set the page title translatable.
 	 */
 	public function __construct() {
@@ -67,13 +81,16 @@ class WPCode_Admin_Page_Generator extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function page_hooks() {
-		$this->generators = wpcode()->generator->get_all_generators();
+		$this->generators = wpcode()->generator()->get_all_generators();
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		// Let's see if we should display a generator.
 		if ( isset( $_GET['generator'] ) ) {
 			$generator = sanitize_text_field( wp_unslash( $_GET['generator'] ) );
 			if ( array_key_exists( $generator, $this->generators ) ) {
 				$this->generator = $generator;
+				if ( isset( $this->generators[ $generator ]->code_type ) ) {
+					$this->code_type = $this->generators[ $generator ]->code_type;
+				}
 			}
 		}
 
@@ -120,10 +137,10 @@ class WPCode_Admin_Page_Generator extends WPCode_Admin_Page {
 	 * @return void
 	 */
 	public function show_generators_list() {
-		$categories = wpcode()->generator->get_categories();
+		$categories = wpcode()->generator()->get_categories();
 		?>
 		<div class="wpcode-items-metabox wpcode-metabox">
-			<?php $this->get_items_list_sidebar( $categories, __( 'All Generators', 'insert-headers-and-footers' ), __( 'Search Generators' ) ); ?>
+			<?php $this->get_items_list_sidebar( $categories, __( 'All Generators', 'insert-headers-and-footers' ), __( 'Search Generators', 'insert-headers-and-footers' ) ); ?>
 			<div class="wpcode-items-list">
 				<ul class="wpcode-items-list-category">
 					<?php
@@ -212,7 +229,7 @@ class WPCode_Admin_Page_Generator extends WPCode_Admin_Page {
 					<span class="wpcode-default-icon"><?php wpcode_icon( 'copy', 16, 16 ); ?></span><span class="wpcode-success-icon"><?php wpcode_icon( 'check', 16, 13 ); ?></span> <?php echo esc_html_x( 'Copy Code', 'Copy to clipboard', 'insert-headers-and-footers' ); ?>
 				</button>
 			</div>
-			<textarea id="wpcode_generator_code_preview"><?php echo $generator->get_snippet_code(); ?></textarea>
+			<textarea id="wpcode_generator_code_preview"><?php echo esc_textarea( $generator->get_snippet_code() ); ?></textarea>
 		</div>
 		<script type="text/template" id="wpcode-generator-repeater-row">
 			<?php $this->repeater_group_template(); ?>
@@ -261,5 +278,6 @@ class WPCode_Admin_Page_Generator extends WPCode_Admin_Page {
 		$editor->init_editor();
 
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		wp_enqueue_media();
 	}
 }
