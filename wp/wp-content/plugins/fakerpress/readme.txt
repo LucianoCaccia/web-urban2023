@@ -1,10 +1,10 @@
 === FakerPress ===
 Contributors:      bordoni
-Tags:              generator, dummy content, dummy data, lorem ipsun, admin, exemples, testing, images, attachments, featured image, taxonomies, users, post type, faker, fake data, random, developer, dev, development, test, tests
-Requires at least: 4.7
-Tested up to:      5.9.1
-Requires PHP:      5.6
-Stable tag:        0.5.3
+Tags:              generator, dummy content, lorem ipsun, testing, developer
+Requires at least: 5.5
+Tested up to:      6.8.1
+Requires PHP:      8.1
+Stable tag:        0.8.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://fakerpress.com/r/sponsor
@@ -17,7 +17,7 @@ Whenever you create a new Theme or Plugin you will always need to create custom 
 
 Our goal with this plugin is to fill this gap where you have problem with a good solution both for Developers and for Users of WordPress.
 
-> **Note: This plugin requires PHP 5.6 or higher to be activated.**
+> **Note: This plugin requires PHP 7.4 or higher to be activated.**
 
 [**Checkout our GitHub Repository**](http://fakerpress.com/r/github)
 
@@ -98,6 +98,79 @@ Great! There are several ways you can get involved to help make FakerPress bette
 Thank you for wanting to make FakerPress better for everyone! [We salute you](https://www.youtube.com/watch?v=8fPf6L0XNvM).
 
 == Changelog ==
+
+= 0.8.0 &mdash; 20 of May 2025 =
+
+* Version - Update dependency `cakephp/chronos` to `3.1.0`
+* Version - Update PHP min version to `8.1+`
+* Fix - Resolve PHP `8.4+` problems specially arounnd incompatibility with Chronos and notices.
+
+= 0.7.2 &mdash; 18 of May 2025 =
+
+* Fix - Resolve all fatals related to compatibility with version of Faker `1.24+`.
+* Fix - Resolve some incompatibilities with WP Script build tools.
+
+= 0.7.1 &mdash; 18 of May 2025 =
+
+* Fix - Move the registration of the menus to avoid problems with `_load_textdomain_just_in_time()` notices
+* Fix - Resolve problems with `count()` applying to a String instead of an Array for PHP 8.1+
+* Fix - Resolve fatals for newChronos being a bad string replacement.
+
+= 0.7.0 &mdash; 16 of May 2025 =
+
+* Version - Update dependency `fakerphp/faker` to `1.24`
+* Version - Update dependency `lucatume/di52` to `0.4`
+* Tweak - Modified date handling from using `Carbon` to use `Chronos`.
+* Fix - Improved password for the randomized Users created, prevents weird scenarios with faked users allowing brute-force login. Props @rinatkhaziev
+* Fix - Prevent fatals related to `$min` param on Meta Value generation for PHP 8.1+. Props @kubiq
+
+= 0.6.6 &mdash; 26 of April 2024 =
+
+* Fix - Prevent notices related to deprecated usage of Faker methods that were being called as properties.
+* Fix - Prevent fatals related to bad typecasting of Faker methods used for meta generation. props @helgatheviking
+
+= 0.6.5 &mdash; 26 of April 2024 =
+
+* Fix - Ensure meta generation for Users, Terms and Comments work since changes made on version `0.6.2`. props @helgatheviking
+
+= 0.6.4 &mdash; 21 of April 2024 =
+
+* Fix - Ensure that Faker is also included via Strauss, to prevent conflicts with other plugins.
+* Fix - Resolve Fatal where trying to create posts, comments or terms would fail because of missing classes.
+
+= 0.6.3 &mdash; 21 of April 2024 =
+
+* Fix - Prevent fatal errors because of malformed composer autoload files.
+
+= 0.6.2 &mdash; 21 of April 2024 =
+
+* Version - Updated composer dependency `fakerphp/faker` to version `1.23`.
+* Feature - Include consistent user generation, to avoid users feeling a disjointed. props @helgatheviking
+* Tweak - Include the ability to regenerate module data, allowing us to fetch values from earlier generations.
+* Tweak - Include properly use Composer for autoloading and dependencies without conflicting with other plugins.
+* Tweak - Include `lucatume/di52` and `nesbot/carbon` Strauss dependencies, which prevents conflicts with other plugins.
+* Fix - Switch from using Placeholder.com to Placehold.co, as the first one was not working properly anymore. props @cgarofalo
+* Fix - Searching terms nonce had a typo, preventing terms search from working as expected. props @cyrusdavid
+* Fix - Prevent namespace problems with nonexistent classes, specially around Exceptions.
+* Fix - Resolve a problem with Numbers Meta throwing errors on PHP 8.0+ [#168]
+
+= 0.6.1 &mdash; 04 of April 2023 =
+
+* Requirement - PHP Version 7.4 required for usage of FakerPress, important step to allow further improvements and tests.
+* Version - Updated composer dependency `lucatume/di52` to version `3.3.1`.
+* Version - Updated composer dependency `fakerphp/faker` to version `1.21`.
+* Version - Updated composer dependency `nesbot/carbon` to version `2.66`.
+* Fix - Resolve some errors happening with Carbon and version 8.2 of PHP.
+
+= 0.6.0 &mdash; 30 of March 2022 =
+
+* Requirement - PHP Version 7.1 required for usage of FakerPress, important step to allow further improvements and tests.
+* Feature - Modifications to the internal Modules of FakerPress to enable future work around WP-CLI.
+* Feature - Include a new way to handle Administration Pages, included here to enable future work.
+* Enhancement - Modifications to Select2 Styles for better accessibility usage.
+* Tweak - Faker version dependency updated from `fzaninotto/Faker` to `fakerphp/Faker/`.
+* Tweak - Move everything into the FakerPress namespace.
+* Tweak - Autoload using Composer properly.
 
 = 0.5.3 &mdash; 04 of March 2022 =
 

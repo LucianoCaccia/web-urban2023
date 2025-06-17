@@ -1,9 +1,8 @@
 <?php
+
 namespace FakerPress\Module;
-use FakerPress\Admin;
-use FakerPress\Variable;
-use FakerPress\Plugin;
-use Faker;
+
+use FakerPress\ThirdParty\Faker;
 use FakerPress;
 
 /**
@@ -12,26 +11,27 @@ use FakerPress;
  * @since  0.3.0
  *
  */
-class Meta extends Base {
+class Meta extends Abstract_Module {
 
 	/**
 	 * Which Faker Dependencies this Module will need
 	 *
 	 * @since  0.3.0
 	 *
-	 * @var array
+	 * @var string[]
 	 */
-	public $dependencies = [
-		Faker\Provider\Base::class,
-		Faker\Provider\Lorem::class,
-		Faker\Provider\DateTime::class,
+	protected $dependencies = [
+		FakerPress\ThirdParty\Faker\Provider\Base::class,
+		FakerPress\ThirdParty\Faker\Provider\Lorem::class,
+		FakerPress\ThirdParty\Faker\Provider\DateTime::class,
 		FakerPress\Provider\HTML::class,
-		Faker\Provider\Internet::class,
-		Faker\Provider\UserAgent::class,
-		Faker\Provider\en_US\Company::class,
-		Faker\Provider\en_US\Address::class,
-		Faker\Provider\en_US\Person::class,
+		FakerPress\ThirdParty\Faker\Provider\Internet::class,
+		FakerPress\ThirdParty\Faker\Provider\UserAgent::class,
+		FakerPress\ThirdParty\Faker\Provider\en_US\Company::class,
+		FakerPress\ThirdParty\Faker\Provider\en_US\Address::class,
+		FakerPress\ThirdParty\Faker\Provider\en_US\Person::class,
 	];
+
 
 	/**
 	 * Which Faker Provider class we are using here
@@ -40,16 +40,7 @@ class Meta extends Base {
 	 *
 	 * @var string
 	 */
-	public $provider = FakerPress\Provider\WP_Meta::class;
-
-	/**
-	 * Wether or not FakerPress will generate a page for this
-	 *
-	 * @since  0.3.0
-	 *
-	 * @var boolean
-	 */
-	public $page = false;
+	protected $provider_class = FakerPress\Provider\WP_Meta::class;
 
 	/**
 	 * Which type of object we are saving to
@@ -70,24 +61,22 @@ class Meta extends Base {
 	public $object_id = 0;
 
 	/**
-	 * Initalize and Add the correct hooks into the Meta Module
-	 *
-	 * @since  0.3.0
-	 *
-	 * @return void
+	 * @inheritDoc
 	 */
-	public function init() {
-		add_filter( "fakerpress.module.{$this->slug}.save", [ $this, 'do_save' ], 10, 3 );
+	public static function get_slug(): string {
+		return 'meta';
 	}
 
 	/**
-	 * Resets which original object that we will save the meta to
-	 *
-	 * @since  0.3.0
-	 *
-	 * @return self
+	 * @inheritDoc
 	 */
-	public function reset() {
+	public function hook(): void {
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function reset(): Interface_Module {
 		parent::reset();
 
 		$this->object_id = 0;
@@ -102,34 +91,15 @@ class Meta extends Base {
 	 *
 	 * @return self
 	 */
-	public function object( $id = 0, $name = 'post' ) {
-		$this->object_id = $id;
+	public function object( $id = 0, $name = 'post' ): Interface_Module {
+		$this->object_id   = $id;
 		$this->object_name = $name;
 
 		return $this;
 	}
 
-	/**
-	 * Generate the meta based on the Params given
-	 *
-	 * @since  0.3.0
-	 *
-	 * @param  string $type Type of Meta we are dealing with
-	 * @param  string $name Name of the Meta, used to save
-	 * @param  array  $args Arguments used to setup the Meta
-	 *
-	 * @return self
-	 */
-	public function generate() {
-		// Allow a bunch of params
-		$arguments = func_get_args();
-
-		// Remove $key and $name
-		$type = array_shift( $arguments );
-		$name = array_shift( $arguments );
-		$args = array_shift( $arguments );
-
-		$this->data['meta_key'] = null;
+	public function with( string $type, string $name, $args ): Interface_Module {
+		$this->data['meta_key']   = null;
 		$this->data['meta_value'] = null;
 
 		if ( empty( $type ) ) {
@@ -140,16 +110,40 @@ class Meta extends Base {
 			return $this;
 		}
 
-		$this->data['meta_key'] = $name;
+		$this->data['meta_type'] = $type;
+		$this->data['meta_key']  = $name;
+		$this->data['meta_args'] = array_values( $args );
 
-		unset( $args['name'], $args['type'] );
+		$faker = $this->get_faker();
 
-		// Pass which object we are dealing with
-		$this->faker->set_meta_object( $this->object_name, $this->object_id );
+		// Pass which object we are dealing with.
+		$faker->set_meta_object( $this->object_name, $this->object_id );
 
-		if ( is_callable( [ $this->faker, 'meta_type_' . $type ] ) ) {
-			$this->data['meta_value'] = call_user_func_array( [ $this->faker, 'meta_type_' . $type ], array_values( $args ) );
-		} else {
+		return $this;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function generate( bool $force = false ): Interface_Module {
+		// Only regenerate if there is no data, or we are forcing it.
+		if ( isset( $this->data['meta_value'] ) && ! $force ) {
+			return $this;
+		}
+
+		// Failed generation because we have no type.
+		if ( ! isset( $this->data['meta_type'] ) ) {
+			return $this;
+		}
+
+		$type = $this->data['meta_type'];
+		$args = $this->data['meta_args'] ?? [];
+
+		$faker = $this->get_faker();
+
+		if ( is_callable( [ $faker, 'meta_type_' . $type ] ) ) {
+			$this->data['meta_value'] = call_user_func_array( [ $faker, 'meta_type_' . $type ], $args );
+		} elseif ( count( $args ) === 1 ) {
 			$this->data['meta_value'] = reset( $args );
 		}
 
@@ -158,10 +152,10 @@ class Meta extends Base {
 		 *
 		 * @since  0.4.8
 		 *
-		 * @param  mixed  $meta_value  The Meta value that will be filtered
-		 * @param  string $meta_key    Which meta key we are currently filtering for
-		 * @param  string $meta_type   Which type of Meta we are dealing with
-		 * @param  self   $module      An instance of the Meta Module
+		 * @param mixed  $meta_value The Meta value that will be filtered
+		 * @param string $meta_key   Which meta key we are currently filtering for
+		 * @param string $meta_type  Which type of Meta we are dealing with
+		 * @param self   $module     An instance of the Meta Module
 		 */
 		$this->data['meta_value'] = apply_filters( "fakerpress.module.meta.value", $this->data['meta_value'], $this->data['meta_key'], $type, $this );
 
@@ -170,9 +164,9 @@ class Meta extends Base {
 		 *
 		 * @since  0.4.8
 		 *
-		 * @param  mixed  $meta_value  The Meta value that will be filtered
-		 * @param  string $meta_type   Which type of Meta we are dealing with
-		 * @param  self   $module      An instance of the Meta Module
+		 * @param mixed  $meta_value The Meta value that will be filtered
+		 * @param string $meta_type  Which type of Meta we are dealing with
+		 * @param self   $module     An instance of the Meta Module
 		 */
 		$this->data['meta_value'] = apply_filters( "fakerpress.module.meta.{$this->data['meta_key']}.value", $this->data['meta_value'], $type, $this );
 
@@ -180,19 +174,9 @@ class Meta extends Base {
 	}
 
 	/**
-	 * Actually save the meta value into the Database
-	 *
-	 * @since  0.3.0
-	 *
-	 * @param  string  $return_val  Unsed variable that comes from the hook
-	 * @param  string  $data        Data generated, meta_key and meta_value
-	 * @param  array   $module      Arguments used to setup the Meta
-	 *
-	 * @return self
+	 * @inheritDoc
 	 */
-	public function do_save( $return_val, $data, $module ) {
-		$status = false;
-
+	public function filter_save_response( $response, array $data, Abstract_Module $module ) {
 		if ( ! isset( $data['meta_value'] ) ) {
 			return false;
 		}
@@ -201,9 +185,20 @@ class Meta extends Base {
 			return false;
 		}
 
-		if ( ! is_null( $data['meta_value'] ) ) {
-			$status = update_metadata( $this->object_name, $this->object_id, $data['meta_key'], $data['meta_value'] );
-		}
-		return $status;
+		return update_metadata( $this->object_name, $this->object_id, $data['meta_key'], $data['meta_value'] );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public static function fetch( array $args = [] ): array {
+		// TODO: Implement fetch() method.
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public static function delete( $item ) {
+		// TODO: Implement delete() method.
 	}
 }
