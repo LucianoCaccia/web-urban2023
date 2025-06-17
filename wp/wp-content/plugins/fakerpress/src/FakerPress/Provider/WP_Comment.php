@@ -1,8 +1,10 @@
 <?php
 namespace FakerPress\Provider;
 
-use Faker\Provider\Base;
+use FakerPress\ThirdParty\Faker\Provider\Base;
+use FakerPress\ThirdParty\Cake\Chronos\Chronos;
 use FakerPress\Utils;
+use function FakerPress\make;
 
 class WP_Comment extends Base {
 
@@ -15,7 +17,7 @@ class WP_Comment extends Base {
 		if ( true === $html ) {
 			$content = implode( "\n", $this->generator->html_elements( $args ) );
 		} else {
-			$content = implode( "\r\n\r\n", $this->generator->paragraphs( Utils::instance()->get_qty_from_range( $args['qty'] ) ) );
+			$content = implode( "\r\n\r\n", $this->generator->paragraphs( make( Utils::class )->get_qty_from_range( $args['qty'] ) ) );
 		}
 
 		return $content;
@@ -152,16 +154,16 @@ class WP_Comment extends Base {
 	public function comment_date( $min = 'now', $max = null ) {
 		// Unfortunatelly there is not such solution to this problem, we need to try and catch with DateTime
 		try {
-			$min = new \Carbon\Carbon( $min );
-		} catch ( Exception $e ) {
+			$min = new Chronos( $min );
+		} catch ( \Exception $e ) {
 			return null;
 		}
 
 		if ( ! is_null( $max ) ) {
 			// Unfortunatelly there is not such solution to this problem, we need to try and catch with DateTime
 			try {
-				$max = new \Carbon\Carbon( $max );
-			} catch ( Exception $e ) {
+				$max = new Chronos( $max );
+			} catch ( \Exception $e ) {
 				return null;
 			}
 		}

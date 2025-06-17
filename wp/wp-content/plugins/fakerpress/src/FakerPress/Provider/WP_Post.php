@@ -1,9 +1,25 @@
 <?php
+/**
+ * FakerPress Post Provider
+ *
+ * @package FakerPress
+ * 
+ * @since TBD
+ */
 namespace FakerPress\Provider;
 
-use Faker\Provider\Base;
-use FakerPress;
+use FakerPress\ThirdParty\Faker\Provider\Base;
+use FakerPress\ThirdParty\Cake\Chronos\Chronos;
+use FakerPress\Utils;
+use function FakerPress\make;
 
+/**
+ * FakerPress WP_Post Provider
+ *
+ * @package FakerPress
+ * 
+ * @since TBD
+ */
 class WP_Post extends Base {
 
 	protected static $default = [
@@ -41,23 +57,23 @@ class WP_Post extends Base {
 
 		// Unfortunatelly there is not such solution to this problem, we need to try and catch with DateTime
 		try {
-			$min = new \Carbon\Carbon( array_shift( $interval ) );
+			$min = new Chronos( array_shift( $interval ) );
 		} catch ( \Exception $e ) {
-			$min = new \Carbon\Carbon( 'today' );
+			$min = new Chronos( 'today' );
 			$min = $min->startOfDay();
 		}
 
 		if ( ! empty( $interval ) ) {
 			// Unfortunatelly there is not such solution to this problem, we need to try and catch with DateTime
 			try {
-				$max = new \Carbon\Carbon( array_shift( $interval ) );
+				$max = new Chronos( array_shift( $interval ) );
 			} catch ( \Exception $e ) {
 
 			}
 		}
 
 		if ( ! isset( $max ) ) {
-			$max = new \Carbon\Carbon( 'now' );
+			$max = new Chronos( 'now' );
 		}
 
 		// If max has no Time set it to the end of the day
@@ -81,7 +97,7 @@ class WP_Post extends Base {
 		if ( true === $html ) {
 			$content = implode( "\n", $this->generator->html_elements( $args ) );
 		} else {
-			$content = implode( "\r\n\r\n", $this->generator->paragraphs( FakerPress\Utils::instance()->get_qty_from_range( $args['qty'] ) ) );
+			$content = implode( "\r\n\r\n", $this->generator->paragraphs( make( Utils::class )->get_qty_from_range( $args['qty'] ) ) );
 		}
 
 		return $content;
@@ -99,7 +115,7 @@ class WP_Post extends Base {
 	 * @return string
 	 */
 	public function post_excerpt( $qty = [ 25, 75 ], $html = false, $weight = 60 ) {
-		$words = FakerPress\Utils::instance()->get_qty_from_range( $qty );
+		$words = make( Utils::class )->get_qty_from_range( $qty );
 		$paragraphs = $this->generator->randomElement( [ 1, 1, 1, 1, 1, 2, 2, 2, 3, 4 ] );
 
 		for ( $i = 0; $i < $paragraphs; $i++ ) {
@@ -108,7 +124,7 @@ class WP_Post extends Base {
 
 		$excerpt = implode( "\n\n", $excerpt );
 
-		return $this->generator->optional( $weight, '' )->randomElement( (array) $excerpt );
+		return $this->generator->optional( $weight / 100, '' )->randomElement( (array) $excerpt );
 	}
 
 	public function post_author( $haystack = [] ) {
@@ -126,7 +142,7 @@ class WP_Post extends Base {
 	}
 
 	public function post_parent( $haystack = [], $weight = 70 ) {
-		return $this->generator->optional( $weight, 0 )->randomElement( (array) $haystack );
+		return $this->generator->optional( $weight / 100, 0 )->randomElement( (array) $haystack );
 	}
 
 	public function ping_status( $haystack = [] ) {
@@ -205,9 +221,9 @@ class WP_Post extends Base {
 				$terms = array_filter( array_map( 'absint', $terms ) );
 
 				if ( ! isset( $settings->qty ) ) {
-					$qty = FakerPress\Utils::instance()->get_qty_from_range( ( isset( $ranges[ $taxonomy ] ) ? $ranges[ $taxonomy ] : $ranges['__default'] ), $terms );
+					$qty = make( Utils::class )->get_qty_from_range( ( isset( $ranges[ $taxonomy ] ) ? $ranges[ $taxonomy ] : $ranges['__default'] ), $terms );
 				} else {
-					$qty = (int) FakerPress\Utils::instance()->get_qty_from_range( $settings->qty, $terms );
+					$qty = (int) make( Utils::class )->get_qty_from_range( $settings->qty, $terms );
 				}
 
 				if ( ! isset( $settings->rate ) ) {
@@ -217,7 +233,7 @@ class WP_Post extends Base {
 				}
 
 				// Select the elements based on qty
-				$output[ $taxonomy ] = $this->generator->optional( (int) $rate, null )->randomElements( $terms, (int) $qty );
+				$output[ $taxonomy ] = $this->generator->optional( ( (int) $rate ) / 100, null )->randomElements( $terms, (int) $qty );
 			}
 		}
 

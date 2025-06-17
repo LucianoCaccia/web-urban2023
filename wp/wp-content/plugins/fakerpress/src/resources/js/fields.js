@@ -1,9 +1,11 @@
-( function( $, _, fp ){
+( function( $, _ ){
 	'use strict';
 
 	const isNumeric = ( n ) => {
 		return ! isNaN( parseFloat( n ) ) && isFinite( n );
 	};
+
+	const fp = {};
 
 	fp.fields = {};
 	fp.ready_class = 'fp-js-ready';
@@ -288,6 +290,14 @@
 				}
 			}
 			$select.data( 'value', data ).attr( 'data-value', JSON.stringify( data ) );
+		} )
+		.on( 'select2-open', ( event ) => {
+			const $target = $( event.target );
+			const select2 = $target.data( 'select2' );
+			const width = select2.dropdown.width();
+
+			select2.dropdown.width( width+2 ).css( 'margin-left', '-1px' );
+
 		} );
 	};
 
@@ -714,7 +724,7 @@
 		}
 	};
 
-	$( document ).ready( function() {
+	$( () => {
 		$.each( fp.fieldset.items, function( index, fieldset ) {
 			fp.fieldset.setup( fieldset );
 			fieldset.$.container.each( function( _index, container ) {
@@ -728,4 +738,4 @@
 		} );
 	} );
 
-}( window.jQuery, window._, window.fakerpress ) );
+}( window.jQuery, window._ ) );
