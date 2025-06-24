@@ -81,6 +81,8 @@ the_post();
                                     <h2 class="text-white"><?php the_title(); ?></h3>
                                     <?php if (get_field('logo_medio')) : ?>
 									    <img src="<?php the_field('logo_medio');?>" style="height:6rem;" class="logo-pr" alt="<?php the_title(); ?>"> 
+									<?php else : ?>
+										<img src="/wp-content/themes/ue-theme/img/live.svg" style="height:5rem;" class="logo-pr" alt="<?php the_title(); ?>">
                                     <?php endif; ?>	
 								</div>
 								<div class="col-12 link"> 
@@ -88,7 +90,7 @@ the_post();
                                     <?php if (get_field('link_post')) : ?>
 								        <a target="_blank" href="<?php the_field('link_post');?>" class="btn btn-light btn-card ps-4 pe-4">Ver la nota</a>
                                     <?php else : ?>
-                                        <a href="<?php the_permalink() ;?>" class="btn btn-light btn-card ps-4 pe-4" style="margin-top:6rem;">Leer</a>
+                                        <a href="<?php the_permalink() ;?>" class="btn btn-light btn-card ps-4 pe-4" style="margin-top:1rem;">Leer</a>
                                     <?php endif; ?>	
                                 </div>									
 							</div>
