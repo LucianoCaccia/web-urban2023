@@ -171,15 +171,15 @@ the_post();
 						<h4>PAÍSES</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="15">0</span></h1>
+						<h1 class="numero"><span data-count="20">0</span></h1>
 						<h4>AÑOS DE EXPERIENCIA</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="14">0</span></h1>
+						<h1 class="numero"><span data-count="25">0</span></h1>
 						<h4>DESARROLLOS</h4>
 					</div>
 					<div class="counter col-md-3 col-xs-12">
-						<h1 class="numero"><span data-count="300">0</span></h1>
+						<h1 class="numero"><span data-count="600">0</span></h1>
 						<h4>CLIENTES FELICES</h4>
 					</div>
 			</div>

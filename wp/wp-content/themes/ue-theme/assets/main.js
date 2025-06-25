@@ -134,21 +134,21 @@ if (document.querySelector('section#numeros')) {
         function updateCount() {
           const target = parseInt(counter.dataset.count);
           switch (target) {
-            case 300:
+            case 600:
               if (count < target) {
-                count = count + 10;
+                count = count + 15;
                 counter.innerText = count;
-                setTimeout(updateCount,100);
+                setTimeout(updateCount,70);
       
               } else {
                 counter.innerText = target;
               }
             break;
-            case 15:
+            case 25:
               if (count < target) {
                 count++;
                 counter.innerText = count;
-                setTimeout(updateCount,240);
+                setTimeout(updateCount,130);
       
               } else {
                 counter.innerText = target;
@@ -168,7 +168,7 @@ if (document.querySelector('section#numeros')) {
               if (count < target) {
                 count++;
                 counter.innerText = count;
-                setTimeout(updateCount,260);
+                setTimeout(updateCount,170);
       
               } else {
                 counter.innerText = target;

@@ -24,7 +24,7 @@
 
 <div id="wrapper">
 	<?php // If search page change the header class
-	if ( is_search() ) {
+	if ( is_search() || is_single() ) {
 		$header_class = 'position-relative bg-secondary';
 	}
 	else {

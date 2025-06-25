@@ -12,7 +12,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="comments">
+<div id="comments" class="container">
 	<?php
 		if ( comments_open() && ! have_comments() ) :
 	?>
