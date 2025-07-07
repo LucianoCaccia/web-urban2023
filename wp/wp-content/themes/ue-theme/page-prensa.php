@@ -53,7 +53,7 @@ the_post();
     <section id="proyectos-slider">
 	<div class="container">
         <div class="mt-4 mb-4 pt-5">
-            <h2>Novedades Urban Estate</h2>
+            <!-- <h2>Novedades Urban Estate</h2> -->
         </div>
         <div id="carouselArgControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
@@ -68,21 +68,21 @@ the_post();
 				<?php ($post_n_arg == 1) ? $post_class = "active" : $post_class = "" ?>	
 					<div id="id-carousel-item-arg" class="carousel-item <?php echo $post_class ?>">
 					<div class="card">
-						<div class="img-wrapper" style="filter: brightness(65%);">
+						<div class="img-wrapper" style="filter: brightness(45%);">
 							<?php if (get_field('carousel_img_post')) : ?>
 								<img src="<?php the_field('carousel_img_post')?>"  alt="...">
 							<?php else : ?>
 								<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(3px);" alt="...">
 							<?php endif; ?>						
 						</div>
-						<div class="card-body">
+						<div class="card-body" style="top: 10%;">
 							<div class="row">
 								<div class="col-12 title mb-4">
-                                    <h2 class="text-white"><?php the_title(); ?></h3>
+                                    <h2 class="text-white" style="font-size: 1.5rem;"><?php the_title(); ?></h3>
                                     <?php if (get_field('logo_medio')) : ?>
-									    <img src="<?php the_field('logo_medio');?>" style="height:6rem;" class="logo-pr" alt="<?php the_title(); ?>"> 
+									    <img src="<?php the_field('logo_medio');?>" style="height:4rem; margin-top: 1rem; margin-bottom: 1rem;" class="logo-pr" alt="<?php the_title(); ?>"> 
 									<?php else : ?>
-										<img src="/wp-content/themes/ue-theme/img/live.svg" style="height:5rem;" class="logo-pr" alt="<?php the_title(); ?>">
+										<img src="/wp-content/themes/ue-theme/img/live.svg" style="height:5rem; margin-top: 1rem;" class="logo-pr" alt="<?php the_title(); ?>">
                                     <?php endif; ?>	
 								</div>
 								<div class="col-12 link"> 
