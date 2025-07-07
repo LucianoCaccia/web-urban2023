@@ -36,7 +36,7 @@ the_post();
 
 		<div class="container">
             <div class="content-over position-absolute animated appear delay2 duration4">
-                <h1 class="display-2"><b>PRENSA</b></h1>
+                <h1 class="display-2"><b><?php the_title(); ?></b></h1>
             </div>
 		</div>
 
