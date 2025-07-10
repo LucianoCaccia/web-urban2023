@@ -1156,3 +1156,11 @@ div.joinchat__qr {
 		height: 100px !important;
 	}
 }
+// **** PRENSA ****
+.card-body .vert-space {
+		display: block; 
+		min-height: 8rem;
+	@include media-breakpoint-up(lg) {
+		min-height: 6rem;
+	}
+}
