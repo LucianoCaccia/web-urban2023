@@ -75,11 +75,11 @@ the_post();
 								<img src="/wp-content/themes/ue-theme/img/default-card.jpg"  style="filter: blur(3px);" alt="...">
 							<?php endif; ?>						
 						</div>
-						<div class="card-body" style="top: 10%;">
+						<div class="card-body" style="top: 35%;">
 							<div class="row">
 								<div class="col-12 title mb-4">
 									<?php if (get_field('link_post')) : ?>
-                                    	<div class="vert-space">&nbsp</div>
+                                    	<!-- <div class="vert-space">&nbsp</div> -->
                                     <?php else : ?>
 										<h2 class="text-white" style="font-size: 1.5rem;"><?php the_title(); ?></h3>
 									<?php endif; ?>	
