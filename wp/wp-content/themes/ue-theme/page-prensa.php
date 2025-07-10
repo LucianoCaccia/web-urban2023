@@ -36,7 +36,7 @@ the_post();
 
 		<div class="container">
             <div class="content-over position-absolute animated appear delay2 duration4">
-                <h1 class="display-2"><b><?php the_title(); ?></b></h1>
+                <h1 class="display-1"><?php the_title(); ?></h1>
             </div>
 		</div>
 
@@ -79,7 +79,7 @@ the_post();
 							<div class="row">
 								<div class="col-12 title mb-4">
 									<?php if (get_field('link_post')) : ?>
-                                    	<div style="display: block; min-height: 15rem;">&nbsp</div>
+                                    	<div class="vert-space">&nbsp</div>
                                     <?php else : ?>
 										<h2 class="text-white" style="font-size: 1.5rem;"><?php the_title(); ?></h3>
 									<?php endif; ?>	
