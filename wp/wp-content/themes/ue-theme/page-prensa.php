@@ -78,9 +78,14 @@ the_post();
 						<div class="card-body" style="top: 10%;">
 							<div class="row">
 								<div class="col-12 title mb-4">
-                                    <h2 class="text-white" style="font-size: 1.5rem;"><?php the_title(); ?></h3>
-                                    <?php if (get_field('logo_medio')) : ?>
-									    <img src="<?php the_field('logo_medio');?>" style="height:4rem; margin-top: 1rem; margin-bottom: 1rem;" class="logo-pr" alt="<?php the_title(); ?>"> 
+									<?php if (get_field('link_post')) : ?>
+                                    	<div style="display: block; min-height: 15rem;">&nbsp</div>
+                                    <?php else : ?>
+										<h2 class="text-white" style="font-size: 1.5rem;"><?php the_title(); ?></h3>
+									<?php endif; ?>	
+
+									<?php if (get_field('logo_medio')) : ?>
+									    <img src="<?php the_field('logo_medio');?>" style="height:1.2rem; margin-top: 1rem; margin-bottom: 1rem;" class="logo-pr" alt="<?php the_title(); ?>"> 
 									<?php else : ?>
 										<img src="/wp-content/themes/ue-theme/img/live.svg" style="height:5rem; margin-top: 1rem;" class="logo-pr" alt="<?php the_title(); ?>">
                                     <?php endif; ?>	
